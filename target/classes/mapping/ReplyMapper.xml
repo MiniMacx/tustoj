@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tustoj.dao.ReplyMapper" >
+  <resultMap id="BaseResultMap" type="com.tustoj.entity.Reply" >
+    <id column="rid" property="rid" jdbcType="INTEGER" />
+    <result column="author_id" property="authorId" jdbcType="VARCHAR" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="topic_id" property="topicId" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="vote_up" property="voteUp" jdbcType="INTEGER" />
+    <result column="vote_down" property="voteDown" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tustoj.entity.Reply" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    rid, author_id, time, topic_id, status, ip, vote_up, vote_down
+  </sql>
+  <sql id="Blob_Column_List" >
+    content
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from reply
+    where rid = #{rid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from reply
+    where rid = #{rid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tustoj.entity.Reply" >
+    insert into reply (rid, author_id, time, 
+      topic_id, status, ip, 
+      vote_up, vote_down, content
+      )
+    values (#{rid,jdbcType=INTEGER}, #{authorId,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, 
+      #{topicId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, 
+      #{voteUp,jdbcType=INTEGER}, #{voteDown,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustoj.entity.Reply" >
+    insert into reply
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="rid != null" >
+        rid,
+      </if>
+      <if test="authorId != null" >
+        author_id,
+      </if>
+      <if test="time != null" >
+        time,
+      </if>
+      <if test="topicId != null" >
+        topic_id,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="ip != null" >
+        ip,
+      </if>
+      <if test="voteUp != null" >
+        vote_up,
+      </if>
+      <if test="voteDown != null" >
+        vote_down,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="rid != null" >
+        #{rid,jdbcType=INTEGER},
+      </if>
+      <if test="authorId != null" >
+        #{authorId,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="topicId != null" >
+        #{topicId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="ip != null" >
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="voteUp != null" >
+        #{voteUp,jdbcType=INTEGER},
+      </if>
+      <if test="voteDown != null" >
+        #{voteDown,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustoj.entity.Reply" >
+    update reply
+    <set >
+      <if test="authorId != null" >
+        author_id = #{authorId,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="topicId != null" >
+        topic_id = #{topicId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="ip != null" >
+        ip = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="voteUp != null" >
+        vote_up = #{voteUp,jdbcType=INTEGER},
+      </if>
+      <if test="voteDown != null" >
+        vote_down = #{voteDown,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where rid = #{rid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustoj.entity.Reply" >
+    update reply
+    set author_id = #{authorId,jdbcType=VARCHAR},
+      time = #{time,jdbcType=TIMESTAMP},
+      topic_id = #{topicId,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      ip = #{ip,jdbcType=VARCHAR},
+      vote_up = #{voteUp,jdbcType=INTEGER},
+      vote_down = #{voteDown,jdbcType=INTEGER},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where rid = #{rid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tustoj.entity.Reply" >
+    update reply
+    set author_id = #{authorId,jdbcType=VARCHAR},
+      time = #{time,jdbcType=TIMESTAMP},
+      topic_id = #{topicId,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      ip = #{ip,jdbcType=VARCHAR},
+      vote_up = #{voteUp,jdbcType=INTEGER},
+      vote_down = #{voteDown,jdbcType=INTEGER}
+    where rid = #{rid,jdbcType=INTEGER}
+  </update>
+</mapper>

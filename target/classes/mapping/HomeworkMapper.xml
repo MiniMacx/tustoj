@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tustoj.dao.HomeworkMapper" >
+  <resultMap id="BaseResultMap" type="com.tustoj.entity.Homework" >
+    <id column="homework_id" property="homeworkId" jdbcType="BIGINT" />
+    <result column="homework_creator_id" property="homeworkCreatorId" jdbcType="VARCHAR" />
+    <result column="homework_create_time" property="homeworkCreateTime" jdbcType="VARCHAR" />
+    <result column="homework_end_time" property="homeworkEndTime" jdbcType="VARCHAR" />
+    <result column="homework_score" property="homeworkScore" jdbcType="DECIMAL" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tustoj.entity.Homework" extends="BaseResultMap" >
+    <result column="homework_problem" property="homeworkProblem" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    homework_id, homework_creator_id, homework_create_time, homework_end_time, homework_score
+  </sql>
+  <sql id="Blob_Column_List" >
+    homework_problem
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from homework
+    where homework_id = #{homeworkId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from homework
+    where homework_id = #{homeworkId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.tustoj.entity.Homework" >
+    insert into homework (homework_id, homework_creator_id, homework_create_time, 
+      homework_end_time, homework_score, homework_problem
+      )
+    values (#{homeworkId,jdbcType=BIGINT}, #{homeworkCreatorId,jdbcType=VARCHAR}, #{homeworkCreateTime,jdbcType=VARCHAR}, 
+      #{homeworkEndTime,jdbcType=VARCHAR}, #{homeworkScore,jdbcType=DECIMAL}, #{homeworkProblem,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustoj.entity.Homework" >
+    insert into homework
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="homeworkId != null" >
+        homework_id,
+      </if>
+      <if test="homeworkCreatorId != null" >
+        homework_creator_id,
+      </if>
+      <if test="homeworkCreateTime != null" >
+        homework_create_time,
+      </if>
+      <if test="homeworkEndTime != null" >
+        homework_end_time,
+      </if>
+      <if test="homeworkScore != null" >
+        homework_score,
+      </if>
+      <if test="homeworkProblem != null" >
+        homework_problem,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="homeworkId != null" >
+        #{homeworkId,jdbcType=BIGINT},
+      </if>
+      <if test="homeworkCreatorId != null" >
+        #{homeworkCreatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="homeworkCreateTime != null" >
+        #{homeworkCreateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="homeworkEndTime != null" >
+        #{homeworkEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="homeworkScore != null" >
+        #{homeworkScore,jdbcType=DECIMAL},
+      </if>
+      <if test="homeworkProblem != null" >
+        #{homeworkProblem,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustoj.entity.Homework" >
+    update homework
+    <set >
+      <if test="homeworkCreatorId != null" >
+        homework_creator_id = #{homeworkCreatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="homeworkCreateTime != null" >
+        homework_create_time = #{homeworkCreateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="homeworkEndTime != null" >
+        homework_end_time = #{homeworkEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="homeworkScore != null" >
+        homework_score = #{homeworkScore,jdbcType=DECIMAL},
+      </if>
+      <if test="homeworkProblem != null" >
+        homework_problem = #{homeworkProblem,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where homework_id = #{homeworkId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustoj.entity.Homework" >
+    update homework
+    set homework_creator_id = #{homeworkCreatorId,jdbcType=VARCHAR},
+      homework_create_time = #{homeworkCreateTime,jdbcType=VARCHAR},
+      homework_end_time = #{homeworkEndTime,jdbcType=VARCHAR},
+      homework_score = #{homeworkScore,jdbcType=DECIMAL},
+      homework_problem = #{homeworkProblem,jdbcType=LONGVARCHAR}
+    where homework_id = #{homeworkId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tustoj.entity.Homework" >
+    update homework
+    set homework_creator_id = #{homeworkCreatorId,jdbcType=VARCHAR},
+      homework_create_time = #{homeworkCreateTime,jdbcType=VARCHAR},
+      homework_end_time = #{homeworkEndTime,jdbcType=VARCHAR},
+      homework_score = #{homeworkScore,jdbcType=DECIMAL}
+    where homework_id = #{homeworkId,jdbcType=BIGINT}
+  </update>
+</mapper>

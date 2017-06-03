@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tustcs.matrix.oj.dao.OnlineMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Online" >
+    <id column="hash" property="hash" jdbcType="VARCHAR" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="ua" property="ua" jdbcType="VARCHAR" />
+    <result column="refer" property="refer" jdbcType="VARCHAR" />
+    <result column="lastmove" property="lastmove" jdbcType="INTEGER" />
+    <result column="firsttime" property="firsttime" jdbcType="INTEGER" />
+    <result column="uri" property="uri" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    hash, ip, ua, refer, lastmove, firsttime, uri
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from online
+    where hash = #{hash,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from online
+    where hash = #{hash,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Online" >
+    insert into online (hash, ip, ua, 
+      refer, lastmove, firsttime, 
+      uri)
+    values (#{hash,jdbcType=VARCHAR}, #{ip,jdbcType=VARCHAR}, #{ua,jdbcType=VARCHAR}, 
+      #{refer,jdbcType=VARCHAR}, #{lastmove,jdbcType=INTEGER}, #{firsttime,jdbcType=INTEGER}, 
+      #{uri,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Online" >
+    insert into online
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="hash != null" >
+        hash,
+      </if>
+      <if test="ip != null" >
+        ip,
+      </if>
+      <if test="ua != null" >
+        ua,
+      </if>
+      <if test="refer != null" >
+        refer,
+      </if>
+      <if test="lastmove != null" >
+        lastmove,
+      </if>
+      <if test="firsttime != null" >
+        firsttime,
+      </if>
+      <if test="uri != null" >
+        uri,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="hash != null" >
+        #{hash,jdbcType=VARCHAR},
+      </if>
+      <if test="ip != null" >
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="ua != null" >
+        #{ua,jdbcType=VARCHAR},
+      </if>
+      <if test="refer != null" >
+        #{refer,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmove != null" >
+        #{lastmove,jdbcType=INTEGER},
+      </if>
+      <if test="firsttime != null" >
+        #{firsttime,jdbcType=INTEGER},
+      </if>
+      <if test="uri != null" >
+        #{uri,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.Online" >
+    update online
+    <set >
+      <if test="ip != null" >
+        ip = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="ua != null" >
+        ua = #{ua,jdbcType=VARCHAR},
+      </if>
+      <if test="refer != null" >
+        refer = #{refer,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmove != null" >
+        lastmove = #{lastmove,jdbcType=INTEGER},
+      </if>
+      <if test="firsttime != null" >
+        firsttime = #{firsttime,jdbcType=INTEGER},
+      </if>
+      <if test="uri != null" >
+        uri = #{uri,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where hash = #{hash,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Online" >
+    update online
+    set ip = #{ip,jdbcType=VARCHAR},
+      ua = #{ua,jdbcType=VARCHAR},
+      refer = #{refer,jdbcType=VARCHAR},
+      lastmove = #{lastmove,jdbcType=INTEGER},
+      firsttime = #{firsttime,jdbcType=INTEGER},
+      uri = #{uri,jdbcType=VARCHAR}
+    where hash = #{hash,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tustoj.dao.MailMapper" >
+  <resultMap id="BaseResultMap" type="com.tustoj.entity.Mail" >
+    <id column="mail_id" property="mailId" jdbcType="INTEGER" />
+    <result column="to_user" property="toUser" jdbcType="VARCHAR" />
+    <result column="from_user" property="fromUser" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="new_mail" property="newMail" jdbcType="BIT" />
+    <result column="reply" property="reply" jdbcType="TINYINT" />
+    <result column="in_date" property="inDate" jdbcType="TIMESTAMP" />
+    <result column="defunct" property="defunct" jdbcType="CHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tustoj.entity.Mail" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    mail_id, to_user, from_user, title, new_mail, reply, in_date, defunct
+  </sql>
+  <sql id="Blob_Column_List" >
+    content
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from mail
+    where mail_id = #{mailId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from mail
+    where mail_id = #{mailId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tustoj.entity.Mail" >
+    insert into mail (mail_id, to_user, from_user, 
+      title, new_mail, reply, 
+      in_date, defunct, content
+      )
+    values (#{mailId,jdbcType=INTEGER}, #{toUser,jdbcType=VARCHAR}, #{fromUser,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{newMail,jdbcType=BIT}, #{reply,jdbcType=TINYINT}, 
+      #{inDate,jdbcType=TIMESTAMP}, #{defunct,jdbcType=CHAR}, #{content,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustoj.entity.Mail" >
+    insert into mail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="mailId != null" >
+        mail_id,
+      </if>
+      <if test="toUser != null" >
+        to_user,
+      </if>
+      <if test="fromUser != null" >
+        from_user,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="newMail != null" >
+        new_mail,
+      </if>
+      <if test="reply != null" >
+        reply,
+      </if>
+      <if test="inDate != null" >
+        in_date,
+      </if>
+      <if test="defunct != null" >
+        defunct,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="mailId != null" >
+        #{mailId,jdbcType=INTEGER},
+      </if>
+      <if test="toUser != null" >
+        #{toUser,jdbcType=VARCHAR},
+      </if>
+      <if test="fromUser != null" >
+        #{fromUser,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="newMail != null" >
+        #{newMail,jdbcType=BIT},
+      </if>
+      <if test="reply != null" >
+        #{reply,jdbcType=TINYINT},
+      </if>
+      <if test="inDate != null" >
+        #{inDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="defunct != null" >
+        #{defunct,jdbcType=CHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustoj.entity.Mail" >
+    update mail
+    <set >
+      <if test="toUser != null" >
+        to_user = #{toUser,jdbcType=VARCHAR},
+      </if>
+      <if test="fromUser != null" >
+        from_user = #{fromUser,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="newMail != null" >
+        new_mail = #{newMail,jdbcType=BIT},
+      </if>
+      <if test="reply != null" >
+        reply = #{reply,jdbcType=TINYINT},
+      </if>
+      <if test="inDate != null" >
+        in_date = #{inDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="defunct != null" >
+        defunct = #{defunct,jdbcType=CHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where mail_id = #{mailId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustoj.entity.Mail" >
+    update mail
+    set to_user = #{toUser,jdbcType=VARCHAR},
+      from_user = #{fromUser,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      new_mail = #{newMail,jdbcType=BIT},
+      reply = #{reply,jdbcType=TINYINT},
+      in_date = #{inDate,jdbcType=TIMESTAMP},
+      defunct = #{defunct,jdbcType=CHAR},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where mail_id = #{mailId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tustoj.entity.Mail" >
+    update mail
+    set to_user = #{toUser,jdbcType=VARCHAR},
+      from_user = #{fromUser,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      new_mail = #{newMail,jdbcType=BIT},
+      reply = #{reply,jdbcType=TINYINT},
+      in_date = #{inDate,jdbcType=TIMESTAMP},
+      defunct = #{defunct,jdbcType=CHAR}
+    where mail_id = #{mailId,jdbcType=INTEGER}
+  </update>
+</mapper>
