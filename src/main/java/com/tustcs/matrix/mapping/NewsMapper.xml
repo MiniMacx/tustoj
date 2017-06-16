@@ -171,29 +171,11 @@
 
   <select id="selectNewsList" parameterType="com.tustcs.matrix.entity.News" resultType="News">
     select *from news
-<<<<<<< HEAD
-    limit #{startPos},#{pageSize}
-  </select>
-
-  <select id="selectNewsCount" resultType="Integer">
-    select count(*)
-    from news
-=======
     limit #{offset},#{limit}
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </select>
 
   <select id="selectByTitle" parameterType="com.tustcs.matrix.entity.News" resultType="News">
     select *from news
     where title like '%${title}%'
   </select>
-<<<<<<< HEAD
-
-  <select id="selectNewsCountUsingTitle" resultType="Integer">
-    select count(*)
-    from news
-    where title like '%${title}%'
-  </select>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 </mapper>

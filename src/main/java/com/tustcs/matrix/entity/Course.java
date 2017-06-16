@@ -9,8 +9,11 @@ public class Course {
 
     private String courseTime;
 
+<<<<<<< HEAD
     private Integer deleteFlag;
 
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public Integer getCourseId() {
         return courseId;
     }
@@ -42,6 +45,7 @@ public class Course {
     public void setCourseTime(String courseTime) {
         this.courseTime = courseTime == null ? null : courseTime.trim();
     }
+<<<<<<< HEAD
 
     public Integer getDeleteFlag() {
         return deleteFlag;
@@ -50,4 +54,6 @@ public class Course {
     public void setDeleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
     }
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 }

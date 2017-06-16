@@ -20,6 +20,7 @@ public interface NewsMapper {
 
     int updateByPrimaryKey(News record);
 
+<<<<<<< HEAD
     /**
      * 分页获取新闻信息
      * @param startPos
@@ -50,4 +51,9 @@ public interface NewsMapper {
      * @return
      */
     Integer selectNewsCountUsingTitle(@Param("title") String title);
+=======
+    List<News> selectNewsList(@Param("offset")int offset,@Param("limit") int limit);
+
+    List<News> selectByTitle(@Param("title")String title);
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 }

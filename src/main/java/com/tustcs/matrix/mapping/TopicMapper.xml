@@ -9,20 +9,12 @@
     <result column="pid" property="pid" jdbcType="INTEGER" />
     <result column="author_id" property="authorId" jdbcType="VARCHAR" />
     <result column="time" property="time" jdbcType="VARCHAR" />
-<<<<<<< HEAD
-    <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.Topic" extends="BaseResultMap" >
     <result column="title" property="title" jdbcType="VARBINARY" />
   </resultMap>
   <sql id="Base_Column_List" >
-<<<<<<< HEAD
-    tid, status, top_level, cid, pid, author_id, time, delete_flag
-=======
     tid, status, top_level, cid, pid, author_id, time
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </sql>
   <sql id="Blob_Column_List" >
     title
@@ -42,19 +34,10 @@
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Topic" >
     insert into topic (tid, status, top_level, 
       cid, pid, author_id, 
-<<<<<<< HEAD
-      time, delete_flag, title
-      )
-    values (#{tid,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{topLevel,jdbcType=INTEGER}, 
-      #{cid,jdbcType=INTEGER}, #{pid,jdbcType=INTEGER}, #{authorId,jdbcType=VARCHAR}, 
-      #{time,jdbcType=VARCHAR}, #{deleteFlag,jdbcType=INTEGER}, #{title,jdbcType=VARBINARY}
-      )
-=======
       time, title)
     values (#{tid,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{topLevel,jdbcType=INTEGER}, 
       #{cid,jdbcType=INTEGER}, #{pid,jdbcType=INTEGER}, #{authorId,jdbcType=VARCHAR}, 
       #{time,jdbcType=VARCHAR}, #{title,jdbcType=VARBINARY})
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Topic" >
     insert into topic
@@ -80,12 +63,6 @@
       <if test="time != null" >
         time,
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag,
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <if test="title != null" >
         title,
       </if>
@@ -112,12 +89,6 @@
       <if test="time != null" >
         #{time,jdbcType=VARCHAR},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <if test="title != null" >
         #{title,jdbcType=VARBINARY},
       </if>
@@ -144,12 +115,6 @@
       <if test="time != null" >
         time = #{time,jdbcType=VARCHAR},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <if test="title != null" >
         title = #{title,jdbcType=VARBINARY},
       </if>
@@ -164,10 +129,6 @@
       pid = #{pid,jdbcType=INTEGER},
       author_id = #{authorId,jdbcType=VARCHAR},
       time = #{time,jdbcType=VARCHAR},
-<<<<<<< HEAD
-      delete_flag = #{deleteFlag,jdbcType=INTEGER},
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       title = #{title,jdbcType=VARBINARY}
     where tid = #{tid,jdbcType=INTEGER}
   </update>
@@ -178,22 +139,6 @@
       cid = #{cid,jdbcType=INTEGER},
       pid = #{pid,jdbcType=INTEGER},
       author_id = #{authorId,jdbcType=VARCHAR},
-<<<<<<< HEAD
-      time = #{time,jdbcType=VARCHAR},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER}
-    where tid = #{tid,jdbcType=INTEGER}
-  </update>
-
-
-  <select id="selectTopicList" parameterType="com.tustcs.matrix.entity.Topic" resultType="Topic">
-    SELECT *from topic
-    limit #{startPos},#{pageSize}
-  </select>
-
-  <select id="selectCount" resultType="Integer">
-    select count(*)
-    from topic
-=======
       time = #{time,jdbcType=VARCHAR}
     where tid = #{tid,jdbcType=INTEGER}
   </update>
@@ -201,33 +146,10 @@
   <select id="selectTopicList" parameterType="com.tustcs.matrix.entity.Topic" resultType="Topic">
     SELECT *from topic
     limit #{offset},#{limit}
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </select>
 
   <select id="selectByTitle" parameterType="com.tustcs.matrix.entity.Topic" resultType="Topic">
     select *from topic
     where title like '%${title}%'
-<<<<<<< HEAD
-    limit #{startPos},#{pageSize}
-  </select>
-
-  <select id="selectTopicCountUsingTitle" resultType="Integer">
-    SELECT count(*)
-    from topic
-    where title like '%${title}%'
-  </select>
-
-  <select id="selectByUserId" resultType="Topic">
-    select *from topic
-    where author_id like '%${userId}%'
-    limit #{startPos},#{pageSize}
-  </select>
-
-  <select id="selectTopicCountUsingUserId" resultType="Integer">
-    SELECT  count(*)
-    from topic
-    where author_id like '%${userId}%'
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </select>
 </mapper>

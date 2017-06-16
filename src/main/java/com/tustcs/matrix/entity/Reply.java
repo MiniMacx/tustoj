@@ -19,8 +19,11 @@ public class Reply {
 
     private Integer voteDown;
 
+<<<<<<< HEAD
     private Integer deleteFlag;
 
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     private String content;
 
     public Integer getRid() {
@@ -87,6 +90,7 @@ public class Reply {
         this.voteDown = voteDown;
     }
 
+<<<<<<< HEAD
     public Integer getDeleteFlag() {
         return deleteFlag;
     }
@@ -95,6 +99,8 @@ public class Reply {
         this.deleteFlag = deleteFlag;
     }
 
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public String getContent() {
         return content;
     }

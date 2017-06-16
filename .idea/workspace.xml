@@ -1,7 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ChangeListManager">
     <list default="true" id="59e8e26e-2543-4b0f-9c7e-04cd7e4e04b7" name="Default" comment="" />
+=======
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/HomeworkMapper.java" line="26" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9ed7f032-241b-4fa7-b409-386d3ef51f5f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ContestController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ContestService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ContestServiceImpl.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/controller/SolutionController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/CompileInfoMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/ContestMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/ContestProblemMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/CourseMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/CustomInputMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/HomeworkMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/LoginlogMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/MailMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/NewsMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/NoticeMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/OnlineMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/PrivilegeMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/ProblemMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/ReplyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/RuntimeInfoMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/SimMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/SolutionMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/SourceCodeMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/SourceCodeUserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/TopicMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/UserContestMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/UserCourseMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/UserHomeworkMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/dao/UserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/CompileInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Contest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/ContestProblem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Course.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/CustomInput.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Homework.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Loginlog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Mail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/News.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Notice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Online.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Privilege.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Problem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/ProblemWithBLOBs.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Reply.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/RuntimeInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Sim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Solution.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/SourceCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/SourceCodeUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/Topic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/UserContest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/UserCourse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/entity/UserHomework.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/service/AdminService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/service/SolutionService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/service/impl/SolutionServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/utils/Page.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tustcs/matrix/oj/utils/Res.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tustcs/matrix/oj/dao/ProblemMapperTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tustcs/matrix/oj/dao/UserMapperTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/controller/SolutionController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/CompileInfoMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/ContestMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/ContestProblemMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/CourseMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/CustomInputMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/HomeworkMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/LoginlogMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/MailMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/NewsMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/NoticeMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/OnlineMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/PrivilegeMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/ProblemMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/ReplyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/RuntimeInfoMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/SimMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/SolutionMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/SourceCodeMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/SourceCodeUserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/TopicMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/UserContestMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/UserCourseMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/UserHomeworkMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/dao/UserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/CompileInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Contest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/ContestProblem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Course.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/CustomInput.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Homework.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Loginlog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Mail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/News.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Notice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Online.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Privilege.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Problem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/ProblemWithBLOBs.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Reply.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/RuntimeInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Sim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Solution.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/SourceCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/SourceCodeUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/Topic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/UserContest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/UserCourse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/entity/UserHomework.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/service/AdminService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/service/SolutionService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/service/impl/SolutionServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/utils/Page.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/com/tustcs/matrix/oj/utils/Res.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/Config.java" afterPath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/config/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj.war" afterPath="$PROJECT_DIR$/target/tustoj.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ContestMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ContestMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/AdminService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/AdminService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/SolutionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/SolutionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/SolutionServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/SolutionServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/ContestMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ContestMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/schema/newoj.sql" afterPath="$PROJECT_DIR$/src/main/resources/schema/newoj.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/CompileInfoMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/CompileInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/ContestMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/ContestMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/ContestProblemMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/ContestProblemMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/CourseMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/CourseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/CustomInputMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/CustomInputMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/HomeworkMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/HomeworkMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/LoginlogMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/LoginlogMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/MailMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/MailMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/NewsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/NewsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/NoticeMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/NoticeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/OnlineMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/OnlineMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/PrivilegeMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/PrivilegeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/ProblemMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/ProblemMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/ReplyMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/ReplyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/RuntimeInfoMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/RuntimeInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/SimMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/SimMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/SolutionMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/SolutionMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/SourceCodeMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/SourceCodeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/SourceCodeUserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/SourceCodeUserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/TopicMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/TopicMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/UserContestMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/UserContestMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/UserCourseMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/UserCourseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/UserHomeworkMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/UserHomeworkMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/schema/newoj.sql" afterPath="$PROJECT_DIR$/target/classes/schema/newoj.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/CompileInfoMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/CompileInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/ContestMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/ContestMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/ContestProblemMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/ContestProblemMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/CourseMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/CourseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/CustomInputMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/CustomInputMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/HomeworkMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/HomeworkMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/LoginlogMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/LoginlogMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/MailMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/MailMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/NewsMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/NewsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/NoticeMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/NoticeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/OnlineMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/OnlineMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/PrivilegeMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/PrivilegeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/ProblemMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/ProblemMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/ReplyMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/ReplyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/RuntimeInfoMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/RuntimeInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/SimMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/SimMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/SolutionMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/SolutionMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/SourceCodeMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/SourceCodeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/SourceCodeUserMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/SourceCodeUserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/TopicMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/TopicMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/UserContestMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/UserContestMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/UserCourseMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/UserCourseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/UserHomeworkMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/UserHomeworkMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/mapping/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/schema/newoj.sql" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/schema/newoj.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/spring/spring-dao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/spring/spring-service.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/spring/spring-service.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/spring/spring-web.xml" afterPath="$PROJECT_DIR$/target/tustoj/WEB-INF/classes/spring/spring-web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tustoj.iml" afterPath="$PROJECT_DIR$/tustoj.iml" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,6 +218,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="ProblemMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ProblemMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -39,10 +236,19 @@
                 <marker date="1497599076940" expanded="true" signature="10365:10449" ph="select *from... problem" />
                 <marker date="1497599076940" expanded="true" signature="10591:10657" ph="select COUNT... problem" />
               </folding>
+=======
+      <file leaf-file-name="ContestMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ContestMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-543">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="ReplyMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ReplyMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,6 +263,26 @@
                 <marker date="1497598977848" expanded="true" signature="5602:6012" ph="update reply... " />
                 <marker date="1497598977848" expanded="true" signature="6081:6137" ph="select *FROM... reply" />
                 <marker date="1497598977848" expanded="true" signature="6209:6239" ph="SELECT count... reply" />
+=======
+      <file leaf-file-name="ContestMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ContestMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="179" column="11" lean-forward="true" selection-start-line="179" selection-start-column="11" selection-end-line="179" selection-end-column="11" />
+              <folding>
+                <marker date="1496990989759" expanded="true" signature="1344:1509" ph="select , fro... " />
+                <marker date="1496990989759" expanded="true" signature="1596:1668" ph="delete from " />
+                <marker date="1496990989759" expanded="true" signature="1758:2195" ph="insert into contest... " />
+                <marker date="1496990989759" expanded="true" signature="3932:4795" ph="update conte... " />
+                <marker date="1496990989759" expanded="true" signature="4906:5350" ph="update conte... " />
+                <marker date="1496990989759" expanded="true" signature="5452:5839" ph="update conte... " />
+                <marker date="1496990989759" expanded="true" signature="5961:5981" ph="select *from... contest" />
+                <marker date="1496990989759" expanded="true" signature="5961:6015" ph="select *from... contest" />
+                <marker date="1496990989759" expanded="true" signature="6089:6121" ph="select COUNT... contest" />
+                <marker date="1496990989759" expanded="true" signature="6241:6295" ph="select *from... contest" />
+                <marker date="1496990989759" expanded="true" signature="6241:6329" ph="select *from... contest" />
+                <marker date="1496990989759" expanded="true" signature="6413:6479" ph="select COUNT... contest" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
               </folding>
             </state>
           </provider>
@@ -65,6 +291,7 @@
       <file leaf-file-name="SolutionMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/SolutionMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="153">
               <caret line="248" column="62" lean-forward="false" selection-start-line="248" selection-start-column="51" selection-end-line="248" selection-end-column="62" />
               <folding>
@@ -77,11 +304,26 @@
                 <marker date="1497598977868" expanded="true" signature="9068:9121" ph="select COUNT... solution" />
                 <marker date="1497598977868" expanded="true" signature="9256:9364" ph="select *FROM... solution" />
                 <marker date="1497598977868" expanded="true" signature="9508:9582" ph="select count... solution" />
+=======
+            <state relative-caret-position="356">
+              <caret line="245" column="16" lean-forward="true" selection-start-line="245" selection-start-column="16" selection-end-line="245" selection-end-column="16" />
+              <folding>
+                <marker date="1496842951556" expanded="true" signature="1788:1909" ph="select from solution" />
+                <marker date="1496842951556" expanded="true" signature="1996:2071" ph="delete from " />
+                <marker date="1496842951556" expanded="true" signature="2162:2909" ph="insert into solution... " />
+                <marker date="1496842951556" expanded="true" signature="5788:7369" ph="update solut... " />
+                <marker date="1496842951556" expanded="true" signature="7472:8254" ph="update solut... " />
+                <marker date="1496842951556" expanded="true" signature="8381:8465" ph="select * fro... solution" />
+                <marker date="1496842951556" expanded="true" signature="8601:8654" ph="select COUNT... solution" />
+                <marker date="1496842951556" expanded="true" signature="8789:8897" ph="select *FROM... solution" />
+                <marker date="1496842951556" expanded="true" signature="9041:9115" ph="select count... solution" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="TokenMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/TokenMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,20 +332,40 @@
               <folding>
                 <marker date="1497599259276" expanded="true" signature="723:963" ph="insert into token... " />
               </folding>
+=======
+      <file leaf-file-name="SolutionServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/SolutionServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+              <folding />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="UserContestMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserContestMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+=======
+      <file leaf-file-name="SolutionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+              <folding>
+                <element signature="e#1293#1309#0" expanded="true" />
+              </folding>
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="TopicMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/TopicMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -122,11 +384,24 @@
                 <marker date="1497598977864" expanded="true" signature="6015:6079" ph="SELECT count... topic" />
                 <marker date="1497598977864" expanded="true" signature="6147:6238" ph="select *from... topic" />
                 <marker date="1497598977864" expanded="true" signature="6321:6391" ph="SELECT count... topic" />
+=======
+      <file leaf-file-name="ContestServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ContestServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1459">
+              <caret line="71" column="29" lean-forward="true" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#847#862#0" expanded="true" />
+                <element signature="e#1579#1594#0" expanded="true" />
+                <marker date="1496993542220" expanded="true" signature="2304:2368" ph="..." />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -142,10 +417,19 @@
                 <marker date="1497598642821" expanded="true" signature="7566:7609" ph="select *from... users" />
                 <marker date="1497598642821" expanded="true" signature="7721:7776" ph="select *from... users" />
               </folding>
+=======
+      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+              <folding />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="CourseMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/CourseMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -164,10 +448,19 @@
                 <marker date="1497598977840" expanded="true" signature="4386:4484" ph="select *from... course" />
                 <marker date="1497598977840" expanded="true" signature="4572:4648" ph="select count... course" />
               </folding>
+=======
+      <file leaf-file-name="ContestService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ContestService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="15" column="72" lean-forward="true" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+              <folding />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="HomeworkMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/HomeworkMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -180,11 +473,23 @@
                 <marker date="1497598977844" expanded="true" signature="3799:4605" ph="update homew... " />
                 <marker date="1497598977844" expanded="true" signature="4717:5162" ph="update homew... " />
                 <marker date="1497598977844" expanded="true" signature="5265:5644" ph="update homew... " />
+=======
+      <file leaf-file-name="ContestController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ContestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="655">
+              <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1058#1073#0" expanded="true" />
+                <element signature="e#1437#1452#0" expanded="true" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="NewsMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/NewsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -202,6 +507,14 @@
                 <marker date="1497598642513" expanded="true" signature="6466:6517" ph="select *from... news" />
                 <marker date="1497598642513" expanded="true" signature="6598:6661" ph="select count... news" />
               </folding>
+=======
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+              <folding />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
             </state>
           </provider>
         </entry>
@@ -211,6 +524,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="JUnit4 Test Class" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -218,6 +535,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
       <find>&quot;updateByPrimaryKey&quot;</find>
       <find>news</find>
       <find>contest</find>
@@ -230,6 +548,21 @@
       <find>com.tustcs.</find>
     </findStrings>
   </component>
+=======
+      <find>pub</find>
+      <find>topic</find>
+      <find>time</find>
+      <find>contest</find>
+      <find>private</find>
+      <find>mysql</find>
+      <find>nes</find>
+      <find>news</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -238,6 +571,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/game/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ReplyMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ReplayService.java" />
@@ -289,6 +623,59 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapping/TopicMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/ProblemMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/TokenMapper.xml" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/dao/CourseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/dao/HomeworkMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/dao/NewsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/NewsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/dao/NoticeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/NoticeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/TopicMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/dao/TopicMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/utils/Page.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/entity/Contest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/entity/Course.java" />
+        <option value="$PROJECT_DIR$/src/test/com/tustcs/matrix/oj/dao/UserMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/SolutionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/dao/SolutionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/service/SolutionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/service/impl/SolutionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/controller/SolutionController.java" />
+        <option value="$PROJECT_DIR$/src/test/com/tustcs/matrix/oj/dao/ProblemMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/dao/ProblemMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/ProblemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/utils/MD5Utils.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/utils/Res.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/oj/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserCourseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserCourseMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/CourseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/CourseMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/HomeworkMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/HomeworkMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserContestMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserContestMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/AdminService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ContestMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/SolutionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/SolutionService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/schema/newoj.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ContestService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/ContestMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ContestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ContestController.java" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       </list>
     </option>
   </component>
@@ -305,6 +692,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+<<<<<<< HEAD
   <component name="MavenProjectNavigator">
     <treeState>
       <PATH>
@@ -333,11 +721,36 @@
       </PATH>
     </treeState>
   </component>
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   <component name="ProjectFrameBounds">
     <option name="y" value="27" />
     <option name="width" value="1920" />
     <option name="height" value="1053" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SqlNoDataSourceInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -355,21 +768,33 @@
     <panes>
       <pane id="Scratches" />
       <pane id="Scope" />
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="tust-oj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tustoj-master" />
+=======
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="tust-oj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
@@ -379,16 +804,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tust-oj" />
+=======
+              <option name="myItemId" value="tustoj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tustoj-master" />
+              <option name="myItemId" value="tustoj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -400,17 +821,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
+              <option name="myItemId" value="tustcs" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="tust-oj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tustoj-master" />
+=======
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+=======
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="tust-oj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj-master" />
+=======
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -421,6 +889,7 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -429,6 +898,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tustoj-master" />
+=======
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -446,11 +933,19 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="tust-oj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tustoj-master" />
+=======
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -472,11 +967,70 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="tust-oj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tustoj-master" />
+=======
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="schema" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -496,13 +1050,146 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+<<<<<<< HEAD
+          </PATH>
         </subPane>
       </pane>
+=======
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -514,6 +1201,36 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao" />
       <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix" />
       <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service" />
+=======
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.tustcs.matrix.oj.dao" />
+      <recent name="com.tustoj.dao" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/schema" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tustcs.matrix.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </key>
   </component>
   <component name="RunDashboard">
@@ -528,6 +1245,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="JUnit.UserMapperTest.selectUserList">
     <configuration default="false" name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.78" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
@@ -635,57 +1353,20 @@
       <option name="PACKAGE_NAME" value="com.tustcs.matrix.dao" />
       <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.dao.ProblemMapperTest" />
       <option name="METHOD_NAME" value="selectProblemList" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ProblemMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.tustcs.matrix.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="tust-oj" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.tustcs.matrix.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.dao.ProblemMapperTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+=======
+  <component name="RunManager" selected="Tomcat Server.index.jsp">
     <configuration default="false" name="UserMapperTest.selectUserList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.tustcs.matrix.dao.*" />
+          <option name="PATTERN" value="com.tustcs.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="tust-oj" />
+      <module name="tustoj" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.tustcs.matrix.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.dao.UserMapperTest" />
+      <option name="PACKAGE_NAME" value="com.tustcs.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.tustcs.dao.UserMapperTest" />
       <option name="METHOD_NAME" value="selectUserList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -700,11 +1381,137 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="false" name="UserMapperTest.selectByLevel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tustcs.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tustoj" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tustcs.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.tustcs.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="selectByLevel" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+<<<<<<< HEAD
+    <configuration default="false" name="ProblemMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tustcs.matrix.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tust-oj" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tustcs.matrix.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.dao.ProblemMapperTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+=======
+    <configuration default="false" name="ProblemMapperTest.selectProblemList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tustcs.matrix.oj.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tustoj" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tustcs.matrix.oj.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.oj.dao.ProblemMapperTest" />
+      <option name="METHOD_NAME" value="selectProblemList" />
+      <option name="TEST_OBJECT" value="method" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+<<<<<<< HEAD
+    <configuration default="false" name="UserMapperTest.selectUserList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tustcs.matrix.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tust-oj" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tustcs.matrix.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="selectUserList" />
+=======
+    <configuration default="false" name="ProblemMapperTest.selectByTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tustcs.matrix.oj.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tustoj" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tustcs.matrix.oj.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.oj.dao.ProblemMapperTest" />
+      <option name="METHOD_NAME" value="selectByTitle" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+<<<<<<< HEAD
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="_tust-oj" />
+=======
+    <configuration default="false" name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.78" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
+      <deployment>
+        <artifact name="tustoj:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="index_jsp_tustoj" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -713,6 +1520,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
+<<<<<<< HEAD
         <option name="DEBUG_PORT" value="32819" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
@@ -730,6 +1538,10 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+=======
+        <option name="DEBUG_PORT" value="35491" />
+      </RunnerSettings>
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -760,6 +1572,24 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+<<<<<<< HEAD
+=======
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="tustoj:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1069,7 +1899,11 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
+<<<<<<< HEAD
       <module name="tust-oj" />
+=======
+      <module name="tustoj" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <envs />
       <method />
     </configuration>
@@ -1196,6 +2030,7 @@
       </MavenSettings>
       <method />
     </configuration>
+<<<<<<< HEAD
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Maven.generator" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.index.jsp" />
@@ -1211,6 +2046,86 @@
         <item index="2" class="java.lang.String" itemvalue="JUnit.ProblemMapperTest.selectProblemList" />
         <item index="3" class="java.lang.String" itemvalue="Application.Test (1)" />
         <item index="4" class="java.lang.String" itemvalue="Tomcat Server.index.jsp" />
+=======
+    <configuration default="false" name="tustoj" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.78" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_tustoj" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="38343" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method />
+    </configuration>
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Maven.generator" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.tustoj" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserMapperTest.selectUserList" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserMapperTest.selectByLevel" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ProblemMapperTest.selectProblemList" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ProblemMapperTest.selectByTitle" />
+      <item index="6" class="java.lang.String" itemvalue="Tomcat Server.index.jsp" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Tomcat Server.index.jsp" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ProblemMapperTest.selectByTitle" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ProblemMapperTest.selectProblemList" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserMapperTest.selectByLevel" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserMapperTest.selectUserList" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       </list>
     </recent_temporary>
   </component>
@@ -1219,6 +2134,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="59e8e26e-2543-4b0f-9c7e-04cd7e4e04b7" name="Default" comment="" />
       <created>1497085956803</created>
       <option name="number" value="Default" />
@@ -1233,10 +2149,40 @@
       <workItem from="1497244001799" duration="14909000" />
       <workItem from="1497270120735" duration="10047000" />
       <workItem from="1497589694582" duration="5505000" />
+=======
+      <changelist id="9ed7f032-241b-4fa7-b409-386d3ef51f5f" name="Default" comment="" />
+      <created>1495793609548</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1495793609548</updated>
+      <workItem from="1495793613568" duration="4321000" />
+      <workItem from="1496206550700" duration="45000" />
+      <workItem from="1496206628113" duration="1601000" />
+      <workItem from="1496234937787" duration="1362000" />
+      <workItem from="1496236324841" duration="4574000" />
+      <workItem from="1496242115887" duration="693000" />
+      <workItem from="1496242814991" duration="1375000" />
+      <workItem from="1496311661813" duration="1727000" />
+      <workItem from="1496327683589" duration="42000" />
+      <workItem from="1496473720671" duration="4351000" />
+      <workItem from="1496499673814" duration="3275000" />
+      <workItem from="1496555658976" duration="897000" />
+      <workItem from="1496626624228" duration="3771000" />
+      <workItem from="1496668295763" duration="5913000" />
+      <workItem from="1496743759588" duration="1197000" />
+      <workItem from="1496716175247" duration="112000" />
+      <workItem from="1496716319878" duration="14545000" />
+      <workItem from="1496842565447" duration="3450000" />
+      <workItem from="1496888695998" duration="599000" />
+      <workItem from="1496931476100" duration="518000" />
+      <workItem from="1496975753903" duration="28000" />
+      <workItem from="1496981321738" duration="9720000" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </task>
     <servers />
   </component>
   <component name="TestHistory">
+<<<<<<< HEAD
     <history-entry file="ProblemMapperTest - 2017.06.16 at 15h 21m 51s.xml">
       <configuration name="ProblemMapperTest" configurationId="JUnit" />
     </history-entry>
@@ -1259,18 +2205,56 @@
       <configuration name="ProblemMapperTest.selectProblemList" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserMapperTest_selectUserList - 2017.06.16 at 15h 45m 05s.xml">
+=======
+    <history-entry file="ProblemMapperTest_selectByTitle - 2017.06.05 at 09h 59m 16s.xml">
+      <configuration name="ProblemMapperTest.selectByTitle" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProblemMapperTest_selectProblemList - 2017.06.05 at 09h 58m 19s.xml">
+      <configuration name="ProblemMapperTest.selectProblemList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_insert - 2017.05.31 at 23h 06m 30s.xml">
+      <configuration name="UserMapperTest.insert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_insert - 2017.05.31 at 23h 10m 03s.xml">
+      <configuration name="UserMapperTest.insert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_insert - 2017.05.31 at 23h 10m 59s.xml">
+      <configuration name="UserMapperTest.insert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_insert - 2017.05.31 at 23h 19m 11s.xml">
+      <configuration name="UserMapperTest.insert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_insert - 2017.05.31 at 23h 21m 35s.xml">
+      <configuration name="UserMapperTest.insert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_selectByLevel - 2017.06.01 at 18h 21m 47s.xml">
+      <configuration name="UserMapperTest.selectByLevel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_selectUserList - 2017.06.01 at 18h 19m 45s.xml">
+      <configuration name="UserMapperTest.selectUserList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_selectUserList - 2017.06.01 at 18h 21m 35s.xml">
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <configuration name="UserMapperTest.selectUserList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="49669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
+=======
+    <option name="totallyTimeSpent" value="64116000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10223642" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1283,10 +2267,25 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39978093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3989305" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32834226" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33734939" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1294,6 +2293,14 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2715655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45775402" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25104168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1301,6 +2308,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31517094" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1310,7 +2321,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
+<<<<<<< HEAD
     <breakpoint-manager />
+=======
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1318,6 +2335,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/gen/tustcs/mapping/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -1368,10 +2386,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="145" column="11" lean-forward="false" selection-start-line="145" selection-start-column="11" selection-end-line="145" selection-end-column="11" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Contest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-445">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/CompileInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/tustcs/matrix/dao/UserMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/gen/tustcs/mapping/CourseMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -1544,10 +2604,161 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/TopicMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/tustcs/matrix/dao/ProblemMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ProblemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6028">
+          <caret line="274" column="33" lean-forward="false" selection-start-line="274" selection-start-column="33" selection-end-line="274" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4642">
+          <caret line="211" column="25" lean-forward="false" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/MD5Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/Res.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserCourseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserCourseMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/CourseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/CourseMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="101" column="20" lean-forward="false" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserHomeworkMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/HomeworkMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/HomeworkMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="122" column="24" lean-forward="false" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserContestMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserContestMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="803">
+          <caret line="77" column="11" lean-forward="false" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserHomeworkMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/mapping/SimMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1560,18 +2771,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1081">
           <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+=======
+    <entry file="file://$PROJECT_DIR$/config/Config.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="35" column="30" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/CompileInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1612,30 +2845,73 @@
             <marker date="1497598642537" expanded="true" signature="1241:1402" ph="insert into user_homework... " />
             <marker date="1497598642537" expanded="true" signature="2219:2494" ph="update user_... " />
             <marker date="1497598642537" expanded="true" signature="2601:2755" ph="update user_... " />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/EncodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ContestProblemMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1497598642473" expanded="true" signature="669:870" ph="insert into contest_problem... " />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/NewsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/LoginlogMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1497598642697" expanded="true" signature="643:829" ph="insert into loginlog... " />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ProblemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="46" column="20" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/RuntimeInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1646,10 +2922,19 @@
             <marker date="1497598642477" expanded="true" signature="1210:1329" ph="insert into runtimeinfo... " />
             <marker date="1497598642477" expanded="true" signature="2014:2201" ph="update runti... " />
             <marker date="1497598642477" expanded="true" signature="2316:2435" ph="update runti... " />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/SolutionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/SourceCodeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1660,10 +2945,26 @@
             <marker date="1497598642737" expanded="true" signature="1209:1330" ph="insert into source_code... " />
             <marker date="1497598642737" expanded="true" signature="2017:2207" ph="update sourc... " />
             <marker date="1497598642737" expanded="true" signature="2321:2442" ph="update sourc... " />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/mapping/ContestMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3261">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1496843375000" expanded="true" signature="1344:1509" ph="select , fro... " />
+            <marker date="1496843375000" expanded="true" signature="1596:1668" ph="delete from " />
+            <marker date="1496843375000" expanded="true" signature="1758:2195" ph="insert into contest... " />
+            <marker date="1496843375000" expanded="true" signature="3932:4795" ph="update conte... " />
+            <marker date="1496843375000" expanded="true" signature="4906:5350" ph="update conte... " />
+            <marker date="1496843375000" expanded="true" signature="5452:5839" ph="update conte... " />
+            <marker date="1496843375000" expanded="true" signature="5961:6010" ph="select *from... contest" />
+            <marker date="1496843375000" expanded="true" signature="6128:6182" ph="select *from... contest" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/test/com/tustcs/matrix/dao/ProblemMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1678,18 +2979,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/SolutionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/test/com/tustcs/matrix/dao/UserMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema/newoj.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="84" column="218" lean-forward="true" selection-start-line="84" selection-start-column="218" selection-end-line="84" selection-end-column="218" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ContestMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1725,10 +3048,35 @@
             <marker date="1497598977840" expanded="true" signature="4179:4259" ph="select count... course" />
             <marker date="1497598977840" expanded="true" signature="4386:4484" ph="select *from... course" />
             <marker date="1497598977840" expanded="true" signature="4572:4648" ph="select count... course" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/SolutionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="245" column="16" lean-forward="true" selection-start-line="245" selection-start-column="16" selection-end-line="245" selection-end-column="16" />
+          <folding>
+            <marker date="1496842951556" expanded="true" signature="1788:1909" ph="select from solution" />
+            <marker date="1496842951556" expanded="true" signature="1996:2071" ph="delete from " />
+            <marker date="1496842951556" expanded="true" signature="2162:2909" ph="insert into solution... " />
+            <marker date="1496842951556" expanded="true" signature="5788:7369" ph="update solut... " />
+            <marker date="1496842951556" expanded="true" signature="7472:8254" ph="update solut... " />
+            <marker date="1496842951556" expanded="true" signature="8381:8465" ph="select * fro... solution" />
+            <marker date="1496842951556" expanded="true" signature="8601:8654" ph="select COUNT... solution" />
+            <marker date="1496842951556" expanded="true" signature="8789:8897" ph="select *FROM... solution" />
+            <marker date="1496842951556" expanded="true" signature="9041:9115" ph="select count... solution" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/HomeworkMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1795,10 +3143,54 @@
             <marker date="1497598977848" expanded="true" signature="5602:6012" ph="update reply... " />
             <marker date="1497598977848" expanded="true" signature="6081:6137" ph="select *FROM... reply" />
             <marker date="1497598977848" expanded="true" signature="6209:6239" ph="SELECT count... reply" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ContestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="72" lean-forward="true" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ContestMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-543">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ContestMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="179" column="11" lean-forward="true" selection-start-line="179" selection-start-column="11" selection-end-line="179" selection-end-column="11" />
+          <folding>
+            <marker date="1496990989759" expanded="true" signature="1344:1509" ph="select , fro... " />
+            <marker date="1496990989759" expanded="true" signature="1596:1668" ph="delete from " />
+            <marker date="1496990989759" expanded="true" signature="1758:2195" ph="insert into contest... " />
+            <marker date="1496990989759" expanded="true" signature="3932:4795" ph="update conte... " />
+            <marker date="1496990989759" expanded="true" signature="4906:5350" ph="update conte... " />
+            <marker date="1496990989759" expanded="true" signature="5452:5839" ph="update conte... " />
+            <marker date="1496990989759" expanded="true" signature="5961:5981" ph="select *from... contest" />
+            <marker date="1496990989759" expanded="true" signature="5961:6015" ph="select *from... contest" />
+            <marker date="1496990989759" expanded="true" signature="6089:6121" ph="select COUNT... contest" />
+            <marker date="1496990989759" expanded="true" signature="6241:6295" ph="select *from... contest" />
+            <marker date="1496990989759" expanded="true" signature="6241:6329" ph="select *from... contest" />
+            <marker date="1496990989759" expanded="true" signature="6413:6479" ph="select COUNT... contest" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/SolutionMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1823,10 +3215,30 @@
           <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="57" />
           <folding>
             <marker date="1497599259276" expanded="true" signature="723:963" ph="insert into token... " />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/SolutionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ContestServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1459">
+          <caret line="71" column="29" lean-forward="true" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#847#862#0" expanded="true" />
+            <element signature="e#1579#1594#0" expanded="true" />
+            <marker date="1496993542220" expanded="true" signature="2304:2368" ph="..." />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserContestMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1852,10 +3264,19 @@
             <marker date="1497598977864" expanded="true" signature="6015:6079" ph="SELECT count... topic" />
             <marker date="1497598977864" expanded="true" signature="6147:6238" ph="select *from... topic" />
             <marker date="1497598977864" expanded="true" signature="6321:6391" ph="SELECT count... topic" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <folding>
+            <element signature="e#1293#1309#0" expanded="true" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -1869,9 +3290,100 @@
             <marker date="1497598642821" expanded="true" signature="7400:7451" ph="SELECT *FROM... users" />
             <marker date="1497598642821" expanded="true" signature="7566:7609" ph="select *from... users" />
             <marker date="1497598642821" expanded="true" signature="7721:7776" ph="select *from... users" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ContestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1058#1073#0" expanded="true" />
+            <element signature="e#1437#1452#0" expanded="true" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
           </folding>
         </state>
       </provider>
     </entry>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>tustoj:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>tustoj</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 </project>

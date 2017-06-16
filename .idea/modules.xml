@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/tust-oj.iml" filepath="$PROJECT_DIR$/tust-oj.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/tustoj.iml" filepath="$PROJECT_DIR$/tustoj.iml" />
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </modules>
   </component>
 </project>

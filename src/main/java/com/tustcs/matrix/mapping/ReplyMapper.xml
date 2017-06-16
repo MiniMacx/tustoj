@@ -10,20 +10,12 @@
     <result column="ip" property="ip" jdbcType="VARCHAR" />
     <result column="vote_up" property="voteUp" jdbcType="INTEGER" />
     <result column="vote_down" property="voteDown" jdbcType="INTEGER" />
-<<<<<<< HEAD
-    <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.Reply" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-<<<<<<< HEAD
-    rid, author_id, time, topic_id, status, ip, vote_up, vote_down, delete_flag
-=======
     rid, author_id, time, topic_id, status, ip, vote_up, vote_down
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </sql>
   <sql id="Blob_Column_List" >
     content
@@ -43,21 +35,12 @@
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Reply" >
     insert into reply (rid, author_id, time, 
       topic_id, status, ip, 
-<<<<<<< HEAD
-      vote_up, vote_down, delete_flag, 
-      content)
-    values (#{rid,jdbcType=INTEGER}, #{authorId,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, 
-      #{topicId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, 
-      #{voteUp,jdbcType=INTEGER}, #{voteDown,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER}, 
-      #{content,jdbcType=LONGVARCHAR})
-=======
       vote_up, vote_down, content
       )
     values (#{rid,jdbcType=INTEGER}, #{authorId,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, 
       #{topicId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, 
       #{voteUp,jdbcType=INTEGER}, #{voteDown,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR}
       )
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Reply" >
     insert into reply
@@ -86,12 +69,6 @@
       <if test="voteDown != null" >
         vote_down,
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag,
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <if test="content != null" >
         content,
       </if>
@@ -121,12 +98,6 @@
       <if test="voteDown != null" >
         #{voteDown,jdbcType=INTEGER},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <if test="content != null" >
         #{content,jdbcType=LONGVARCHAR},
       </if>
@@ -156,12 +127,6 @@
       <if test="voteDown != null" >
         vote_down = #{voteDown,jdbcType=INTEGER},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <if test="content != null" >
         content = #{content,jdbcType=LONGVARCHAR},
       </if>
@@ -177,10 +142,6 @@
       ip = #{ip,jdbcType=VARCHAR},
       vote_up = #{voteUp,jdbcType=INTEGER},
       vote_down = #{voteDown,jdbcType=INTEGER},
-<<<<<<< HEAD
-      delete_flag = #{deleteFlag,jdbcType=INTEGER},
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       content = #{content,jdbcType=LONGVARCHAR}
     where rid = #{rid,jdbcType=INTEGER}
   </update>
@@ -192,25 +153,7 @@
       status = #{status,jdbcType=INTEGER},
       ip = #{ip,jdbcType=VARCHAR},
       vote_up = #{voteUp,jdbcType=INTEGER},
-<<<<<<< HEAD
-      vote_down = #{voteDown,jdbcType=INTEGER},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER}
-    where rid = #{rid,jdbcType=INTEGER}
-  </update>
-
-  <select id="selectReplyList" resultType="Reply">
-    select *FROM
-    reply
-    limit #{startPos},#{pageSize}
-  </select>
-
-  <select id="selectReplyCount" resultType="Integer">
-    SELECT count(*)
-    from reply
-  </select>
-=======
       vote_down = #{voteDown,jdbcType=INTEGER}
     where rid = #{rid,jdbcType=INTEGER}
   </update>
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 </mapper>

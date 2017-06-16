@@ -16,18 +16,10 @@
     <result column="nick" property="nick" jdbcType="VARCHAR" />
     <result column="school" property="school" jdbcType="VARCHAR" />
     <result column="level" property="level" jdbcType="INTEGER" />
-<<<<<<< HEAD
-    <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    user_id, email, submit, solved, defunct, ip, accesstime, volume, language, password, 
-    reg_time, nick, school, level, delete_flag
-=======
   </resultMap>
   <sql id="Base_Column_List" >
     user_id, email, submit, solved, defunct, ip, accesstime, volume, language, password, 
     reg_time, nick, school, level
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
@@ -44,20 +36,12 @@
       solved, defunct, ip, accesstime, 
       volume, language, password, 
       reg_time, nick, school, 
-<<<<<<< HEAD
-      level, delete_flag)
-=======
       level)
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     values (#{userId,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{submit,jdbcType=INTEGER}, 
       #{solved,jdbcType=INTEGER}, #{defunct,jdbcType=CHAR}, #{ip,jdbcType=VARCHAR}, #{accesstime,jdbcType=TIMESTAMP}, 
       #{volume,jdbcType=INTEGER}, #{language,jdbcType=INTEGER}, #{password,jdbcType=VARCHAR}, 
       #{regTime,jdbcType=TIMESTAMP}, #{nick,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR}, 
-<<<<<<< HEAD
-      #{level,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER})
-=======
       #{level,jdbcType=INTEGER})
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.User" >
     insert into users
@@ -104,12 +88,6 @@
       <if test="level != null" >
         level,
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag,
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="userId != null" >
@@ -154,12 +132,6 @@
       <if test="level != null" >
         #{level,jdbcType=INTEGER},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.User" >
@@ -204,12 +176,6 @@
       <if test="level != null" >
         level = #{level,jdbcType=INTEGER},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </set>
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
@@ -227,19 +193,11 @@
       reg_time = #{regTime,jdbcType=TIMESTAMP},
       nick = #{nick,jdbcType=VARCHAR},
       school = #{school,jdbcType=VARCHAR},
-<<<<<<< HEAD
-      level = #{level,jdbcType=INTEGER},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER}
-    where user_id = #{userId,jdbcType=VARCHAR}
-  </update>
-
-=======
       level = #{level,jdbcType=INTEGER}
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
 
 
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   <select id="selectUserList" parameterType="com.tustcs.matrix.entity.User" resultType="User">
     SELECT *FROM
     users
@@ -255,8 +213,5 @@
     select *from users
     where user_id like '%${userId}%'
   </select>
-<<<<<<< HEAD
-=======
 
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 </mapper>

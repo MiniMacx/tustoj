@@ -15,8 +15,11 @@ public class Topic {
 
     private String time;
 
+<<<<<<< HEAD
     private Integer deleteFlag;
 
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     private byte[] title;
 
     public Integer getTid() {
@@ -75,6 +78,7 @@ public class Topic {
         this.time = time == null ? null : time.trim();
     }
 
+<<<<<<< HEAD
     public Integer getDeleteFlag() {
         return deleteFlag;
     }
@@ -83,6 +87,8 @@ public class Topic {
         this.deleteFlag = deleteFlag;
     }
 
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public byte[] getTitle() {
         return title;
     }

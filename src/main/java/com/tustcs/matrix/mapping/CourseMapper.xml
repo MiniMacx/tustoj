@@ -6,16 +6,9 @@
     <result column="course_name" property="courseName" jdbcType="VARCHAR" />
     <result column="course_teacher" property="courseTeacher" jdbcType="VARCHAR" />
     <result column="course_time" property="courseTime" jdbcType="VARCHAR" />
-<<<<<<< HEAD
-    <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    course_id, course_name, course_teacher, course_time, delete_flag
-=======
   </resultMap>
   <sql id="Base_Column_List" >
     course_id, course_name, course_teacher, course_time
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -29,15 +22,9 @@
   </delete>
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Course" >
     insert into course (course_id, course_name, course_teacher, 
-<<<<<<< HEAD
-      course_time, delete_flag)
-    values (#{courseId,jdbcType=INTEGER}, #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR}, 
-      #{courseTime,jdbcType=VARCHAR}, #{deleteFlag,jdbcType=INTEGER})
-=======
       course_time)
     values (#{courseId,jdbcType=INTEGER}, #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR}, 
       #{courseTime,jdbcType=VARCHAR})
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Course" >
     insert into course
@@ -54,12 +41,6 @@
       <if test="courseTime != null" >
         course_time,
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag,
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="courseId != null" >
@@ -74,12 +55,6 @@
       <if test="courseTime != null" >
         #{courseTime,jdbcType=VARCHAR},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Course" >
@@ -94,12 +69,6 @@
       <if test="courseTime != null" >
         course_time = #{courseTime,jdbcType=VARCHAR},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </set>
     where course_id = #{courseId,jdbcType=INTEGER}
   </update>
@@ -107,22 +76,6 @@
     update course
     set course_name = #{courseName,jdbcType=VARCHAR},
       course_teacher = #{courseTeacher,jdbcType=VARCHAR},
-<<<<<<< HEAD
-      course_time = #{courseTime,jdbcType=VARCHAR},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER}
-    where course_id = #{courseId,jdbcType=INTEGER}
-  </update>
-
-
-  <select id="selectCourseList" parameterType="com.tustcs.matrix.entity.Course" resultType="Course">
-    select *from course
-    limit #{startPos},#{pageSize}
-  </select>
-
-  <select id="selectCourseCount" resultType="Integer">
-    select COUNT(*)
-    from course
-=======
       course_time = #{courseTime,jdbcType=VARCHAR}
     where course_id = #{courseId,jdbcType=INTEGER}
   </update>
@@ -130,40 +83,18 @@
   <select id="selectCourseList" parameterType="com.tustcs.matrix.entity.Course" resultType="Course">
     select *from course
     limit #{offset},#{limit}
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </select>
 
   <select id="selectCourseByTeacherName" parameterType="com.tustcs.matrix.entity.Course" resultType="Course">
     select *from course
     where course_teacher like '%${teacherName}%'
-<<<<<<< HEAD
-    limit #{startPos},#{pageSize}
-  </select>
-
-  <select id="selectCourseCountUsingTeacherName" resultType="Integer">
-    select count(*)
-    from course
-    where course_teacher like '%${teacherName}%'
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </select>
 
   <select id="selectCourseByCourseName" parameterType="com.tustcs.matrix.entity.Course" resultType="Course">
     select *from course
     where course_name like '%${courseName}%'
-<<<<<<< HEAD
-    limit #{startPos},#{pageSize}
   </select>
 
-  <select id="selectCourseCountUsingCourseName" resultType="Integer">
-    select count(*)
-    from course
-    where course_name like '%${courseName}%'
-  </select>
-=======
-  </select>
-
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
   <!--添加Course的列表查询-->
   <select id="listCourse" resultMap="BaseResultMap">

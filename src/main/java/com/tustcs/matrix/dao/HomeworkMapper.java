@@ -21,7 +21,11 @@ public interface HomeworkMapper {
 
     int updateByPrimaryKey(Homework record);
 
+<<<<<<< HEAD
     List<Homework> selectHomeworkList(@Param("offset") int offset, @Param("limit") int limitl);
+=======
+    List<Homework> selectHomeworkList(@Param("offset") int offset,@Param("limit") int limitl);
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
     List<Homework> selectCreatorId(@Param("creatorId") String creatorId);
 

@@ -26,7 +26,11 @@ public interface UserMapper {
      * @param limit
      * @return
      */
+<<<<<<< HEAD
     List<User> selectUserList(@Param("offset") int offset, @Param("limit") int limit);
+=======
+    List<User> selectUserList(@Param("offset") int offset ,@Param("limit") int limit );
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
     /**
      * [管理员使用]

@@ -26,7 +26,11 @@ public interface SolutionMapper {
      * @param userId
      * @return
      */
+<<<<<<< HEAD
     List<Solution> selectSolutionByPage(@Param("startPos") Integer startPos, @Param("pageSize") Integer pageSize,
+=======
+    List<Solution> selectSolutionByPage(@Param("startPos") Integer startPos,@Param("pageSize") Integer pageSize,
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
                                         @Param("userId") String userId);
 
     /**
@@ -34,7 +38,11 @@ public interface SolutionMapper {
      * @param userId
      * @return
      */
+<<<<<<< HEAD
     int selectSolutionCountUsingUserId(@Param("userId") String userId);
+=======
+    int selectSolutionCountUsingUserId(@Param("userId")String userId);
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
     /**
      * 分页
@@ -45,8 +53,13 @@ public interface SolutionMapper {
      * @param result
      * @return
      */
+<<<<<<< HEAD
     List<Solution> selectAcceptedSolutionByPage(@Param("startPos") Integer startPos, @Param("pageSize") Integer pageSize,
                                                 @Param("userId") String userId, @Param("result") Short result);
+=======
+    List<Solution> selectAcceptedSolutionByPage(@Param("startPos") Integer startPos,@Param("pageSize") Integer pageSize,
+                                             @Param("userId") String userId,@Param("result") Short result);
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
     /**
      * 获取某个用户通过的（accepted）提交记录的数量
@@ -54,7 +67,11 @@ public interface SolutionMapper {
      * @param result
      * @return
      */
+<<<<<<< HEAD
     Integer selectAcceptedSolutionCountUsingUserId(@Param("userId") String userId, @Param("result") Short result);
+=======
+    Integer selectAcceptedSolutionCountUsingUserId(@Param("userId") String userId,@Param("result") Short result);
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
 
 }

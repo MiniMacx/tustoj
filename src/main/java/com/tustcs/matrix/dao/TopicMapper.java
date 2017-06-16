@@ -20,6 +20,7 @@ public interface TopicMapper {
 
     int updateByPrimaryKey(Topic record);
 
+<<<<<<< HEAD
     /**
      * 返回讨论标题
      * @param startPos
@@ -71,4 +72,12 @@ public interface TopicMapper {
      * @return
      */
     Integer selectTopicCountUsingUserId(@Param("userId")String userId);
+=======
+    List<Topic> selectTopicList(@Param("offset") int offset,@Param("limit") int limit);
+
+    List<Topic> selectByTitle(@Param("title") String title);
+
+
+
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 }

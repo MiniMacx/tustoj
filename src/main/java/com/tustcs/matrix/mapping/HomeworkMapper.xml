@@ -7,21 +7,12 @@
     <result column="homework_create_time" property="homeworkCreateTime" jdbcType="VARCHAR" />
     <result column="homework_end_time" property="homeworkEndTime" jdbcType="VARCHAR" />
     <result column="homework_score" property="homeworkScore" jdbcType="DECIMAL" />
-<<<<<<< HEAD
-    <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.Homework" extends="BaseResultMap" >
     <result column="homework_problem" property="homeworkProblem" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-<<<<<<< HEAD
-    homework_id, homework_creator_id, homework_create_time, homework_end_time, homework_score, 
-    delete_flag
-=======
     homework_id, homework_creator_id, homework_create_time, homework_end_time, homework_score
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </sql>
   <sql id="Blob_Column_List" >
     homework_problem
@@ -40,19 +31,11 @@
   </delete>
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Homework" >
     insert into homework (homework_id, homework_creator_id, homework_create_time, 
-<<<<<<< HEAD
-      homework_end_time, homework_score, delete_flag, 
-      homework_problem)
-    values (#{homeworkId,jdbcType=BIGINT}, #{homeworkCreatorId,jdbcType=VARCHAR}, #{homeworkCreateTime,jdbcType=VARCHAR}, 
-      #{homeworkEndTime,jdbcType=VARCHAR}, #{homeworkScore,jdbcType=DECIMAL}, #{deleteFlag,jdbcType=INTEGER}, 
-      #{homeworkProblem,jdbcType=LONGVARCHAR})
-=======
       homework_end_time, homework_score, homework_problem
       )
     values (#{homeworkId,jdbcType=BIGINT}, #{homeworkCreatorId,jdbcType=VARCHAR}, #{homeworkCreateTime,jdbcType=VARCHAR}, 
       #{homeworkEndTime,jdbcType=VARCHAR}, #{homeworkScore,jdbcType=DECIMAL}, #{homeworkProblem,jdbcType=LONGVARCHAR}
       )
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Homework" >
     insert into homework
@@ -72,12 +55,6 @@
       <if test="homeworkScore != null" >
         homework_score,
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag,
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <if test="homeworkProblem != null" >
         homework_problem,
       </if>
@@ -98,12 +75,6 @@
       <if test="homeworkScore != null" >
         #{homeworkScore,jdbcType=DECIMAL},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <if test="homeworkProblem != null" >
         #{homeworkProblem,jdbcType=LONGVARCHAR},
       </if>
@@ -124,12 +95,6 @@
       <if test="homeworkScore != null" >
         homework_score = #{homeworkScore,jdbcType=DECIMAL},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       <if test="homeworkProblem != null" >
         homework_problem = #{homeworkProblem,jdbcType=LONGVARCHAR},
       </if>
@@ -142,10 +107,6 @@
       homework_create_time = #{homeworkCreateTime,jdbcType=VARCHAR},
       homework_end_time = #{homeworkEndTime,jdbcType=VARCHAR},
       homework_score = #{homeworkScore,jdbcType=DECIMAL},
-<<<<<<< HEAD
-      delete_flag = #{deleteFlag,jdbcType=INTEGER},
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       homework_problem = #{homeworkProblem,jdbcType=LONGVARCHAR}
     where homework_id = #{homeworkId,jdbcType=BIGINT}
   </update>
@@ -154,19 +115,11 @@
     set homework_creator_id = #{homeworkCreatorId,jdbcType=VARCHAR},
       homework_create_time = #{homeworkCreateTime,jdbcType=VARCHAR},
       homework_end_time = #{homeworkEndTime,jdbcType=VARCHAR},
-<<<<<<< HEAD
-      homework_score = #{homeworkScore,jdbcType=DECIMAL},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER}
-    where homework_id = #{homeworkId,jdbcType=BIGINT}
-  </update>
-
-=======
       homework_score = #{homeworkScore,jdbcType=DECIMAL}
     where homework_id = #{homeworkId,jdbcType=BIGINT}
   </update>
 
 
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   <!--添加homework的列表查询-->
   <select id="listHomework" resultMap="ResultMapWithBLOBs" parameterType="java.util.List">
     SELECT
@@ -179,8 +132,5 @@
       #{item.homeworkId}
     </foreach>
   </select>
-<<<<<<< HEAD
-=======
 
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 </mapper>

@@ -13,8 +13,11 @@ public class Homework {
 
     private BigDecimal homeworkScore;
 
+<<<<<<< HEAD
     private Integer deleteFlag;
 
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     private String homeworkProblem;
 
     public Long getHomeworkId() {
@@ -57,6 +60,7 @@ public class Homework {
         this.homeworkScore = homeworkScore;
     }
 
+<<<<<<< HEAD
     public Integer getDeleteFlag() {
         return deleteFlag;
     }
@@ -65,6 +69,8 @@ public class Homework {
         this.deleteFlag = deleteFlag;
     }
 
+=======
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public String getHomeworkProblem() {
         return homeworkProblem;
     }

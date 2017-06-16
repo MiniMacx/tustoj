@@ -19,18 +19,10 @@
     <result column="pass_rate" property="passRate" jdbcType="DECIMAL" />
     <result column="lint_error" property="lintError" jdbcType="INTEGER" />
     <result column="judger" property="judger" jdbcType="CHAR" />
-<<<<<<< HEAD
-    <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    solution_id, problem_id, user_id, time, memory, in_date, result, language, ip, contest_id, 
-    valid, num, code_length, judgetime, pass_rate, lint_error, judger, delete_flag
-=======
   </resultMap>
   <sql id="Base_Column_List" >
     solution_id, problem_id, user_id, time, memory, in_date, result, language, ip, contest_id, 
     valid, num, code_length, judgetime, pass_rate, lint_error, judger
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -48,23 +40,13 @@
       result, language, ip, 
       contest_id, valid, num, 
       code_length, judgetime, pass_rate, 
-<<<<<<< HEAD
-      lint_error, judger, delete_flag
-      )
-=======
       lint_error, judger)
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     values (#{solutionId,jdbcType=INTEGER}, #{problemId,jdbcType=INTEGER}, #{userId,jdbcType=CHAR}, 
       #{time,jdbcType=INTEGER}, #{memory,jdbcType=INTEGER}, #{inDate,jdbcType=TIMESTAMP}, 
       #{result,jdbcType=SMALLINT}, #{language,jdbcType=INTEGER}, #{ip,jdbcType=CHAR}, 
       #{contestId,jdbcType=INTEGER}, #{valid,jdbcType=TINYINT}, #{num,jdbcType=TINYINT}, 
       #{codeLength,jdbcType=INTEGER}, #{judgetime,jdbcType=TIMESTAMP}, #{passRate,jdbcType=DECIMAL}, 
-<<<<<<< HEAD
-      #{lintError,jdbcType=INTEGER}, #{judger,jdbcType=CHAR}, #{deleteFlag,jdbcType=INTEGER}
-      )
-=======
       #{lintError,jdbcType=INTEGER}, #{judger,jdbcType=CHAR})
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Solution" >
     insert into solution
@@ -120,12 +102,6 @@
       <if test="judger != null" >
         judger,
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag,
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="solutionId != null" >
@@ -179,12 +155,6 @@
       <if test="judger != null" >
         #{judger,jdbcType=CHAR},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Solution" >
@@ -238,12 +208,6 @@
       <if test="judger != null" >
         judger = #{judger,jdbcType=CHAR},
       </if>
-<<<<<<< HEAD
-      <if test="deleteFlag != null" >
-        delete_flag = #{deleteFlag,jdbcType=INTEGER},
-      </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </set>
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </update>
@@ -264,19 +228,10 @@
       judgetime = #{judgetime,jdbcType=TIMESTAMP},
       pass_rate = #{passRate,jdbcType=DECIMAL},
       lint_error = #{lintError,jdbcType=INTEGER},
-<<<<<<< HEAD
-      judger = #{judger,jdbcType=CHAR},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER}
-    where solution_id = #{solutionId,jdbcType=INTEGER}
-  </update>
-
-
-=======
       judger = #{judger,jdbcType=CHAR}
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </update>
 
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   <select id="selectSolutionByPage" parameterType="com.tustcs.matrix.entity.Solution" resultType="Solution">
     select *
     from solution
@@ -299,8 +254,5 @@
   </select>
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 </mapper>

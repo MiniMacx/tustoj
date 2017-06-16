@@ -28,6 +28,7 @@ public interface ProblemMapper {
      * @param pageSize
      * @return
      */
+<<<<<<< HEAD
     List<ProblemWithBLOBs> selectProblemList(@Param("startPos") int startPos, @Param("pageSize") int pageSize);
 
     /**
@@ -35,13 +36,28 @@ public interface ProblemMapper {
      * @return
      */
     Integer selectProblemCount();
+=======
+    List<ProblemWithBLOBs> selectProblemList(@Param("startPos") int startPos,@Param("pageSize") int pageSize);
+
+    /**
+     * 分页获取问题数量
+     * @param startPos
+     * @param pageSize
+     * @return
+     */
+    Integer selectProblemCount(@Param("startPos") int startPos,@Param("pageSize") int pageSize);
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
     /**
      * 根据标题搜索问题
      * @param title
      * @return
      */
+<<<<<<< HEAD
     List<ProblemWithBLOBs> selectByTitle(@Param("title") String title, @Param("startPos") Integer startPos,
+=======
+    List<ProblemWithBLOBs> selectByTitle(@Param("title") String title,@Param("startPos") Integer startPos,
+>>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
                                          @Param("pageSize") Integer pageSize);
 
     /**
