@@ -28,7 +28,10 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.1.7.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.1.0" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
+<<<<<<< HEAD
           <element id="library" level="project" name="Maven: org.json:json:20160810" />
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.5" />

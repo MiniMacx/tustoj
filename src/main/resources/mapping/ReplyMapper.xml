@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.ReplyMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Reply" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.ReplyMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Reply" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="rid" property="rid" jdbcType="INTEGER" />
     <result column="author_id" property="authorId" jdbcType="VARCHAR" />
     <result column="time" property="time" jdbcType="TIMESTAMP" />
@@ -10,6 +15,7 @@
     <result column="ip" property="ip" jdbcType="VARCHAR" />
     <result column="vote_up" property="voteUp" jdbcType="INTEGER" />
     <result column="vote_down" property="voteDown" jdbcType="INTEGER" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
 =======
@@ -24,6 +30,14 @@
 =======
     rid, author_id, time, topic_id, status, ip, vote_up, vote_down
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.Reply" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    rid, author_id, time, topic_id, status, ip, vote_up, vote_down
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
   </sql>
   <sql id="Blob_Column_List" >
     content
@@ -40,6 +54,7 @@
     delete from reply
     where rid = #{rid,jdbcType=INTEGER}
   </delete>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Reply" >
     insert into reply (rid, author_id, time, 
       topic_id, status, ip, 
@@ -51,15 +66,25 @@
       #{voteUp,jdbcType=INTEGER}, #{voteDown,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER}, 
       #{content,jdbcType=LONGVARCHAR})
 =======
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Reply" >
+    insert into reply (rid, author_id, time, 
+      topic_id, status, ip, 
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       vote_up, vote_down, content
       )
     values (#{rid,jdbcType=INTEGER}, #{authorId,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, 
       #{topicId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, 
       #{voteUp,jdbcType=INTEGER}, #{voteDown,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR}
       )
+<<<<<<< HEAD
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Reply" >
+=======
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Reply" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into reply
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="rid != null" >
@@ -87,11 +112,14 @@
         vote_down,
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="content != null" >
         content,
       </if>
@@ -122,17 +150,24 @@
         #{voteDown,jdbcType=INTEGER},
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="content != null" >
         #{content,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Reply" >
+=======
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.Reply" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update reply
     <set >
       <if test="authorId != null" >
@@ -157,18 +192,25 @@
         vote_down = #{voteDown,jdbcType=INTEGER},
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="content != null" >
         content = #{content,jdbcType=LONGVARCHAR},
       </if>
     </set>
     where rid = #{rid,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.Reply" >
+=======
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.Reply" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update reply
     set author_id = #{authorId,jdbcType=VARCHAR},
       time = #{time,jdbcType=TIMESTAMP},
@@ -178,6 +220,7 @@
       vote_up = #{voteUp,jdbcType=INTEGER},
       vote_down = #{voteDown,jdbcType=INTEGER},
 <<<<<<< HEAD
+<<<<<<< HEAD
       delete_flag = #{deleteFlag,jdbcType=INTEGER},
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
@@ -185,6 +228,12 @@
     where rid = #{rid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.Reply" >
+=======
+      content = #{content,jdbcType=LONGVARCHAR}
+    where rid = #{rid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Reply" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update reply
     set author_id = #{authorId,jdbcType=VARCHAR},
       time = #{time,jdbcType=TIMESTAMP},
@@ -192,6 +241,7 @@
       status = #{status,jdbcType=INTEGER},
       ip = #{ip,jdbcType=VARCHAR},
       vote_up = #{voteUp,jdbcType=INTEGER},
+<<<<<<< HEAD
 <<<<<<< HEAD
       vote_down = #{voteDown,jdbcType=INTEGER},
       delete_flag = #{deleteFlag,jdbcType=INTEGER}
@@ -213,4 +263,9 @@
     where rid = #{rid,jdbcType=INTEGER}
   </update>
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+      vote_down = #{voteDown,jdbcType=INTEGER}
+    where rid = #{rid,jdbcType=INTEGER}
+  </update>
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </mapper>

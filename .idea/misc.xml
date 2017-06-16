@@ -14,6 +14,7 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="masterDetails">
     <states>
       <state key="ProjectJDKs.UI">
@@ -32,4 +33,6 @@
   </component>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </project>

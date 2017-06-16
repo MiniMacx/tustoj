@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.ProblemMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Problem" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.ProblemMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Problem" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="problem_id" property="problemId" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="spj" property="spj" jdbcType="CHAR" />
@@ -14,11 +19,16 @@
     <result column="submit" property="submit" jdbcType="INTEGER" />
     <result column="solved" property="solved" jdbcType="INTEGER" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.ProblemWithBLOBs" extends="BaseResultMap" >
+=======
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.ProblemWithBLOBs" extends="BaseResultMap" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <result column="description" property="description" jdbcType="LONGVARCHAR" />
     <result column="input" property="input" jdbcType="LONGVARCHAR" />
     <result column="output" property="output" jdbcType="LONGVARCHAR" />
@@ -29,10 +39,14 @@
   <sql id="Base_Column_List" >
     problem_id, title, spj, source, in_date, time_limit, memory_limit, defunct, accepted, 
 <<<<<<< HEAD
+<<<<<<< HEAD
     submit, solved, delete_flag
 =======
     submit, solved
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+    submit, solved
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
   </sql>
   <sql id="Blob_Column_List" >
     description, input, output, sample_input, sample_output, hint
@@ -49,6 +63,7 @@
     delete from problem
     where problem_id = #{problemId,jdbcType=INTEGER}
   </delete>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.ProblemWithBLOBs" >
     insert into problem (problem_id, title, spj, 
       source, in_date, time_limit, 
@@ -66,6 +81,12 @@
       #{sampleInput,jdbcType=LONGVARCHAR}, #{sampleOutput,jdbcType=LONGVARCHAR}, #{hint,jdbcType=LONGVARCHAR}
       )
 =======
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.ProblemWithBLOBs" >
+    insert into problem (problem_id, title, spj, 
+      source, in_date, time_limit, 
+      memory_limit, defunct, accepted, 
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       submit, solved, description, 
       input, output, sample_input, 
       sample_output, hint)
@@ -75,9 +96,14 @@
       #{submit,jdbcType=INTEGER}, #{solved,jdbcType=INTEGER}, #{description,jdbcType=LONGVARCHAR}, 
       #{input,jdbcType=LONGVARCHAR}, #{output,jdbcType=LONGVARCHAR}, #{sampleInput,jdbcType=LONGVARCHAR}, 
       #{sampleOutput,jdbcType=LONGVARCHAR}, #{hint,jdbcType=LONGVARCHAR})
+<<<<<<< HEAD
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.ProblemWithBLOBs" >
+=======
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.ProblemWithBLOBs" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into problem
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="problemId != null" >
@@ -114,11 +140,14 @@
         solved,
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="description != null" >
         description,
       </if>
@@ -173,11 +202,14 @@
         #{solved,jdbcType=INTEGER},
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="description != null" >
         #{description,jdbcType=LONGVARCHAR},
       </if>
@@ -198,7 +230,11 @@
       </if>
     </trim>
   </insert>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.ProblemWithBLOBs" >
+=======
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.ProblemWithBLOBs" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update problem
     <set >
       <if test="title != null" >
@@ -232,11 +268,14 @@
         solved = #{solved,jdbcType=INTEGER},
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="description != null" >
         description = #{description,jdbcType=LONGVARCHAR},
       </if>
@@ -258,7 +297,11 @@
     </set>
     where problem_id = #{problemId,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.ProblemWithBLOBs" >
+=======
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.ProblemWithBLOBs" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update problem
     set title = #{title,jdbcType=VARCHAR},
       spj = #{spj,jdbcType=CHAR},
@@ -271,9 +314,12 @@
       submit = #{submit,jdbcType=INTEGER},
       solved = #{solved,jdbcType=INTEGER},
 <<<<<<< HEAD
+<<<<<<< HEAD
       delete_flag = #{deleteFlag,jdbcType=INTEGER},
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       description = #{description,jdbcType=LONGVARCHAR},
       input = #{input,jdbcType=LONGVARCHAR},
       output = #{output,jdbcType=LONGVARCHAR},
@@ -283,10 +329,14 @@
     where problem_id = #{problemId,jdbcType=INTEGER}
   </update>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.Problem" >
 =======
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.ProblemWithBLOBs" >
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Problem" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update problem
     set title = #{title,jdbcType=VARCHAR},
       spj = #{spj,jdbcType=CHAR},
@@ -297,6 +347,7 @@
       defunct = #{defunct,jdbcType=CHAR},
       accepted = #{accepted,jdbcType=INTEGER},
       submit = #{submit,jdbcType=INTEGER},
+<<<<<<< HEAD
       solved = #{solved,jdbcType=INTEGER},
 <<<<<<< HEAD
       delete_flag = #{deleteFlag,jdbcType=INTEGER}
@@ -345,4 +396,9 @@
 =======
 
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+      solved = #{solved,jdbcType=INTEGER}
+    where problem_id = #{problemId,jdbcType=INTEGER}
+  </update>
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </mapper>

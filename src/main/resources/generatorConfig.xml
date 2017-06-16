@@ -80,10 +80,13 @@
         <table tableName="source_code_user" domainObjectName="SourceCodeUser" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <table tableName="token" domainObjectName="Token" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
         <table tableName="topic" domainObjectName="Topic" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
         <table tableName="user_contest" domainObjectName="UserContest" enableCountByExample="false"

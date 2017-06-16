@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.CourseMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Course" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.CourseMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Course" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="course_id" property="courseId" jdbcType="INTEGER" />
     <result column="course_name" property="courseName" jdbcType="VARCHAR" />
     <result column="course_teacher" property="courseTeacher" jdbcType="VARCHAR" />
     <result column="course_time" property="courseTime" jdbcType="VARCHAR" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
   </resultMap>
@@ -16,6 +22,11 @@
   <sql id="Base_Column_List" >
     course_id, course_name, course_teacher, course_time
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+  </resultMap>
+  <sql id="Base_Column_List" >
+    course_id, course_name, course_teacher, course_time
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -27,6 +38,7 @@
     delete from course
     where course_id = #{courseId,jdbcType=INTEGER}
   </delete>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Course" >
     insert into course (course_id, course_name, course_teacher, 
 <<<<<<< HEAD
@@ -40,6 +52,15 @@
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Course" >
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Course" >
+    insert into course (course_id, course_name, course_teacher, 
+      course_time)
+    values (#{courseId,jdbcType=INTEGER}, #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR}, 
+      #{courseTime,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Course" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into course
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="courseId != null" >
@@ -55,11 +76,14 @@
         course_time,
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="courseId != null" >
@@ -75,6 +99,7 @@
         #{courseTime,jdbcType=VARCHAR},
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
       </if>
@@ -83,6 +108,11 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Course" >
+=======
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.Course" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update course
     <set >
       <if test="courseName != null" >
@@ -94,6 +124,7 @@
       <if test="courseTime != null" >
         course_time = #{courseTime,jdbcType=VARCHAR},
       </if>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
@@ -175,4 +206,16 @@
       #{item}
     </foreach>
   </select>
+=======
+    </set>
+    where course_id = #{courseId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Course" >
+    update course
+    set course_name = #{courseName,jdbcType=VARCHAR},
+      course_teacher = #{courseTeacher,jdbcType=VARCHAR},
+      course_time = #{courseTime,jdbcType=VARCHAR}
+    where course_id = #{courseId,jdbcType=INTEGER}
+  </update>
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </mapper>

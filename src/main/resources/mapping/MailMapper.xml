@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.MailMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Mail" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.MailMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Mail" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="mail_id" property="mailId" jdbcType="INTEGER" />
     <result column="to_user" property="toUser" jdbcType="VARCHAR" />
     <result column="from_user" property="fromUser" jdbcType="VARCHAR" />
@@ -11,7 +16,11 @@
     <result column="in_date" property="inDate" jdbcType="TIMESTAMP" />
     <result column="defunct" property="defunct" jdbcType="CHAR" />
   </resultMap>
+<<<<<<< HEAD
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.Mail" extends="BaseResultMap" >
+=======
+  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.Mail" extends="BaseResultMap" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -32,7 +41,11 @@
     delete from mail
     where mail_id = #{mailId,jdbcType=INTEGER}
   </delete>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Mail" >
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Mail" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into mail (mail_id, to_user, from_user, 
       title, new_mail, reply, 
       in_date, defunct, content
@@ -42,7 +55,11 @@
       #{inDate,jdbcType=TIMESTAMP}, #{defunct,jdbcType=CHAR}, #{content,jdbcType=LONGVARCHAR}
       )
   </insert>
+<<<<<<< HEAD
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Mail" >
+=======
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Mail" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into mail
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="mailId != null" >
@@ -103,7 +120,11 @@
       </if>
     </trim>
   </insert>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Mail" >
+=======
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.Mail" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update mail
     <set >
       <if test="toUser != null" >
@@ -133,7 +154,11 @@
     </set>
     where mail_id = #{mailId,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.Mail" >
+=======
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.Mail" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update mail
     set to_user = #{toUser,jdbcType=VARCHAR},
       from_user = #{fromUser,jdbcType=VARCHAR},
@@ -145,7 +170,11 @@
       content = #{content,jdbcType=LONGVARCHAR}
     where mail_id = #{mailId,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.Mail" >
+=======
+  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Mail" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update mail
     set to_user = #{toUser,jdbcType=VARCHAR},
       from_user = #{fromUser,jdbcType=VARCHAR},

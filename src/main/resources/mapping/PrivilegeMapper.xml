@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.PrivilegeMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Privilege" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.PrivilegeMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Privilege" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <result column="user_id" property="userId" jdbcType="CHAR" />
     <result column="rightstr" property="rightstr" jdbcType="CHAR" />
     <result column="defunct" property="defunct" jdbcType="CHAR" />
   </resultMap>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Privilege" >
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Privilege" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into privilege (user_id, rightstr, defunct
       )
     values (#{userId,jdbcType=CHAR}, #{rightstr,jdbcType=CHAR}, #{defunct,jdbcType=CHAR}
       )
   </insert>
+<<<<<<< HEAD
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Privilege" >
+=======
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Privilege" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into privilege
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="userId != null" >

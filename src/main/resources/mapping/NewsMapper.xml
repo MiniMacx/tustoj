@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.NewsMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.News" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.NewsMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.News" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="news_id" property="newsId" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="pic_url" property="picUrl" jdbcType="VARCHAR" />
@@ -12,7 +17,11 @@
     <result column="weight" property="weight" jdbcType="INTEGER" />
     <result column="add_time" property="addTime" jdbcType="VARCHAR" />
   </resultMap>
+<<<<<<< HEAD
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.News" extends="BaseResultMap" >
+=======
+  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.News" extends="BaseResultMap" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -33,7 +42,11 @@
     delete from news
     where news_id = #{newsId,jdbcType=INTEGER}
   </delete>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.News" >
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.News" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into news (news_id, title, pic_url, 
       user_id, is_top, is_report, 
       delete_flag, weight, add_time, 
@@ -43,7 +56,11 @@
       #{deleteFlag,jdbcType=INTEGER}, #{weight,jdbcType=INTEGER}, #{addTime,jdbcType=VARCHAR}, 
       #{content,jdbcType=LONGVARCHAR})
   </insert>
+<<<<<<< HEAD
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.News" >
+=======
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.News" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into news
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="newsId != null" >
@@ -110,7 +127,11 @@
       </if>
     </trim>
   </insert>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.News" >
+=======
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.News" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update news
     <set >
       <if test="title != null" >
@@ -143,7 +164,11 @@
     </set>
     where news_id = #{newsId,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.News" >
+=======
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.News" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update news
     set title = #{title,jdbcType=VARCHAR},
       pic_url = #{picUrl,jdbcType=VARCHAR},
@@ -156,7 +181,11 @@
       content = #{content,jdbcType=LONGVARCHAR}
     where news_id = #{newsId,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.News" >
+=======
+  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.News" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update news
     set title = #{title,jdbcType=VARCHAR},
       pic_url = #{picUrl,jdbcType=VARCHAR},
@@ -168,6 +197,7 @@
       add_time = #{addTime,jdbcType=VARCHAR}
     where news_id = #{newsId,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
 
   <select id="selectNewsList" parameterType="com.tustcs.matrix.entity.News" resultType="News">
     select *from news
@@ -196,4 +226,6 @@
   </select>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </mapper>

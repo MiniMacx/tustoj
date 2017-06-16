@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.UserCourseMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.UserCourse" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.UserCourseMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.UserCourse" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="VARCHAR" />
     <result column="teacher_id" property="teacherId" jdbcType="VARCHAR" />
@@ -20,13 +25,21 @@
     delete from user_course
     where id = #{id,jdbcType=INTEGER}
   </delete>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.UserCourse" >
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.UserCourse" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into user_course (id, user_id, teacher_id, 
       course_id)
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{teacherId,jdbcType=VARCHAR}, 
       #{courseId,jdbcType=INTEGER})
   </insert>
+<<<<<<< HEAD
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.UserCourse" >
+=======
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.UserCourse" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into user_course
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -57,7 +70,11 @@
       </if>
     </trim>
   </insert>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.UserCourse" >
+=======
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.UserCourse" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update user_course
     <set >
       <if test="userId != null" >
@@ -72,13 +89,18 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.UserCourse" >
+=======
+  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.UserCourse" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update user_course
     set user_id = #{userId,jdbcType=VARCHAR},
       teacher_id = #{teacherId,jdbcType=VARCHAR},
       course_id = #{courseId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
 
   <!--添加列表查询-->
   <select id="listUserCourse" parameterType="com.tustcs.matrix.entity.UserCourse" resultMap="BaseResultMap">
@@ -88,4 +110,6 @@
     WHERE user_id =#{userId,jdbcType=VARCHAR} OR teacher_id = #{teacherId,jdbcType=VARCHAR} OR
     course_id =  #{courseId,jdbcType=INTEGER}
   </select>
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </mapper>

@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.SourceCodeMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.SourceCode" >
     <id column="solution_id" property="solutionId" jdbcType="INTEGER" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.SourceCode" extends="BaseResultMap" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.SourceCodeMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.SourceCode" >
+    <id column="solution_id" property="solutionId" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.SourceCode" extends="BaseResultMap" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <result column="source" property="source" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -25,11 +33,19 @@
     delete from source_code
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </delete>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.SourceCode" >
     insert into source_code (solution_id, source)
     values (#{solutionId,jdbcType=INTEGER}, #{source,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.SourceCode" >
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.SourceCode" >
+    insert into source_code (solution_id, source)
+    values (#{solutionId,jdbcType=INTEGER}, #{source,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.SourceCode" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into source_code
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="solutionId != null" >
@@ -48,7 +64,11 @@
       </if>
     </trim>
   </insert>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.SourceCode" >
+=======
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.SourceCode" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update source_code
     <set >
       <if test="source != null" >
@@ -57,7 +77,11 @@
     </set>
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.SourceCode" >
+=======
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.SourceCode" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update source_code
     set source = #{source,jdbcType=LONGVARCHAR}
     where solution_id = #{solutionId,jdbcType=INTEGER}

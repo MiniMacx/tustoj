@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.CustomInputMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.CustomInput" >
     <id column="solution_id" property="solutionId" jdbcType="INTEGER" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.CustomInput" extends="BaseResultMap" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.CustomInputMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.CustomInput" >
+    <id column="solution_id" property="solutionId" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.CustomInput" extends="BaseResultMap" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <result column="input_text" property="inputText" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -25,11 +33,19 @@
     delete from custominput
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </delete>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.CustomInput" >
     insert into custominput (solution_id, input_text)
     values (#{solutionId,jdbcType=INTEGER}, #{inputText,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.CustomInput" >
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.CustomInput" >
+    insert into custominput (solution_id, input_text)
+    values (#{solutionId,jdbcType=INTEGER}, #{inputText,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.CustomInput" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into custominput
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="solutionId != null" >
@@ -48,7 +64,11 @@
       </if>
     </trim>
   </insert>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.CustomInput" >
+=======
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.CustomInput" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update custominput
     <set >
       <if test="inputText != null" >
@@ -57,7 +77,11 @@
     </set>
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.CustomInput" >
+=======
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.CustomInput" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update custominput
     set input_text = #{inputText,jdbcType=LONGVARCHAR}
     where solution_id = #{solutionId,jdbcType=INTEGER}

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.TopicMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Topic" >
+=======
+<mapper namespace="com.tustcs.matrix.oj.dao.TopicMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Topic" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="tid" property="tid" jdbcType="INTEGER" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="top_level" property="topLevel" jdbcType="INTEGER" />
@@ -9,6 +14,7 @@
     <result column="pid" property="pid" jdbcType="INTEGER" />
     <result column="author_id" property="authorId" jdbcType="VARCHAR" />
     <result column="time" property="time" jdbcType="VARCHAR" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
 =======
@@ -23,6 +29,14 @@
 =======
     tid, status, top_level, cid, pid, author_id, time
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.Topic" extends="BaseResultMap" >
+    <result column="title" property="title" jdbcType="VARBINARY" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    tid, status, top_level, cid, pid, author_id, time
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
   </sql>
   <sql id="Blob_Column_List" >
     title
@@ -39,6 +53,7 @@
     delete from topic
     where tid = #{tid,jdbcType=INTEGER}
   </delete>
+<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Topic" >
     insert into topic (tid, status, top_level, 
       cid, pid, author_id, 
@@ -50,13 +65,23 @@
       #{time,jdbcType=VARCHAR}, #{deleteFlag,jdbcType=INTEGER}, #{title,jdbcType=VARBINARY}
       )
 =======
+=======
+  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Topic" >
+    insert into topic (tid, status, top_level, 
+      cid, pid, author_id, 
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       time, title)
     values (#{tid,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{topLevel,jdbcType=INTEGER}, 
       #{cid,jdbcType=INTEGER}, #{pid,jdbcType=INTEGER}, #{authorId,jdbcType=VARCHAR}, 
       #{time,jdbcType=VARCHAR}, #{title,jdbcType=VARBINARY})
+<<<<<<< HEAD
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Topic" >
+=======
+  </insert>
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Topic" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into topic
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="tid != null" >
@@ -81,11 +106,14 @@
         time,
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="title != null" >
         title,
       </if>
@@ -113,17 +141,24 @@
         #{time,jdbcType=VARCHAR},
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="title != null" >
         #{title,jdbcType=VARBINARY},
       </if>
     </trim>
   </insert>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Topic" >
+=======
+  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.Topic" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update topic
     <set >
       <if test="status != null" >
@@ -145,18 +180,25 @@
         time = #{time,jdbcType=VARCHAR},
       </if>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+=======
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="title != null" >
         title = #{title,jdbcType=VARBINARY},
       </if>
     </set>
     where tid = #{tid,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.Topic" >
+=======
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.Topic" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update topic
     set status = #{status,jdbcType=INTEGER},
       top_level = #{topLevel,jdbcType=INTEGER},
@@ -165,6 +207,7 @@
       author_id = #{authorId,jdbcType=VARCHAR},
       time = #{time,jdbcType=VARCHAR},
 <<<<<<< HEAD
+<<<<<<< HEAD
       delete_flag = #{deleteFlag,jdbcType=INTEGER},
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
@@ -172,12 +215,19 @@
     where tid = #{tid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.Topic" >
+=======
+      title = #{title,jdbcType=VARBINARY}
+    where tid = #{tid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Topic" >
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update topic
     set status = #{status,jdbcType=INTEGER},
       top_level = #{topLevel,jdbcType=INTEGER},
       cid = #{cid,jdbcType=INTEGER},
       pid = #{pid,jdbcType=INTEGER},
       author_id = #{authorId,jdbcType=VARCHAR},
+<<<<<<< HEAD
 <<<<<<< HEAD
       time = #{time,jdbcType=VARCHAR},
       delete_flag = #{deleteFlag,jdbcType=INTEGER}
@@ -230,4 +280,9 @@
 =======
 >>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </select>
+=======
+      time = #{time,jdbcType=VARCHAR}
+    where tid = #{tid,jdbcType=INTEGER}
+  </update>
+>>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </mapper>
