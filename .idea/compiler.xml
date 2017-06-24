@@ -6,26 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-<<<<<<< HEAD
-<<<<<<< HEAD
         <module name="tust-oj" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="tust-oj" target="1.6" />
-=======
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
-        <module name="tustoj" />
-      </profile>
-    </annotationProcessing>
-    <bytecodeTargetLevel>
-<<<<<<< HEAD
-      <module name="tustoj" target="1.6" />
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
-      <module name="tustoj" target="1.5" />
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     </bytecodeTargetLevel>
   </component>
 </project>

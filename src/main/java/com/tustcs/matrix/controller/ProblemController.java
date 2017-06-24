@@ -4,6 +4,7 @@ import com.tustcs.matrix.dao.ProblemMapper;
 import com.tustcs.matrix.entity.ProblemTopic;
 import com.tustcs.matrix.service.ProblemService;
 import com.tustcs.matrix.entity.ProblemWithBLOBs;
+import com.tustcs.matrix.utils.Page;
 import com.tustcs.matrix.utils.Res;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,29 +24,53 @@ public class ProblemController {
     @Resource
     ProblemService problemService;
 
-    @Resource
-    ProblemMapper problemMapper;
-
-    @RequestMapping("/showdetail/{problemId}")
+    @RequestMapping("/queryDetail/{problemId}")
     @ResponseBody
     public Res<ProblemWithBLOBs> showDetail(@PathVariable("problemId")Integer problemId ){
         Res<ProblemWithBLOBs> res=new Res<ProblemWithBLOBs>();
-        res.setData(problemMapper.selectByPrimaryKey(problemId));
-        return res;
+        if(problemService.getProblem(problemId)!=null){
+            res.setMsg("problem details");
+            res.setStatus(1);
+            res.setData(problemService.getProblem(problemId));
+            return res;
+        }else {
+            res.setMsg("failed");
+            res.setStatus(0);
+            return res;
+        }
+
     }
 
-    @RequestMapping("/show/{pageNow}")
+    @RequestMapping("/queryProblem")
     @ResponseBody
-    public Res<List<ProblemTopic>> showProblem(@PathVariable("pageNow") Integer pageNow){
-        Res<List<ProblemTopic>> res=new Res<List<ProblemTopic>>();
-        return res;
+    public Res<List<ProblemWithBLOBs>> showProblem(Integer pageNow){
+        Res<List<ProblemWithBLOBs>> res= new Res<List<ProblemWithBLOBs>>();
+        try {
+            List<ProblemWithBLOBs> problemList = problemService.showProblem(pageNow);
+            res.setData(problemList);
+            res.setMsg(String.valueOf(problemList.size() / Page.pageSize));
+            res.setStatus(1);
+            return res;
+        } catch (Exception e) {
+            res.setMsg("failed");
+            res.setStatus(0);
+            return res;
+        }
     }
-    @RequestMapping("/showbytitle/{pageNow}")
+    @RequestMapping("/queryProblemByTitle")
     @ResponseBody
-    public Res<List<ProblemTopic>> showProblem(HttpServletRequest request,@PathVariable("pageNow") Integer pageNow){
-        Res<List<ProblemTopic>> res=new Res<List<ProblemTopic>>();
-        String title=request.getParameter("title");
-
-        return res;
+    public Res<List<ProblemWithBLOBs>> showProblemByTitle(String title,Integer pageNow){
+        Res<List<ProblemWithBLOBs>> res=new Res<List<ProblemWithBLOBs>>();
+        try {
+            List<ProblemWithBLOBs> problemList = problemService.showProblemByTitle(pageNow,title);
+            res.setData(problemList);
+            res.setMsg(String.valueOf(problemList.size() / Page.pageSize));
+            res.setStatus(1);
+            return res;
+        } catch (Exception e) {
+            res.setMsg("failed");
+            res.setStatus(0);
+            return res;
+        }
     }
 }

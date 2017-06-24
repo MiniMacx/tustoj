@@ -7,6 +7,7 @@ import com.tustcs.matrix.utils.Page;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -44,4 +45,33 @@ public class ProblemServiceImpl implements ProblemService {
 
         return problemList;
     }
+
+    @Override
+    public ProblemWithBLOBs getProblem(Integer problemId) {
+        ProblemWithBLOBs problem=problemMapper.selectByPrimaryKey(problemId);
+        if(problem.getDeleteFlag()!=1)
+            return problem;
+        return null;
+    }
+
+
+
+    @Override
+    public boolean addProblem(ProblemWithBLOBs problem) {
+        return problemMapper.insert(problem)>0;
+    }
+
+    @Override
+    public boolean updateProblem(ProblemWithBLOBs problem) {
+        return problemMapper.updateByPrimaryKeySelective(problem)>0;
+    }
+
+    @Override
+    public boolean deleteProblem(Integer problemId) {
+        ProblemWithBLOBs problemWithBLOBs=new ProblemWithBLOBs();
+        problemWithBLOBs.setProblemId(problemId);
+        problemWithBLOBs.setDeleteFlag(1);
+        return problemMapper.updateByPrimaryKeySelective(problemWithBLOBs)>0;
+    }
+
 }

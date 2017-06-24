@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.UserMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.User" >
-=======
-<mapper namespace="com.tustcs.matrix.oj.dao.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.User" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="user_id" property="userId" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="submit" property="submit" jdbcType="INTEGER" />
@@ -21,70 +16,36 @@
     <result column="nick" property="nick" jdbcType="VARCHAR" />
     <result column="school" property="school" jdbcType="VARCHAR" />
     <result column="level" property="level" jdbcType="INTEGER" />
-<<<<<<< HEAD
-<<<<<<< HEAD
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     user_id, email, submit, solved, defunct, ip, accesstime, volume, language, password, 
     reg_time, nick, school, level, delete_flag
-=======
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
-  </resultMap>
-  <sql id="Base_Column_List" >
-    user_id, email, submit, solved, defunct, ip, accesstime, volume, language, password, 
-    reg_time, nick, school, level
-<<<<<<< HEAD
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from users
     where user_id = #{userId,jdbcType=VARCHAR}
+    and delete_flag=0
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from users
     where user_id = #{userId,jdbcType=VARCHAR}
   </delete>
-<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.User" >
-=======
-  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.User" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into users (user_id, email, submit, 
       solved, defunct, ip, accesstime, 
       volume, language, password, 
       reg_time, nick, school, 
-<<<<<<< HEAD
-<<<<<<< HEAD
       level, delete_flag)
-=======
-      level)
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
-      level)
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     values (#{userId,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{submit,jdbcType=INTEGER}, 
       #{solved,jdbcType=INTEGER}, #{defunct,jdbcType=CHAR}, #{ip,jdbcType=VARCHAR}, #{accesstime,jdbcType=TIMESTAMP}, 
       #{volume,jdbcType=INTEGER}, #{language,jdbcType=INTEGER}, #{password,jdbcType=VARCHAR}, 
       #{regTime,jdbcType=TIMESTAMP}, #{nick,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR}, 
-<<<<<<< HEAD
-<<<<<<< HEAD
       #{level,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER})
-=======
-      #{level,jdbcType=INTEGER})
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.User" >
-=======
-      #{level,jdbcType=INTEGER})
-  </insert>
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.User" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into users
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="userId != null" >
@@ -129,15 +90,9 @@
       <if test="level != null" >
         level,
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="userId != null" >
@@ -182,21 +137,12 @@
       <if test="level != null" >
         #{level,jdbcType=INTEGER},
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.User" >
-=======
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.User" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update users
     <set >
       <if test="email != null" >
@@ -238,23 +184,13 @@
       <if test="level != null" >
         level = #{level,jdbcType=INTEGER},
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </set>
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.User" >
-=======
-    </set>
-    where user_id = #{userId,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.User" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update users
     set email = #{email,jdbcType=VARCHAR},
       submit = #{submit,jdbcType=INTEGER},
@@ -268,55 +204,27 @@
       reg_time = #{regTime,jdbcType=TIMESTAMP},
       nick = #{nick,jdbcType=VARCHAR},
       school = #{school,jdbcType=VARCHAR},
-<<<<<<< HEAD
-<<<<<<< HEAD
       level = #{level,jdbcType=INTEGER},
       delete_flag = #{deleteFlag,jdbcType=INTEGER}
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
 
-=======
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
-      level = #{level,jdbcType=INTEGER}
-    where user_id = #{userId,jdbcType=VARCHAR}
-  </update>
-
-
-<<<<<<< HEAD
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   <select id="selectUserList" parameterType="com.tustcs.matrix.entity.User" resultType="User">
-=======
-  <select id="selectUserList" parameterType="com.tustcs.matrix.oj.entity.User" resultType="User">
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     SELECT *FROM
     users
+    where delete_flag=0
     limit #{offset},#{limit}
   </select>
 
-<<<<<<< HEAD
   <select id="selectUsingLevel" parameterType="com.tustcs.matrix.entity.User" resultType="User">
-=======
-  <select id="selectByLevel" parameterType="com.tustcs.matrix.oj.entity.User" resultType="User">
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     select *from users
     where level=#{level}
+    and delete_flag=0
   </select>
 
-<<<<<<< HEAD
   <select id="selectUsingId" parameterType="com.tustcs.matrix.entity.User" resultType="User">
     select *from users
     where user_id like '%${userId}%'
+    and delete_flag=0
   </select>
-<<<<<<< HEAD
-=======
-
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
-  <select id="selectById" parameterType="com.tustcs.matrix.oj.entity.User" resultType="User">
-    select *from users
-    where user_id like '%${userId}%'
-  </select>
-
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </mapper>

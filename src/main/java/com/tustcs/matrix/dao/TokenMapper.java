@@ -7,4 +7,10 @@ public interface TokenMapper {
     int insert(Token record);
 
     int insertSelective(Token record);
+
+    Token selectByUserId(String userId);
+
+    Token selectByRecId(Integer recId);
+
+    Token selectByToken(String token);
 }

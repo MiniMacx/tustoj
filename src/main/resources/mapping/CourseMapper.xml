@@ -1,66 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.CourseMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Course" >
-=======
-<mapper namespace="com.tustcs.matrix.oj.dao.CourseMapper" >
-  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Course" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="course_id" property="courseId" jdbcType="INTEGER" />
     <result column="course_name" property="courseName" jdbcType="VARCHAR" />
     <result column="course_teacher" property="courseTeacher" jdbcType="VARCHAR" />
     <result column="course_time" property="courseTime" jdbcType="VARCHAR" />
-<<<<<<< HEAD
-<<<<<<< HEAD
+    <result column="course_week" property="courseWeek" jdbcType="VARCHAR" />
+    <result column="course_section" property="courseSection" jdbcType="VARCHAR" />
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    course_id, course_name, course_teacher, course_time, delete_flag
-=======
-  </resultMap>
-  <sql id="Base_Column_List" >
-    course_id, course_name, course_teacher, course_time
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
-  </resultMap>
-  <sql id="Base_Column_List" >
-    course_id, course_name, course_teacher, course_time
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
+    course_id, course_name, course_teacher, course_time, course_week, course_section, 
+    delete_flag
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     from course
     where course_id = #{courseId,jdbcType=INTEGER}
+    where delete_flag=0
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from course
     where course_id = #{courseId,jdbcType=INTEGER}
   </delete>
-<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Course" >
-    insert into course (course_id, course_name, course_teacher, 
-<<<<<<< HEAD
-      course_time, delete_flag)
-    values (#{courseId,jdbcType=INTEGER}, #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR}, 
-      #{courseTime,jdbcType=VARCHAR}, #{deleteFlag,jdbcType=INTEGER})
-=======
-      course_time)
-    values (#{courseId,jdbcType=INTEGER}, #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR}, 
-      #{courseTime,jdbcType=VARCHAR})
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+    insert into course ( course_name, course_teacher,
+      course_time, course_week, course_section)
+    values ( #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR},
+      #{courseTime,jdbcType=VARCHAR}, #{courseWeek,jdbcType=VARCHAR}, #{courseSection,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Course" >
-=======
-  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Course" >
-    insert into course (course_id, course_name, course_teacher, 
-      course_time)
-    values (#{courseId,jdbcType=INTEGER}, #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR}, 
-      #{courseTime,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Course" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into course
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="courseId != null" >
@@ -75,15 +46,15 @@
       <if test="courseTime != null" >
         course_time,
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
+      <if test="courseWeek != null" >
+        course_week,
+      </if>
+      <if test="courseSection != null" >
+        course_section,
+      </if>
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="courseId != null" >
@@ -98,21 +69,18 @@
       <if test="courseTime != null" >
         #{courseTime,jdbcType=VARCHAR},
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
+      <if test="courseWeek != null" >
+        #{courseWeek,jdbcType=VARCHAR},
+      </if>
+      <if test="courseSection != null" >
+        #{courseSection,jdbcType=VARCHAR},
+      </if>
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Course" >
-=======
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.Course" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update course
     <set >
       <if test="courseName != null" >
@@ -124,13 +92,15 @@
       <if test="courseTime != null" >
         course_time = #{courseTime,jdbcType=VARCHAR},
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
+      <if test="courseWeek != null" >
+        course_week = #{courseWeek,jdbcType=VARCHAR},
+      </if>
+      <if test="courseSection != null" >
+        course_section = #{courseSection,jdbcType=VARCHAR},
+      </if>
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     </set>
     where course_id = #{courseId,jdbcType=INTEGER}
   </update>
@@ -138,8 +108,9 @@
     update course
     set course_name = #{courseName,jdbcType=VARCHAR},
       course_teacher = #{courseTeacher,jdbcType=VARCHAR},
-<<<<<<< HEAD
       course_time = #{courseTime,jdbcType=VARCHAR},
+      course_week = #{courseWeek,jdbcType=VARCHAR},
+      course_section = #{courseSection,jdbcType=VARCHAR},
       delete_flag = #{deleteFlag,jdbcType=INTEGER}
     where course_id = #{courseId,jdbcType=INTEGER}
   </update>
@@ -147,27 +118,20 @@
 
   <select id="selectCourseList" parameterType="com.tustcs.matrix.entity.Course" resultType="Course">
     select *from course
+    where delete_flag=0
     limit #{startPos},#{pageSize}
   </select>
 
   <select id="selectCourseCount" resultType="Integer">
     select COUNT(*)
     from course
-=======
-      course_time = #{courseTime,jdbcType=VARCHAR}
-    where course_id = #{courseId,jdbcType=INTEGER}
-  </update>
-
-  <select id="selectCourseList" parameterType="com.tustcs.matrix.entity.Course" resultType="Course">
-    select *from course
-    limit #{offset},#{limit}
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+    where delete_flag=0
   </select>
 
   <select id="selectCourseByTeacherName" parameterType="com.tustcs.matrix.entity.Course" resultType="Course">
     select *from course
     where course_teacher like '%${teacherName}%'
-<<<<<<< HEAD
+    and delete_flag=0
     limit #{startPos},#{pageSize}
   </select>
 
@@ -175,14 +139,13 @@
     select count(*)
     from course
     where course_teacher like '%${teacherName}%'
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+    and delete_flag=0
   </select>
 
   <select id="selectCourseByCourseName" parameterType="com.tustcs.matrix.entity.Course" resultType="Course">
     select *from course
     where course_name like '%${courseName}%'
-<<<<<<< HEAD
+    and delete_flag=0
     limit #{startPos},#{pageSize}
   </select>
 
@@ -190,11 +153,8 @@
     select count(*)
     from course
     where course_name like '%${courseName}%'
+    and delete_flag=0
   </select>
-=======
-  </select>
-
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
   <!--添加Course的列表查询-->
   <select id="listCourse" resultMap="BaseResultMap">
@@ -206,16 +166,4 @@
       #{item}
     </foreach>
   </select>
-=======
-    </set>
-    where course_id = #{courseId,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Course" >
-    update course
-    set course_name = #{courseName,jdbcType=VARCHAR},
-      course_teacher = #{courseTeacher,jdbcType=VARCHAR},
-      course_time = #{courseTime,jdbcType=VARCHAR}
-    where course_id = #{courseId,jdbcType=INTEGER}
-  </update>
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </mapper>

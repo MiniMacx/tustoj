@@ -100,4 +100,34 @@ public class News {
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
     }
+
+    public News(Integer newsId, String title, String picUrl, String userId, Integer isTop, Integer isReport,
+                Integer deleteFlag, Integer weight, String addTime, String content) {
+        this.newsId = newsId;
+        this.title = title;
+        this.picUrl = picUrl;
+        this.userId = userId;
+        this.isTop = isTop;
+        this.isReport = isReport;
+        this.deleteFlag = deleteFlag;
+        this.weight = weight;
+        this.addTime = addTime;
+        this.content = content;
+    }
+
+    public News(String title, String picUrl, String userId, Integer isTop, Integer isReport, Integer deleteFlag,
+                Integer weight, String addTime, String content) {
+        this.title = title;
+        this.picUrl = picUrl;
+        this.userId = userId;
+        this.isTop = isTop;
+        this.isReport = isReport;
+        this.deleteFlag = deleteFlag;
+        this.weight = weight;
+        this.addTime = addTime;
+        this.content = content;
+    }
+
+    public News() {
+    }
 }

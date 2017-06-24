@@ -7,13 +7,13 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface HomeworkMapper {
-    int deleteByPrimaryKey(Long homeworkId);
+    int deleteByPrimaryKey(Integer homeworkId);
 
     int insert(Homework record);
 
     int insertSelective(Homework record);
 
-    Homework selectByPrimaryKey(Long homeworkId);
+    Homework selectByPrimaryKey(Integer homeworkId);
 
     int updateByPrimaryKeySelective(Homework record);
 
@@ -21,15 +21,14 @@ public interface HomeworkMapper {
 
     int updateByPrimaryKey(Homework record);
 
-<<<<<<< HEAD
-    List<Homework> selectHomeworkList(@Param("offset") int offset, @Param("limit") int limitl);
-=======
-    List<Homework> selectHomeworkList(@Param("offset") int offset,@Param("limit") int limitl);
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+    List<Homework> selectHomeworkList(@Param("startPos") int startPos, @Param("pageSize") int pageSize);
 
-    List<Homework> selectCreatorId(@Param("creatorId") String creatorId);
+    Integer selectHomeworkCount();
 
+    List<Homework> selectHomeworkByCreatorId(@Param("startPos") int startPos, @Param("pageSize") int pageSize,
+                                             @Param("creatorId") String creatorId);
 
+    Integer selectHomeworkCountUsingCreatorId(@Param("creatorId") String creatorId);
 
     List<Homework> listHomework(List<UserHomework> userHomework);
 }

@@ -1,12 +1,8 @@
 package com.tustcs.matrix.controller;
 
-<<<<<<< HEAD
-=======
-import com.sun.org.apache.regexp.internal.RE;
-import com.tustcs.matrix.dao.UserMapper;
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 import com.tustcs.matrix.entity.Contest;
 import com.tustcs.matrix.service.ContestService;
+import com.tustcs.matrix.utils.Page;
 import com.tustcs.matrix.utils.Res;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,41 +24,42 @@ public class ContestController {
     @Resource
     ContestService contestService;
 
-<<<<<<< HEAD
-    @RequestMapping(value = "/queryContest/",method = RequestMethod.GET)
+    @RequestMapping(value = "/queryContest",method = RequestMethod.GET)
     @ResponseBody
-    public Res showContest(int pageNow){
+    public Res showContest(Integer pageNow){
 
         Res<List<Contest>> res=new Res<List<Contest>>();
+        try {
+            List<Contest> contestList=contestService.showContest(pageNow);
+            res.setData(contestList);
+            res.setMsg(String.valueOf(contestList.size()/ Page.pageSize));
+            res.setStatus(1);
+            return res;
+        } catch (Exception e) {
+            res.setStatus(0);
+            res.setMsg("failed");
+            return res;
+        }
 
-        res.setData(contestService.showContest(pageNow));
-        return res;
     }
 
-    @RequestMapping(value = "/showbytitle/{pageNow}",method = RequestMethod.GET)
+    @RequestMapping(value = "/queryByTitle",method = RequestMethod.GET)
     @ResponseBody
-    public Res showContestByTitle(HttpServletRequest request,@PathVariable("pageNow") Integer pageNow){
-        String title=request.getParameter("title");
+    public Res showContestByTitle(String title,Integer pageNow){
 
         Res<List<Contest>> res=new Res<List<Contest>>();
+        try {
+            List<Contest> contestList=contestService.showContestByTitle(pageNow,title);
+            res.setData(contestList);
+            res.setMsg(String.valueOf(contestList.size()/ Page.pageSize));
+            res.setStatus(1);
+            return res;
+        } catch (Exception e) {
+            res.setStatus(0);
+            res.setMsg("failed");
+            return res;
+        }
 
-        return res;
-=======
-    @RequestMapping(value = "/showcontest/{pageNow}",method = RequestMethod.GET)
-    @ResponseBody
-    public Res showContest(HttpServletRequest request, @PathVariable("pageNow") Integer pageNow){
-        Res<List<Contest>> res=new Res<List<Contest>>();
-
-        return contestService.showContest(pageNow);
-    }
-
-    @RequestMapping(value = "/showcontestbytitle/{pageNow}",method = RequestMethod.GET)
-    @ResponseBody
-    public Res showContestByTitle(HttpServletRequest request,@PathVariable("pageNow") Integer pageNow){
-        String title=request.getParameter("title");
-        Res<List<Contest>> res=new Res<List<Contest>>();
-        return contestService.showContestByTitle(pageNow,title);
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     }
 
 

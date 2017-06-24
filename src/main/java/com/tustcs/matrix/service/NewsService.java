@@ -10,5 +10,13 @@ import java.util.List;
 public interface NewsService {
     List<News> showNews(Integer pageNow);
 
-    List<News> showNewsByTitle(String title, Integer pageNow);
+    List<News> showNewsByTitle(Integer pageNow,String title );
+
+    News getNews(Integer newsId);
+
+    boolean addNews(News news);
+
+    boolean deleteNews(Integer newsId);
+
+    boolean updateNews(News news);
 }

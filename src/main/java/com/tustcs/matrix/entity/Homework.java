@@ -3,7 +3,7 @@ package com.tustcs.matrix.entity;
 import java.math.BigDecimal;
 
 public class Homework {
-    private Long homeworkId;
+    private Integer homeworkId;
 
     private String homeworkCreatorId;
 
@@ -11,20 +11,17 @@ public class Homework {
 
     private String homeworkEndTime;
 
-    private BigDecimal homeworkScore;
+    private Double homeworkScore;
 
-<<<<<<< HEAD
     private Integer deleteFlag;
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     private String homeworkProblem;
 
-    public Long getHomeworkId() {
+    public Integer getHomeworkId() {
         return homeworkId;
     }
 
-    public void setHomeworkId(Long homeworkId) {
+    public void setHomeworkId(Integer homeworkId) {
         this.homeworkId = homeworkId;
     }
 
@@ -52,15 +49,14 @@ public class Homework {
         this.homeworkEndTime = homeworkEndTime == null ? null : homeworkEndTime.trim();
     }
 
-    public BigDecimal getHomeworkScore() {
+    public Double getHomeworkScore() {
         return homeworkScore;
     }
 
-    public void setHomeworkScore(BigDecimal homeworkScore) {
+    public void setHomeworkScore(Double homeworkScore) {
         this.homeworkScore = homeworkScore;
     }
 
-<<<<<<< HEAD
     public Integer getDeleteFlag() {
         return deleteFlag;
     }
@@ -69,13 +65,35 @@ public class Homework {
         this.deleteFlag = deleteFlag;
     }
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public String getHomeworkProblem() {
         return homeworkProblem;
     }
 
     public void setHomeworkProblem(String homeworkProblem) {
         this.homeworkProblem = homeworkProblem == null ? null : homeworkProblem.trim();
+    }
+
+    public Homework(Integer homeworkId, String homeworkCreatorId, String homeworkCreateTime, String homeworkEndTime,
+                    Double homeworkScore, Integer deleteFlag, String homeworkProblem) {
+        this.homeworkId = homeworkId;
+        this.homeworkCreatorId = homeworkCreatorId;
+        this.homeworkCreateTime = homeworkCreateTime;
+        this.homeworkEndTime = homeworkEndTime;
+        this.homeworkScore = homeworkScore;
+        this.deleteFlag = deleteFlag;
+        this.homeworkProblem = homeworkProblem;
+    }
+
+    public Homework(String homeworkCreatorId, String homeworkCreateTime, String homeworkEndTime,
+                    Double homeworkScore, Integer deleteFlag, String homeworkProblem) {
+        this.homeworkCreatorId = homeworkCreatorId;
+        this.homeworkCreateTime = homeworkCreateTime;
+        this.homeworkEndTime = homeworkEndTime;
+        this.homeworkScore = homeworkScore;
+        this.deleteFlag = deleteFlag;
+        this.homeworkProblem = homeworkProblem;
+    }
+
+    public Homework() {
     }
 }

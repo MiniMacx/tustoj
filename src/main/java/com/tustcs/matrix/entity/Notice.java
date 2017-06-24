@@ -50,4 +50,22 @@ public class Notice {
     public void setNoticeContent(String noticeContent) {
         this.noticeContent = noticeContent == null ? null : noticeContent.trim();
     }
+
+    public Notice(Integer noticeId, Integer deleteFlag, Integer isShow, Integer weight, String noticeContent) {
+        this.noticeId = noticeId;
+        this.deleteFlag = deleteFlag;
+        this.isShow = isShow;
+        this.weight = weight;
+        this.noticeContent = noticeContent;
+    }
+
+    public Notice(Integer deleteFlag, Integer isShow, Integer weight, String noticeContent) {
+        this.deleteFlag = deleteFlag;
+        this.isShow = isShow;
+        this.weight = weight;
+        this.noticeContent = noticeContent;
+    }
+
+    public Notice() {
+    }
 }

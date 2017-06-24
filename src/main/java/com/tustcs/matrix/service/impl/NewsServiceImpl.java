@@ -34,7 +34,7 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public List<News> showNewsByTitle(String title, Integer pageNow) {
+    public List<News> showNewsByTitle( Integer pageNow,String title) {
         List<News> newsList;
 
         if(pageNow!=null){
@@ -44,5 +44,28 @@ public class NewsServiceImpl implements NewsService {
         }
 
         return newsList;
+    }
+
+    @Override
+    public boolean addNews(News news) {
+        return newsMapper.insert(news)>0;
+    }
+
+    @Override
+    public boolean deleteNews(Integer newsId) {
+        News news=new News();
+        news.setNewsId(newsId);
+        news.setDeleteFlag(1);
+        return newsMapper.updateByPrimaryKeySelective(news)>0;
+    }
+
+    @Override
+    public boolean updateNews(News news) {
+        return newsMapper.updateByPrimaryKeySelective(news)>0;
+    }
+
+    @Override
+    public News getNews(Integer newsId) {
+        return newsMapper.selectByPrimaryKey(newsId);
     }
 }

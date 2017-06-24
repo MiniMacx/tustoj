@@ -9,9 +9,9 @@
     <result column="expire_time" property="expireTime" jdbcType="VARCHAR" />
   </resultMap>
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Token" >
-    insert into token (rec_id, user_id, token, 
+    insert into token ( user_id, token,
       create_time, expire_time)
-    values (#{recId,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{token,jdbcType=VARCHAR}, 
+    values ( #{userId,jdbcType=VARCHAR}, #{token,jdbcType=VARCHAR},
       #{createTime,jdbcType=VARCHAR}, #{expireTime,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Token" >
@@ -51,4 +51,23 @@
       </if>
     </trim>
   </insert>
+
+  <select id="selectByToken" resultType="Token">
+    select *from
+    token
+    where token=#{token}
+  </select>
+
+  <select id="selectByUserId" resultType="Token">
+    select * from
+    token
+    where user_id=#{userId}
+  </select>
+
+  <select id="selectByRecId" resultType="Token">
+    select * from
+    token
+    where rec_id=#{recId}
+  </select>
+
 </mapper>

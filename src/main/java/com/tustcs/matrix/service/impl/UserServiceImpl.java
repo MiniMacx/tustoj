@@ -2,13 +2,8 @@ package com.tustcs.matrix.service.impl;
 
 import com.tustcs.matrix.dao.*;
 import com.tustcs.matrix.entity.*;
-<<<<<<< HEAD
 import com.tustcs.matrix.service.UserService;
 import com.tustcs.matrix.entity.User;
-=======
-import com.tustcs.matrix.entity.User;
-import com.tustcs.matrix.service.UserService;
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 import com.tustcs.matrix.utils.MD5Utils;
 import org.springframework.stereotype.Service;
 

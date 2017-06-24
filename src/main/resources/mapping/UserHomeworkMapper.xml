@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.UserHomeworkMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.UserHomework" >
-=======
-<mapper namespace="com.tustcs.matrix.oj.dao.UserHomeworkMapper" >
-  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.UserHomework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="VARCHAR" />
     <result column="homework_id" property="homeworkId" jdbcType="BIGINT" />
@@ -20,7 +15,6 @@
     from user_homework
     where id = #{id,jdbcType=INTEGER}
   </select>
-<<<<<<< HEAD
 
   <select id="listUserHomework" parameterType="java.lang.String" resultMap="BaseResultMap">
     SELECT
@@ -28,27 +22,17 @@
     FROM user_homework
     WHERE user_id = #{userId}
   </select>
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from user_homework
     where id = #{id,jdbcType=INTEGER}
   </delete>
-<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.UserHomework" >
-=======
-  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.UserHomework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into user_homework (id, user_id, homework_id
       )
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{homeworkId,jdbcType=BIGINT}
       )
   </insert>
-<<<<<<< HEAD
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.UserHomework" >
-=======
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.UserHomework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into user_homework
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -73,11 +57,7 @@
       </if>
     </trim>
   </insert>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.UserHomework" >
-=======
-  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.UserHomework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update user_homework
     <set >
       <if test="userId != null" >
@@ -89,11 +69,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-<<<<<<< HEAD
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.UserHomework" >
-=======
-  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.UserHomework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update user_homework
     set user_id = #{userId,jdbcType=VARCHAR},
       homework_id = #{homeworkId,jdbcType=BIGINT}

@@ -2,6 +2,7 @@ package com.tustcs.matrix.controller;
 
 import com.tustcs.matrix.entity.Course;
 import com.tustcs.matrix.service.CourseService;
+import com.tustcs.matrix.utils.Page;
 import com.tustcs.matrix.utils.Res;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,34 +22,62 @@ public class CourseController {
     @Resource
     CourseService courseService;
 
-    @RequestMapping("/show/{pageNow}")
+    @RequestMapping("/queryCourse")
     @ResponseBody
-    public Res<List<Course>> showCourse(@PathVariable("pageNow") Integer pageNow){
-        Res<List<Course>> res= new Res<List<Course>>();
+    public Res<List<Course>> showCourse(Integer pageNow) {
+        Res<List<Course>> res = new Res<List<Course>>();
+        try {
+            List<Course> contestList = courseService.showCourse(pageNow);
+            res.setData(contestList);
+            res.setMsg(String.valueOf(contestList.size() / Page.pageSize));
+            res.setStatus(1);
+            return res;
+        } catch (Exception e) {
+            res.setStatus(0);
+            res.setMsg("failed");
+            return res;
+        }
 
-        return res;
 
     }
 
-    @RequestMapping("/showbyteachername/{pageNow}")
+    @RequestMapping("/queryByTeacerName")
     @ResponseBody
-    public Res<List<Course>> showCourseByTeacherName(HttpServletRequest request,@PathVariable("pageNow") Integer pageNow){
-        String teacherName=request.getParameter("teacherName");
-        Res<List<Course>> res= new Res<List<Course>>();
+    public Res<List<Course>> showCourseByTeacherName(Integer pageNow, String teacherName) {
 
-        return res;
+        Res<List<Course>> res = new Res<List<Course>>();
+        try {
+            List<Course> courseList = courseService.showCourseByTeacherName(teacherName, pageNow);
+            res.setData(courseList);
+            res.setMsg(String.valueOf(courseList.size() / Page.pageSize));
+            res.setStatus(1);
+            return res;
+        } catch (Exception e) {
+            res.setMsg("failed");
+            res.setStatus(0);
+            return res;
+        }
+
 
     }
 
 
-    @RequestMapping("/showbycoursename/{pageNow}")
+    @RequestMapping("/queryByCourseName")
     @ResponseBody
-    public Res<List<Course>> showCourseByCourseName(HttpServletRequest request,@PathVariable("pageNow") Integer pageNow){
-        String courseName=request.getParameter("courseName");
+    public Res<List<Course>> showCourseByCourseName(String courseName, Integer pageNow) {
 
-        Res<List<Course>> res= new Res<List<Course>>();
-
-        return res;
+        Res<List<Course>> res = new Res<List<Course>>();
+        try {
+            List<Course> courseList = courseService.showCourseByCourseName(courseName, pageNow);
+            res.setData(courseList);
+            res.setMsg(String.valueOf(courseList.size() / Page.pageSize));
+            res.setStatus(1);
+            return res;
+        } catch (Exception e) {
+            res.setMsg("failed");
+            res.setStatus(0);
+            return res;
+        }
 
     }
 }

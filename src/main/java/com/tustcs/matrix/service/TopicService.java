@@ -14,4 +14,12 @@ public interface TopicService {
     List<Topic> showTopicByTitle(String title,Integer pageNow);
 
     List<Topic> showTopicByUserId(String userId,Integer pageNow);
+
+    boolean addTopic(Topic topic);
+
+    boolean updateTopic(Topic topic);
+
+    boolean deleteTopic(Integer topicId);
+
+    Topic getTopic(Integer topicId);
 }

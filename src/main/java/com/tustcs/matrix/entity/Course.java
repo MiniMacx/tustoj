@@ -9,11 +9,12 @@ public class Course {
 
     private String courseTime;
 
-<<<<<<< HEAD
+    private String courseWeek;
+
+    private String courseSection;
+
     private Integer deleteFlag;
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public Integer getCourseId() {
         return courseId;
     }
@@ -45,7 +46,22 @@ public class Course {
     public void setCourseTime(String courseTime) {
         this.courseTime = courseTime == null ? null : courseTime.trim();
     }
-<<<<<<< HEAD
+
+    public String getCourseWeek() {
+        return courseWeek;
+    }
+
+    public void setCourseWeek(String courseWeek) {
+        this.courseWeek = courseWeek == null ? null : courseWeek.trim();
+    }
+
+    public String getCourseSection() {
+        return courseSection;
+    }
+
+    public void setCourseSection(String courseSection) {
+        this.courseSection = courseSection == null ? null : courseSection.trim();
+    }
 
     public Integer getDeleteFlag() {
         return deleteFlag;
@@ -54,6 +70,28 @@ public class Course {
     public void setDeleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
     }
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+
+    public Course(Integer courseId, String courseName, String courseTeacher, String courseTime,
+                  String courseWeek, String courseSection, Integer deleteFlag) {
+        this.courseId = courseId;
+        this.courseName = courseName;
+        this.courseTeacher = courseTeacher;
+        this.courseTime = courseTime;
+        this.courseWeek = courseWeek;
+        this.courseSection = courseSection;
+        this.deleteFlag = deleteFlag;
+    }
+
+    public Course(String courseName, String courseTeacher, String courseTime, String courseWeek,
+                  String courseSection, Integer deleteFlag) {
+        this.courseName = courseName;
+        this.courseTeacher = courseTeacher;
+        this.courseTime = courseTime;
+        this.courseWeek = courseWeek;
+        this.courseSection = courseSection;
+        this.deleteFlag = deleteFlag;
+    }
+
+    public Course() {
+    }
 }

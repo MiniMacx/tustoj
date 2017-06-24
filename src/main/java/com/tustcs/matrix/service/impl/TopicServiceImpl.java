@@ -60,4 +60,27 @@ public class TopicServiceImpl implements TopicService {
 
         return topicList;
     }
+
+    @Override
+    public boolean addTopic(Topic topic) {
+        return topicMapper.insert(topic)>0;
+    }
+
+    @Override
+    public boolean updateTopic(Topic topic) {
+        return topicMapper.updateByPrimaryKeySelective(topic)>0;
+    }
+
+    @Override
+    public boolean deleteTopic(Integer topicId) {
+        Topic topic=new Topic();
+        topic.setDeleteFlag(1);
+        topic.setTid(topicId);
+        return topicMapper.updateByPrimaryKeySelective(topic)>0;
+    }
+
+    @Override
+    public Topic getTopic(Integer topicId) {
+        return topicMapper.selectByPrimaryKey(topicId);
+    }
 }

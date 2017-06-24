@@ -27,11 +27,7 @@ public interface ContestMapper {
      * @param pageSize
      * @return
      */
-<<<<<<< HEAD
     List<Contest> selectContestList(@Param("startPos") int startPos, @Param("pageSize") int pageSize);
-=======
-    List<Contest> selectContestList(@Param("startPos") int startPos,@Param("pageSize") int pageSize);
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
     /**
      * 分页获取比赛记录数量
@@ -45,11 +41,7 @@ public interface ContestMapper {
      * @param title
      * @return
      */
-<<<<<<< HEAD
     List<Contest> selectByTitle(@Param("title") String title, @Param("startPos") int startPos,
-=======
-    List<Contest> selectByTitle(@Param("title")String title,@Param("startPos") int startPos,
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
                                 @Param("pageSize") int pageSize);
 
     /**

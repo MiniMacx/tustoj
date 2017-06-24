@@ -2,6 +2,7 @@ package com.tustcs.matrix.controller;
 
 import com.tustcs.matrix.entity.News;
 import com.tustcs.matrix.service.NewsService;
+import com.tustcs.matrix.utils.Page;
 import com.tustcs.matrix.utils.Res;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,20 +23,37 @@ public class NewsController {
     @Resource
     NewsService newsService;
 
-    @RequestMapping("/show/{pageNow}")
+    @RequestMapping("/queryNews")
     @ResponseBody
-    public Res<List<News>> showNews(HttpServletRequest request, @PathVariable("pageNow")Integer pageNow){
+    public Res<List<News>> showNews(Integer pageNow){
         Res<List<News>> res=new Res<List<News>>();
-        return res;
+        try {
+            List<News> newsList = newsService.showNews(pageNow);
+            res.setData(newsList);
+            res.setMsg(String.valueOf(newsList.size() / Page.pageSize));
+            res.setStatus(1);
+            return res;
+        } catch (Exception e) {
+            res.setMsg("failed");
+            res.setStatus(0);
+            return res;
+        }
     }
 
-    @RequestMapping("/showbytitle/{pageNow}")
+    @RequestMapping("/queryByTitle")
     @ResponseBody
-    public Res<List<News>> showNewsByTitle(HttpServletRequest request,@PathVariable("pageNow") Integer pageNow){
+    public Res<List<News>> showNewsByTitle(Integer pageNow,String title){
         Res<List<News>> res=new Res<List<News>>();
-
-        String title=request.getParameter("title");
-
-        return res;
+        try {
+            List<News> newsList = newsService.showNewsByTitle(pageNow,title);
+            res.setData(newsList);
+            res.setMsg(String.valueOf(newsList.size() / Page.pageSize));
+            res.setStatus(1);
+            return res;
+        } catch (Exception e) {
+            res.setMsg("failed");
+            res.setStatus(0);
+            return res;
+        }
     }
 }

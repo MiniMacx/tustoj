@@ -31,11 +31,8 @@ public class User {
 
     private Integer level;
 
-<<<<<<< HEAD
     private Integer deleteFlag;
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public String getUserId() {
         return userId;
     }
@@ -147,7 +144,6 @@ public class User {
     public void setLevel(Integer level) {
         this.level = level;
     }
-<<<<<<< HEAD
 
     public Integer getDeleteFlag() {
         return deleteFlag;
@@ -156,6 +152,4 @@ public class User {
     public void setDeleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
     }
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 }

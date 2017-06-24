@@ -25,11 +25,8 @@ public class Problem {
 
     private Integer solved;
 
-<<<<<<< HEAD
     private Integer deleteFlag;
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public Integer getProblemId() {
         return problemId;
     }
@@ -117,7 +114,6 @@ public class Problem {
     public void setSolved(Integer solved) {
         this.solved = solved;
     }
-<<<<<<< HEAD
 
     public Integer getDeleteFlag() {
         return deleteFlag;
@@ -126,6 +122,38 @@ public class Problem {
     public void setDeleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
     }
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+
+    public Problem(Integer problemId, String title, String spj, String source, Date inDate, Integer timeLimit, Integer memoryLimit,
+                   String defunct, Integer accepted, Integer submit, Integer solved, Integer deleteFlag) {
+        this.problemId = problemId;
+        this.title = title;
+        this.spj = spj;
+        this.source = source;
+        this.inDate = inDate;
+        this.timeLimit = timeLimit;
+        this.memoryLimit = memoryLimit;
+        this.defunct = defunct;
+        this.accepted = accepted;
+        this.submit = submit;
+        this.solved = solved;
+        this.deleteFlag = deleteFlag;
+    }
+
+    public Problem(String title, String spj, String source, Date inDate, Integer timeLimit, Integer memoryLimit, String defunct,
+                   Integer accepted, Integer submit, Integer solved, Integer deleteFlag) {
+        this.title = title;
+        this.spj = spj;
+        this.source = source;
+        this.inDate = inDate;
+        this.timeLimit = timeLimit;
+        this.memoryLimit = memoryLimit;
+        this.defunct = defunct;
+        this.accepted = accepted;
+        this.submit = submit;
+        this.solved = solved;
+        this.deleteFlag = deleteFlag;
+    }
+
+    public Problem() {
+    }
 }

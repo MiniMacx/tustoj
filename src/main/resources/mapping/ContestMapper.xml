@@ -1,43 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.ContestMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Contest" >
-=======
-<mapper namespace="com.tustcs.matrix.oj.dao.ContestMapper" >
-  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Contest" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="contest_id" property="contestId" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
     <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
     <result column="defunct" property="defunct" jdbcType="CHAR" />
-    <result column="private" property="private" jdbcType="TINYINT" />
+    <result column="private" property="privateFlag" jdbcType="TINYINT" />
     <result column="langmask" property="langmask" jdbcType="INTEGER" />
     <result column="password" property="password" jdbcType="CHAR" />
-<<<<<<< HEAD
-<<<<<<< HEAD
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.Contest" extends="BaseResultMap" >
     <result column="description" property="description" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-<<<<<<< HEAD
     contest_id, title, start_time, end_time, defunct, private, langmask, password, delete_flag
-=======
-    contest_id, title, start_time, end_time, defunct, private, langmask, password
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
-  </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.Contest" extends="BaseResultMap" >
-    <result column="description" property="description" jdbcType="LONGVARCHAR" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    contest_id, title, start_time, end_time, defunct, private, langmask, password
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
   </sql>
   <sql id="Blob_Column_List" >
     description
@@ -49,42 +28,23 @@
     <include refid="Blob_Column_List" />
     from contest
     where contest_id = #{contestId,jdbcType=INTEGER}
+    and delete_flag=0
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from contest
     where contest_id = #{contestId,jdbcType=INTEGER}
   </delete>
-<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Contest" >
-    insert into contest (contest_id, title, start_time, 
+    insert into contest (title, start_time,
       end_time, defunct, private, 
-<<<<<<< HEAD
       langmask, password, delete_flag, 
       description)
-    values (#{contestId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP}, 
-      #{endTime,jdbcType=TIMESTAMP}, #{defunct,jdbcType=CHAR}, #{private,jdbcType=TINYINT}, 
+    values  (#{title,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP},
+      #{endTime,jdbcType=TIMESTAMP}, #{defunct,jdbcType=CHAR}, #{privateFlag,jdbcType=TINYINT},
       #{langmask,jdbcType=INTEGER}, #{password,jdbcType=CHAR}, #{deleteFlag,jdbcType=INTEGER}, 
       #{description,jdbcType=LONGVARCHAR})
-=======
-=======
-  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Contest" >
-    insert into contest (contest_id, title, start_time, 
-      end_time, defunct, private, 
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
-      langmask, password, description
-      )
-    values (#{contestId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP}, 
-      #{endTime,jdbcType=TIMESTAMP}, #{defunct,jdbcType=CHAR}, #{private,jdbcType=TINYINT}, 
-      #{langmask,jdbcType=INTEGER}, #{password,jdbcType=CHAR}, #{description,jdbcType=LONGVARCHAR}
-      )
-<<<<<<< HEAD
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Contest" >
-=======
-  </insert>
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Contest" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into contest
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="contestId != null" >
@@ -102,7 +62,7 @@
       <if test="defunct != null" >
         defunct,
       </if>
-      <if test="private != null" >
+      <if test="privateFlag != null" >
         private,
       </if>
       <if test="langmask != null" >
@@ -111,15 +71,9 @@
       <if test="password != null" >
         password,
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="description != null" >
         description,
       </if>
@@ -141,7 +95,7 @@
         #{defunct,jdbcType=CHAR},
       </if>
       <if test="private != null" >
-        #{private,jdbcType=TINYINT},
+        #{privateFlag,jdbcType=TINYINT},
       </if>
       <if test="langmask != null" >
         #{langmask,jdbcType=INTEGER},
@@ -149,25 +103,15 @@
       <if test="password != null" >
         #{password,jdbcType=CHAR},
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="description != null" >
         #{description,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Contest" >
-=======
-  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.Contest" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update contest
     <set >
       <if test="title != null" >
@@ -182,8 +126,8 @@
       <if test="defunct != null" >
         defunct = #{defunct,jdbcType=CHAR},
       </if>
-      <if test="private != null" >
-        private = #{private,jdbcType=TINYINT},
+      <if test="privateFlag != null" >
+        private = #{privateFlag,jdbcType=TINYINT},
       </if>
       <if test="langmask != null" >
         langmask = #{langmask,jdbcType=INTEGER},
@@ -191,83 +135,57 @@
       <if test="password != null" >
         password = #{password,jdbcType=CHAR},
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="description != null" >
         description = #{description,jdbcType=LONGVARCHAR},
       </if>
     </set>
     where contest_id = #{contestId,jdbcType=INTEGER}
   </update>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.Contest" >
-=======
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.Contest" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update contest
     set title = #{title,jdbcType=VARCHAR},
       start_time = #{startTime,jdbcType=TIMESTAMP},
       end_time = #{endTime,jdbcType=TIMESTAMP},
       defunct = #{defunct,jdbcType=CHAR},
-      private = #{private,jdbcType=TINYINT},
+      private = #{privateFlag,jdbcType=TINYINT},
       langmask = #{langmask,jdbcType=INTEGER},
       password = #{password,jdbcType=CHAR},
-<<<<<<< HEAD
-<<<<<<< HEAD
       delete_flag = #{deleteFlag,jdbcType=INTEGER},
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       description = #{description,jdbcType=LONGVARCHAR}
     where contest_id = #{contestId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.Contest" >
-=======
-      description = #{description,jdbcType=LONGVARCHAR}
-    where contest_id = #{contestId,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Contest" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update contest
     set title = #{title,jdbcType=VARCHAR},
       start_time = #{startTime,jdbcType=TIMESTAMP},
       end_time = #{endTime,jdbcType=TIMESTAMP},
       defunct = #{defunct,jdbcType=CHAR},
-      private = #{private,jdbcType=TINYINT},
+      private = #{privateFlag,jdbcType=TINYINT},
       langmask = #{langmask,jdbcType=INTEGER},
-<<<<<<< HEAD
-<<<<<<< HEAD
       password = #{password,jdbcType=CHAR},
       delete_flag = #{deleteFlag,jdbcType=INTEGER}
-=======
-      password = #{password,jdbcType=CHAR}
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     where contest_id = #{contestId,jdbcType=INTEGER}
   </update>
 
   <select id="selectContestList" parameterType="com.tustcs.matrix.entity.Contest" resultType="Contest">
     select *from contest
+    where delete_flag=0
     limit #{startPos},#{pageSize}
   </select>
 
   <select id="selectContestCount" resultType="Integer">
     select COUNT(*)
     from contest
+      where delete_flag=0
   </select>
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   <select id="selectByTitle" parameterType="com.tustcs.matrix.entity.Contest" resultType="Contest">
     select *from contest
     where title like '%${title}%'
+    and delete_flag=0
     limit #{startPos},#{pageSize}
   </select>
 
@@ -275,6 +193,7 @@
     select COUNT(*)
     from contest
     where title like '%${title}%'
+    and delete_flag=0
   </select>
 
   <!--添加contest的列表查询-->
@@ -289,13 +208,4 @@
       #{item.contestId}
     </foreach>
   </select>
-<<<<<<< HEAD
-=======
-
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
-      password = #{password,jdbcType=CHAR}
-    where contest_id = #{contestId,jdbcType=INTEGER}
-  </update>
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
 </mapper>

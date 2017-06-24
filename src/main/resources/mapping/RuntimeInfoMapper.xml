@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.RuntimeInfoMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.RuntimeInfo" >
     <id column="solution_id" property="solutionId" jdbcType="INTEGER" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.RuntimeInfo" extends="BaseResultMap" >
-=======
-<mapper namespace="com.tustcs.matrix.oj.dao.RuntimeInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.RuntimeInfo" >
-    <id column="solution_id" property="solutionId" jdbcType="INTEGER" />
-  </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.RuntimeInfo" extends="BaseResultMap" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <result column="error" property="error" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -33,19 +25,11 @@
     delete from runtimeinfo
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </delete>
-<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.RuntimeInfo" >
     insert into runtimeinfo (solution_id, error)
     values (#{solutionId,jdbcType=INTEGER}, #{error,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.RuntimeInfo" >
-=======
-  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.RuntimeInfo" >
-    insert into runtimeinfo (solution_id, error)
-    values (#{solutionId,jdbcType=INTEGER}, #{error,jdbcType=LONGVARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.RuntimeInfo" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into runtimeinfo
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="solutionId != null" >
@@ -64,11 +48,7 @@
       </if>
     </trim>
   </insert>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.RuntimeInfo" >
-=======
-  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.RuntimeInfo" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update runtimeinfo
     <set >
       <if test="error != null" >
@@ -77,11 +57,7 @@
     </set>
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </update>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.RuntimeInfo" >
-=======
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.RuntimeInfo" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update runtimeinfo
     set error = #{error,jdbcType=LONGVARCHAR}
     where solution_id = #{solutionId,jdbcType=INTEGER}

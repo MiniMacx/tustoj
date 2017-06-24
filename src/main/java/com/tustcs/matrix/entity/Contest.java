@@ -19,11 +19,8 @@ public class Contest {
 
     private String password;
 
-<<<<<<< HEAD
     private Integer deleteFlag;
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     private String description;
 
     public Integer getContestId() {
@@ -90,7 +87,6 @@ public class Contest {
         this.password = password == null ? null : password.trim();
     }
 
-<<<<<<< HEAD
     public Integer getDeleteFlag() {
         return deleteFlag;
     }
@@ -99,13 +95,41 @@ public class Contest {
         this.deleteFlag = deleteFlag;
     }
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description == null ? null : description.trim();
+    }
+
+    public Contest(Integer contestId, String title, Date startTime, Date endTime, String defunct,
+                   Byte privateFlag, Integer langmask, String password, Integer deleteFlag, String description) {
+        this.contestId = contestId;
+        this.title = title;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.defunct = defunct;
+        this.privateFlag = privateFlag;
+        this.langmask = langmask;
+        this.password = password;
+        this.deleteFlag = deleteFlag;
+        this.description = description;
+    }
+
+    public Contest(String title, Date startTime, Date endTime, String defunct, Byte privateFlag,
+                   Integer langmask, String password, Integer deleteFlag, String description) {
+        this.title = title;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.defunct = defunct;
+        this.privateFlag = privateFlag;
+        this.langmask = langmask;
+        this.password = password;
+        this.deleteFlag = deleteFlag;
+        this.description = description;
+    }
+
+    public Contest() {
     }
 }

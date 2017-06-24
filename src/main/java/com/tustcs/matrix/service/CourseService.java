@@ -13,4 +13,12 @@ public interface CourseService {
     List<Course> showCourseByTeacherName(String teacherName,Integer pageNow);
 
     List<Course> showCourseByCourseName(String courseName,Integer pageNow);
+
+    Course getCourse(Integer courseId);
+
+    boolean addCourse(Course course);
+
+    boolean deleteCourse(Integer courseId);
+
+    boolean updateCourse(Course course);
 }

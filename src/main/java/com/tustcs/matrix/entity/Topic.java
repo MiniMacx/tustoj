@@ -15,11 +15,8 @@ public class Topic {
 
     private String time;
 
-<<<<<<< HEAD
     private Integer deleteFlag;
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     private byte[] title;
 
     public Integer getTid() {
@@ -78,7 +75,6 @@ public class Topic {
         this.time = time == null ? null : time.trim();
     }
 
-<<<<<<< HEAD
     public Integer getDeleteFlag() {
         return deleteFlag;
     }
@@ -87,13 +83,39 @@ public class Topic {
         this.deleteFlag = deleteFlag;
     }
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public byte[] getTitle() {
         return title;
     }
 
     public void setTitle(byte[] title) {
         this.title = title;
+    }
+
+    public Topic(Integer tid, Integer status, Integer topLevel, Integer cid, Integer pid, String authorId,
+                 String time, Integer deleteFlag, byte[] title) {
+        this.tid = tid;
+        this.status = status;
+        this.topLevel = topLevel;
+        this.cid = cid;
+        this.pid = pid;
+        this.authorId = authorId;
+        this.time = time;
+        this.deleteFlag = deleteFlag;
+        this.title = title;
+    }
+
+    public Topic(Integer status, Integer topLevel, Integer cid,
+                 Integer pid, String authorId, String time, Integer deleteFlag, byte[] title) {
+        this.status = status;
+        this.topLevel = topLevel;
+        this.cid = cid;
+        this.pid = pid;
+        this.authorId = authorId;
+        this.time = time;
+        this.deleteFlag = deleteFlag;
+        this.title = title;
+    }
+
+    public Topic() {
     }
 }

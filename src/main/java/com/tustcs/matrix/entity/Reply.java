@@ -19,11 +19,8 @@ public class Reply {
 
     private Integer voteDown;
 
-<<<<<<< HEAD
     private Integer deleteFlag;
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     private String content;
 
     public Integer getRid() {
@@ -90,7 +87,6 @@ public class Reply {
         this.voteDown = voteDown;
     }
 
-<<<<<<< HEAD
     public Integer getDeleteFlag() {
         return deleteFlag;
     }
@@ -99,13 +95,41 @@ public class Reply {
         this.deleteFlag = deleteFlag;
     }
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public String getContent() {
         return content;
     }
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
+    }
+
+    public Reply(Integer rid, String authorId, Date time, Integer topicId, Integer status, String ip,
+                 Integer voteUp, Integer voteDown, Integer deleteFlag, String content) {
+        this.rid = rid;
+        this.authorId = authorId;
+        this.time = time;
+        this.topicId = topicId;
+        this.status = status;
+        this.ip = ip;
+        this.voteUp = voteUp;
+        this.voteDown = voteDown;
+        this.deleteFlag = deleteFlag;
+        this.content = content;
+    }
+
+    public Reply(String authorId, Date time, Integer topicId, Integer status, String ip,
+                 Integer voteUp, Integer voteDown, Integer deleteFlag, String content) {
+        this.authorId = authorId;
+        this.time = time;
+        this.topicId = topicId;
+        this.status = status;
+        this.ip = ip;
+        this.voteUp = voteUp;
+        this.voteDown = voteDown;
+        this.deleteFlag = deleteFlag;
+        this.content = content;
+    }
+
+    public Reply() {
     }
 }

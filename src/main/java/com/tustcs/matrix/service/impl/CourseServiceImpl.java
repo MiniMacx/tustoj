@@ -1,5 +1,6 @@
 package com.tustcs.matrix.service.impl;
 
+import com.tustcs.matrix.controller.CourseController;
 import com.tustcs.matrix.entity.Course;
 import com.tustcs.matrix.service.CourseService;
 import com.tustcs.matrix.dao.CourseMapper;
@@ -59,5 +60,31 @@ public class CourseServiceImpl implements CourseService {
         }
 
         return courseList;
+    }
+
+    @Override
+    public boolean addCourse(Course course) {
+        return courseMapper.insert(course)>0;
+
+    }
+
+    @Override
+    public boolean deleteCourse(Integer courseId) {
+        Course course=new Course();
+        course.setCourseId(courseId);
+        course.setDeleteFlag(1);
+        return courseMapper.updateByPrimaryKeySelective(course)>0;
+    }
+
+    @Override
+    public boolean updateCourse(Course course) {
+        return courseMapper.updateByPrimaryKeySelective(course)>0;
+    }
+
+
+    @Override
+    public Course getCourse(Integer courseId) {
+        Course course=courseMapper.selectByPrimaryKey(courseId);
+        return course.getDeleteFlag()==0?course:null;
     }
 }

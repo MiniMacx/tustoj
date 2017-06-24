@@ -1,84 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.HomeworkMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Homework" >
-=======
-<mapper namespace="com.tustcs.matrix.oj.dao.HomeworkMapper" >
-  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Homework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
-    <id column="homework_id" property="homeworkId" jdbcType="BIGINT" />
+    <id column="homework_id" property="homeworkId" jdbcType="INTEGER" />
     <result column="homework_creator_id" property="homeworkCreatorId" jdbcType="VARCHAR" />
     <result column="homework_create_time" property="homeworkCreateTime" jdbcType="VARCHAR" />
     <result column="homework_end_time" property="homeworkEndTime" jdbcType="VARCHAR" />
-    <result column="homework_score" property="homeworkScore" jdbcType="DECIMAL" />
-<<<<<<< HEAD
-<<<<<<< HEAD
+    <result column="homework_score" property="homeworkScore" jdbcType="DOUBLE" />
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.Homework" extends="BaseResultMap" >
     <result column="homework_problem" property="homeworkProblem" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-<<<<<<< HEAD
     homework_id, homework_creator_id, homework_create_time, homework_end_time, homework_score, 
     delete_flag
-=======
-    homework_id, homework_creator_id, homework_create_time, homework_end_time, homework_score
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
-  </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.Homework" extends="BaseResultMap" >
-    <result column="homework_problem" property="homeworkProblem" jdbcType="LONGVARCHAR" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    homework_id, homework_creator_id, homework_create_time, homework_end_time, homework_score
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
   </sql>
   <sql id="Blob_Column_List" >
     homework_problem
   </sql>
-  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
     from homework
-    where homework_id = #{homeworkId,jdbcType=BIGINT}
+    where homework_id = #{homeworkId,jdbcType=INTEGER}
+    and delete_flag=0
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from homework
-    where homework_id = #{homeworkId,jdbcType=BIGINT}
+    where homework_id = #{homeworkId,jdbcType=INTEGER}
   </delete>
-<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Homework" >
-    insert into homework (homework_id, homework_creator_id, homework_create_time, 
-<<<<<<< HEAD
+    insert into homework ( homework_creator_id, homework_create_time,
       homework_end_time, homework_score, delete_flag, 
       homework_problem)
-    values (#{homeworkId,jdbcType=BIGINT}, #{homeworkCreatorId,jdbcType=VARCHAR}, #{homeworkCreateTime,jdbcType=VARCHAR}, 
-      #{homeworkEndTime,jdbcType=VARCHAR}, #{homeworkScore,jdbcType=DECIMAL}, #{deleteFlag,jdbcType=INTEGER}, 
+    values ( #{homeworkCreatorId,jdbcType=VARCHAR}, #{homeworkCreateTime,jdbcType=VARCHAR},
+      #{homeworkEndTime,jdbcType=VARCHAR}, #{homeworkScore,jdbcType=DOUBLE}, #{deleteFlag,jdbcType=INTEGER},
       #{homeworkProblem,jdbcType=LONGVARCHAR})
-=======
-=======
-  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Homework" >
-    insert into homework (homework_id, homework_creator_id, homework_create_time, 
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
-      homework_end_time, homework_score, homework_problem
-      )
-    values (#{homeworkId,jdbcType=BIGINT}, #{homeworkCreatorId,jdbcType=VARCHAR}, #{homeworkCreateTime,jdbcType=VARCHAR}, 
-      #{homeworkEndTime,jdbcType=VARCHAR}, #{homeworkScore,jdbcType=DECIMAL}, #{homeworkProblem,jdbcType=LONGVARCHAR}
-      )
-<<<<<<< HEAD
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Homework" >
-=======
-  </insert>
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Homework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into homework
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="homeworkId != null" >
@@ -96,22 +58,16 @@
       <if test="homeworkScore != null" >
         homework_score,
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="homeworkProblem != null" >
         homework_problem,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="homeworkId != null" >
-        #{homeworkId,jdbcType=BIGINT},
+        #{homeworkId,jdbcType=INTEGER},
       </if>
       <if test="homeworkCreatorId != null" >
         #{homeworkCreatorId,jdbcType=VARCHAR},
@@ -123,27 +79,17 @@
         #{homeworkEndTime,jdbcType=VARCHAR},
       </if>
       <if test="homeworkScore != null" >
-        #{homeworkScore,jdbcType=DECIMAL},
+        #{homeworkScore,jdbcType=DOUBLE},
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="homeworkProblem != null" >
         #{homeworkProblem,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Homework" >
-=======
-  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.Homework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update homework
     <set >
       <if test="homeworkCreatorId != null" >
@@ -156,66 +102,37 @@
         homework_end_time = #{homeworkEndTime,jdbcType=VARCHAR},
       </if>
       <if test="homeworkScore != null" >
-        homework_score = #{homeworkScore,jdbcType=DECIMAL},
+        homework_score = #{homeworkScore,jdbcType=DOUBLE},
       </if>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
       <if test="homeworkProblem != null" >
         homework_problem = #{homeworkProblem,jdbcType=LONGVARCHAR},
       </if>
     </set>
-    where homework_id = #{homeworkId,jdbcType=BIGINT}
+    where homework_id = #{homeworkId,jdbcType=INTEGER}
   </update>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.Homework" >
-=======
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.Homework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update homework
     set homework_creator_id = #{homeworkCreatorId,jdbcType=VARCHAR},
       homework_create_time = #{homeworkCreateTime,jdbcType=VARCHAR},
       homework_end_time = #{homeworkEndTime,jdbcType=VARCHAR},
-      homework_score = #{homeworkScore,jdbcType=DECIMAL},
-<<<<<<< HEAD
-<<<<<<< HEAD
+      homework_score = #{homeworkScore,jdbcType=DOUBLE},
       delete_flag = #{deleteFlag,jdbcType=INTEGER},
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
       homework_problem = #{homeworkProblem,jdbcType=LONGVARCHAR}
-    where homework_id = #{homeworkId,jdbcType=BIGINT}
+    where homework_id = #{homeworkId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.Homework" >
-=======
-      homework_problem = #{homeworkProblem,jdbcType=LONGVARCHAR}
-    where homework_id = #{homeworkId,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Homework" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update homework
     set homework_creator_id = #{homeworkCreatorId,jdbcType=VARCHAR},
       homework_create_time = #{homeworkCreateTime,jdbcType=VARCHAR},
       homework_end_time = #{homeworkEndTime,jdbcType=VARCHAR},
-<<<<<<< HEAD
-<<<<<<< HEAD
-      homework_score = #{homeworkScore,jdbcType=DECIMAL},
+      homework_score = #{homeworkScore,jdbcType=DOUBLE},
       delete_flag = #{deleteFlag,jdbcType=INTEGER}
-    where homework_id = #{homeworkId,jdbcType=BIGINT}
+    where homework_id = #{homeworkId,jdbcType=INTEGER}
   </update>
 
-=======
-      homework_score = #{homeworkScore,jdbcType=DECIMAL}
-    where homework_id = #{homeworkId,jdbcType=BIGINT}
-  </update>
-
-
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
   <!--添加homework的列表查询-->
   <select id="listHomework" resultMap="ResultMapWithBLOBs" parameterType="java.util.List">
     SELECT
@@ -228,13 +145,35 @@
       #{item.homeworkId}
     </foreach>
   </select>
-<<<<<<< HEAD
-=======
 
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
-      homework_score = #{homeworkScore,jdbcType=DECIMAL}
-    where homework_id = #{homeworkId,jdbcType=BIGINT}
-  </update>
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
+
+  <select id="selectHomeworkList" resultType="Homework">
+    select *FROM
+    homework
+    where delete_flag=0
+    limit #{startPos},#{pageSize}
+  </select>
+
+  <select id="selectHomeworkCount" resultType="Integer">
+    select COUNT(*)
+    FROM
+    homework
+    where delete_flag=0
+  </select>
+
+  <select id="selectHomeworkByCreatorId" resultType="Homework">
+    select *from
+    homework
+    where homework_creator_id=#{creatorId}
+    and delete_flag=0
+    limit #{startPos},#{pageSize}
+  </select>
+
+  <select id="selectHomeworkCountUsingCreatorId" resultType="Integer">
+     select count(*)
+     FROM
+     homework
+     where homework_creator_id=#{creatorId}
+     and delete_flag=0
+  </select>
 </mapper>

@@ -109,7 +109,6 @@
       <artifactId>standard</artifactId>
       <version>1.1.2</version>
     </dependency>
-<<<<<<< HEAD
 
     <!-- 映入JSON -->
     <!-- https://mvnrepository.com/artifact/org.json/json -->
@@ -119,8 +118,6 @@
       <version>20160810</version>
     </dependency>
 
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
@@ -163,8 +160,6 @@
           <overwrite>true</overwrite>
         </configuration>
       </plugin>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -173,10 +168,6 @@
                 <target>1.6</target>
             </configuration>
         </plugin>
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
-=======
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     </plugins>
   </build>
 </project>

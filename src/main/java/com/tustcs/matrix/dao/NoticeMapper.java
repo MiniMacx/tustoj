@@ -18,9 +18,5 @@ public interface NoticeMapper {
 
     int updateByPrimaryKey(Notice record);
 
-<<<<<<< HEAD
     int selectNoticeList(@Param("offset") int offset, @Param("limit") int limit);
-=======
-    int selectNoticeList(@Param("offset") int offset,@Param("limit") int limit);
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 }

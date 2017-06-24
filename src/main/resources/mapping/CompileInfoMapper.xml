@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.CompileInfoMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.CompileInfo" >
     <id column="solution_id" property="solutionId" jdbcType="INTEGER" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.CompileInfo" extends="BaseResultMap" >
-=======
-<mapper namespace="com.tustcs.matrix.oj.dao.CompileInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.CompileInfo" >
-    <id column="solution_id" property="solutionId" jdbcType="INTEGER" />
-  </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.oj.entity.CompileInfo" extends="BaseResultMap" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <result column="error" property="error" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -33,19 +25,11 @@
     delete from compileinfo
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </delete>
-<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.CompileInfo" >
     insert into compileinfo (solution_id, error)
     values (#{solutionId,jdbcType=INTEGER}, #{error,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.CompileInfo" >
-=======
-  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.CompileInfo" >
-    insert into compileinfo (solution_id, error)
-    values (#{solutionId,jdbcType=INTEGER}, #{error,jdbcType=LONGVARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.CompileInfo" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into compileinfo
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="solutionId != null" >
@@ -64,11 +48,7 @@
       </if>
     </trim>
   </insert>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.CompileInfo" >
-=======
-  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.CompileInfo" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update compileinfo
     <set >
       <if test="error != null" >
@@ -77,11 +57,7 @@
     </set>
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </update>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.CompileInfo" >
-=======
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.oj.entity.CompileInfo" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update compileinfo
     set error = #{error,jdbcType=LONGVARCHAR}
     where solution_id = #{solutionId,jdbcType=INTEGER}

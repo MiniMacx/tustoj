@@ -50,4 +50,22 @@ public class Token {
     public void setExpireTime(String expireTime) {
         this.expireTime = expireTime == null ? null : expireTime.trim();
     }
+
+    public Token(Integer recId, String userId, String token, String createTime, String expireTime) {
+        this.recId = recId;
+        this.userId = userId;
+        this.token = token;
+        this.createTime = createTime;
+        this.expireTime = expireTime;
+    }
+
+    public Token(String userId, String token, String createTime, String expireTime) {
+        this.userId = userId;
+        this.token = token;
+        this.createTime = createTime;
+        this.expireTime = expireTime;
+    }
+
+    public Token() {
+    }
 }

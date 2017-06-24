@@ -2,20 +2,13 @@ package com.tustcs.matrix.controller;
 
 import com.tustcs.matrix.service.UserService;
 import com.tustcs.matrix.utils.Res;
-<<<<<<< HEAD
-=======
-import org.apache.ibatis.jdbc.SQL;
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-<<<<<<< HEAD
 import javax.servlet.http.HttpServletRequest;
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
 
 /**
  * Created by L.key on 2017/6/2.
@@ -27,10 +20,6 @@ public class UserController {
 
     @Resource
     private UserService userService;
-<<<<<<< HEAD
-=======
-
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     @RequestMapping("/login")
     @ResponseBody
     public String login(String userId, String userPwd) {
@@ -72,14 +61,9 @@ public class UserController {
 
     @RequestMapping("courselist")
     @ResponseBody
-<<<<<<< HEAD
     public String getCourseList(HttpServletRequest request) {
         JSONObject jsonObject = new JSONObject();
         String userId=request.getParameter("userId");
-=======
-    public String getCourseList(String userId) {
-        JSONObject jsonObject = new JSONObject();
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
         if (null == userId || "".equals(userId)) {
             jsonObject.put("msg", "用户名为空")
                     .put("status", 0);

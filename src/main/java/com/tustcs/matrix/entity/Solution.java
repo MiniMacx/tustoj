@@ -38,11 +38,8 @@ public class Solution {
 
     private String judger;
 
-<<<<<<< HEAD
     private Integer deleteFlag;
 
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
     public Integer getSolutionId() {
         return solutionId;
     }
@@ -178,7 +175,6 @@ public class Solution {
     public void setJudger(String judger) {
         this.judger = judger == null ? null : judger.trim();
     }
-<<<<<<< HEAD
 
     public Integer getDeleteFlag() {
         return deleteFlag;
@@ -187,6 +183,54 @@ public class Solution {
     public void setDeleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
     }
-=======
->>>>>>> c46d0824de76fd787bbb6dee4e96a3670765b74d
+
+    public Solution(Integer solutionId, Integer problemId, String userId, Integer time,
+                    Integer memory, Date inDate, Short result, Integer language, String ip,
+                    Integer contestId, Byte valid, Byte num, Integer codeLength,
+                    Date judgetime, BigDecimal passRate, Integer lintError, String judger, Integer deleteFlag) {
+        this.solutionId = solutionId;
+        this.problemId = problemId;
+        this.userId = userId;
+        this.time = time;
+        this.memory = memory;
+        this.inDate = inDate;
+        this.result = result;
+        this.language = language;
+        this.ip = ip;
+        this.contestId = contestId;
+        this.valid = valid;
+        this.num = num;
+        this.codeLength = codeLength;
+        this.judgetime = judgetime;
+        this.passRate = passRate;
+        this.lintError = lintError;
+        this.judger = judger;
+        this.deleteFlag = deleteFlag;
+    }
+
+    public Solution(Integer problemId, String userId, Integer time, Integer memory, Date inDate,
+                    Short result, Integer language, String ip, Integer contestId, Byte valid, Byte num, Integer codeLength,
+                    Date judgetime, BigDecimal passRate, Integer lintError, String judger, Integer deleteFlag) {
+        this.problemId = problemId;
+        this.userId = userId;
+        this.time = time;
+        this.memory = memory;
+        this.inDate = inDate;
+        this.result = result;
+        this.language = language;
+        this.ip = ip;
+        this.contestId = contestId;
+        this.valid = valid;
+        this.num = num;
+        this.codeLength = codeLength;
+        this.judgetime = judgetime;
+        this.passRate = passRate;
+        this.lintError = lintError;
+        this.judger = judger;
+        this.deleteFlag = deleteFlag;
+    }
+
+
+    public Solution() {
+    }
 }

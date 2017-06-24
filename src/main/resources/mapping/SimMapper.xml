@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.SimMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.Sim" >
-=======
-<mapper namespace="com.tustcs.matrix.oj.dao.SimMapper" >
-  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.Sim" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <id column="s_id" property="sId" jdbcType="INTEGER" />
     <result column="sim_s_id" property="simSId" jdbcType="INTEGER" />
     <result column="sim" property="sim" jdbcType="INTEGER" />
@@ -24,21 +19,13 @@
     delete from sim
     where s_id = #{sId,jdbcType=INTEGER}
   </delete>
-<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Sim" >
-=======
-  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.Sim" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into sim (s_id, sim_s_id, sim
       )
     values (#{sId,jdbcType=INTEGER}, #{simSId,jdbcType=INTEGER}, #{sim,jdbcType=INTEGER}
       )
   </insert>
-<<<<<<< HEAD
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Sim" >
-=======
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.Sim" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into sim
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="sId != null" >
@@ -63,11 +50,7 @@
       </if>
     </trim>
   </insert>
-<<<<<<< HEAD
   <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.entity.Sim" >
-=======
-  <update id="updateByPrimaryKeySelective" parameterType="com.tustcs.matrix.oj.entity.Sim" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update sim
     <set >
       <if test="simSId != null" >
@@ -79,11 +62,7 @@
     </set>
     where s_id = #{sId,jdbcType=INTEGER}
   </update>
-<<<<<<< HEAD
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.Sim" >
-=======
-  <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.oj.entity.Sim" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     update sim
     set sim_s_id = #{simSId,jdbcType=INTEGER},
       sim = #{sim,jdbcType=INTEGER}

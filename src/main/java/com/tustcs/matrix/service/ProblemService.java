@@ -2,6 +2,7 @@ package com.tustcs.matrix.service;
 
 import com.tustcs.matrix.entity.ProblemWithBLOBs;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,4 +12,13 @@ public interface ProblemService {
     List<ProblemWithBLOBs> showProblem(Integer pageNow);
 
     List<ProblemWithBLOBs> showProblemByTitle(Integer pageNow, String title);
+
+    ProblemWithBLOBs getProblem(Integer problemId);
+
+    boolean addProblem(ProblemWithBLOBs problem);
+
+    boolean deleteProblem(Integer problemId);
+
+    boolean updateProblem(ProblemWithBLOBs problem);
+
 }

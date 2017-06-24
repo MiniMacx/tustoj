@@ -1,32 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<<<<<<< HEAD
 <mapper namespace="com.tustcs.matrix.dao.ContestProblemMapper" >
   <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.ContestProblem" >
-=======
-<mapper namespace="com.tustcs.matrix.oj.dao.ContestProblemMapper" >
-  <resultMap id="BaseResultMap" type="com.tustcs.matrix.oj.entity.ContestProblem" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     <result column="problem_id" property="problemId" jdbcType="INTEGER" />
     <result column="contest_id" property="contestId" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="CHAR" />
     <result column="num" property="num" jdbcType="INTEGER" />
   </resultMap>
-<<<<<<< HEAD
   <insert id="insert" parameterType="com.tustcs.matrix.entity.ContestProblem" >
-=======
-  <insert id="insert" parameterType="com.tustcs.matrix.oj.entity.ContestProblem" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into contest_problem (problem_id, contest_id, title, 
       num)
     values (#{problemId,jdbcType=INTEGER}, #{contestId,jdbcType=INTEGER}, #{title,jdbcType=CHAR}, 
       #{num,jdbcType=INTEGER})
   </insert>
-<<<<<<< HEAD
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.ContestProblem" >
-=======
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.oj.entity.ContestProblem" >
->>>>>>> d5ce09997160eb49af0f7686681af87d19b4e61b
     insert into contest_problem
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="problemId != null" >
