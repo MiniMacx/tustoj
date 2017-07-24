@@ -1,7 +1,10 @@
 package com.tustcs.matrix.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Date;
 
+@JsonIgnoreProperties({"regTime","deleteFlag"})
 public class User {
     private String userId;
 

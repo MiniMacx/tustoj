@@ -19,7 +19,7 @@
     <include refid="Base_Column_List" />
     from course
     where course_id = #{courseId,jdbcType=INTEGER}
-    where delete_flag=0
+    and delete_flag=0
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from course
@@ -27,9 +27,9 @@
   </delete>
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Course" >
     insert into course ( course_name, course_teacher,
-      course_time, course_week, course_section)
+      course_time, course_week, course_section,delete_flag)
     values ( #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR},
-      #{courseTime,jdbcType=VARCHAR}, #{courseWeek,jdbcType=VARCHAR}, #{courseSection,jdbcType=VARCHAR})
+      #{courseTime,jdbcType=VARCHAR}, #{courseWeek,jdbcType=VARCHAR}, #{courseSection,jdbcType=VARCHAR},0)
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Course" >
     insert into course

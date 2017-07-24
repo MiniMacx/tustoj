@@ -11,6 +11,8 @@ import java.util.List;
 public interface ProblemService {
     List<ProblemWithBLOBs> showProblem(Integer pageNow);
 
+    List<ProblemWithBLOBs> showProblemById(Integer pageNow,Integer problemId);
+
     List<ProblemWithBLOBs> showProblemByTitle(Integer pageNow, String title);
 
     ProblemWithBLOBs getProblem(Integer problemId);

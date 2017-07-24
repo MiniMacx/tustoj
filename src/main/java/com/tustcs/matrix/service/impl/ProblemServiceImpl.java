@@ -23,9 +23,22 @@ public class ProblemServiceImpl implements ProblemService {
     @Override
     public List<ProblemWithBLOBs> showProblem(Integer pageNow) {
         List<ProblemWithBLOBs> problemList;
-
+        Integer pageCount;
         if(pageNow!=null){
             problemList=problemMapper.selectProblemList((pageNow - 1) * Page.pageSize,Page.pageSize);
+        }else {
+            return null;
+        }
+
+        return problemList;
+    }
+
+    @Override
+    public List<ProblemWithBLOBs> showProblemById(Integer pageNow, Integer problemId) {
+        List<ProblemWithBLOBs> problemList;
+
+        if(pageNow!=null){
+            problemList=problemMapper.selectById(problemId,(pageNow - 1) * Page.pageSize,Page.pageSize);
         }else {
             return null;
         }
@@ -46,12 +59,18 @@ public class ProblemServiceImpl implements ProblemService {
         return problemList;
     }
 
+
+
     @Override
     public ProblemWithBLOBs getProblem(Integer problemId) {
-        ProblemWithBLOBs problem=problemMapper.selectByPrimaryKey(problemId);
-        if(problem.getDeleteFlag()!=1)
-            return problem;
-        return null;
+        try {
+            ProblemWithBLOBs problem=problemMapper.selectByPrimaryKey(problemId);
+            if(problem.getDeleteFlag()!=1)
+                return problem;
+            return null;
+        }catch (Exception e){
+            return null;
+        }
     }
 
 

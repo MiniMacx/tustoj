@@ -53,4 +53,6 @@ public interface ContestMapper {
     Integer selectContestCountUsingTitle(@Param("title") String title);
 
     List<Contest> listContest(List<UserContest> listUserContest);
+
+    Integer updateEnrollNum();
 }

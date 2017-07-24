@@ -41,15 +41,15 @@
       time, memory, in_date, 
       result, language, ip, 
       contest_id, valid, num, 
-      code_length, judgetime, pass_rate, 
+      code_length, pass_rate,
       lint_error, judger, delete_flag
       )
     values (#{problemId,jdbcType=INTEGER}, #{userId,jdbcType=CHAR},
       #{time,jdbcType=INTEGER}, #{memory,jdbcType=INTEGER}, #{inDate,jdbcType=TIMESTAMP}, 
       #{result,jdbcType=SMALLINT}, #{language,jdbcType=INTEGER}, #{ip,jdbcType=CHAR}, 
-      #{contestId,jdbcType=INTEGER}, #{valid,jdbcType=TINYINT}, #{num,jdbcType=TINYINT}, 
-      #{codeLength,jdbcType=INTEGER}, #{judgetime,jdbcType=TIMESTAMP}, #{passRate,jdbcType=DECIMAL}, 
-      #{lintError,jdbcType=INTEGER}, #{judger,jdbcType=CHAR}, #{deleteFlag,jdbcType=INTEGER}
+      #{contestId,jdbcType=INTEGER}, 1, -1,
+      #{codeLength,jdbcType=INTEGER}, 0.00,
+      0,'admin', 0
       )
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Solution" >
@@ -250,8 +250,9 @@
   <select id="selectSolutionByPage" parameterType="com.tustcs.matrix.entity.Solution" resultType="Solution">
     select *
     from solution
-    where user_id=#{userId} limit #{startPos},#{pageSize}
+    where user_id=#{userId}
     and delete_flag=0
+    limit #{startPos},#{pageSize}
   </select>
 
   <select id="selectSolutionCountUsingUserId" parameterType="com.tustcs.matrix.entity.Solution" resultType="Integer">
@@ -273,5 +274,28 @@
     and delete_flag=0
   </select>
 
+  <select id="selectSolutionByProblemId" resultType="Solution">
+    select * from solution
+    where user_id=#{userId} and problem_id LIKE '%${problemId}%'
+    limit #{startPos},#{pageSize}
+  </select>
 
+  <select id="selectSolutionCountUsingProblemId" resultType="java.lang.Integer">
+    select count(*)
+    from solution
+    where user_id=#{userId} and problem_id LIKE '%${problemId}%'
+  </select>
+
+  <select id="selectSolutionCount" resultType="java.lang.Integer">
+    select count(*)
+    from solution
+    where delete_flag=0
+  </select>
+
+  <select id="selectContestProblemResult" resultType="java.lang.Short">
+    select result from solution
+    where user_id=#{userId}
+    and contest_id=#{contestId}
+    and problem_id=#{problemId}
+  </select>
 </mapper>

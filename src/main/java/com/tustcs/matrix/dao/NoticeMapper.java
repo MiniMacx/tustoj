@@ -3,6 +3,8 @@ package com.tustcs.matrix.dao;
 import com.tustcs.matrix.entity.Notice;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface NoticeMapper {
     int deleteByPrimaryKey(Integer noticeId);
 
@@ -18,5 +20,7 @@ public interface NoticeMapper {
 
     int updateByPrimaryKey(Notice record);
 
-    int selectNoticeList(@Param("offset") int offset, @Param("limit") int limit);
+    List<Notice> selectNoticeList(@Param("offset") int offset, @Param("limit") int limit);
+
+    int selectNoticeCount();
 }

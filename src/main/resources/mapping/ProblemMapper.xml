@@ -51,10 +51,10 @@
       description, input, output, 
       sample_input, sample_output, hint
       )
-    values ( #{title,jdbcType=VARCHAR}, #{spj,jdbcType=CHAR},
-      #{source,jdbcType=VARCHAR}, #{inDate,jdbcType=TIMESTAMP}, #{timeLimit,jdbcType=INTEGER}, 
-      #{memoryLimit,jdbcType=INTEGER}, #{defunct,jdbcType=CHAR}, #{accepted,jdbcType=INTEGER}, 
-      #{submit,jdbcType=INTEGER}, #{solved,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER}, 
+    values ( #{title,jdbcType=VARCHAR}, 0,
+      '', #{inDate,jdbcType=TIMESTAMP}, #{timeLimit,jdbcType=INTEGER},
+      #{memoryLimit,jdbcType=INTEGER}, 'N', 0,
+      0,0, 0,
       #{description,jdbcType=LONGVARCHAR}, #{input,jdbcType=LONGVARCHAR}, #{output,jdbcType=LONGVARCHAR}, 
       #{sampleInput,jdbcType=LONGVARCHAR}, #{sampleOutput,jdbcType=LONGVARCHAR}, #{hint,jdbcType=LONGVARCHAR}
       )
@@ -280,6 +280,13 @@
     where delete_flag=0
   </select>
 
+  <select id="selectById" parameterType="com.tustcs.matrix.entity.ProblemWithBLOBs" resultType="ProblemWithBLOBs">
+    SELECT *from problem
+    where problem_id like '%${problemId}%'
+    and delete_flag=0
+    limit #{startPos},#{pageSize}
+  </select>
+
   <select id="selectByTitle" parameterType="com.tustcs.matrix.entity.ProblemWithBLOBs" resultType="ProblemWithBLOBs">
     select *from problem
     where title like '%${title}%'
@@ -291,6 +298,13 @@
     select COUNT(*)
     from problem
     where title like '%${title}%'
+    and delete_flag=0
+  </select>
+
+  <select id="selectProblemCountUsingId" parameterType="com.tustcs.matrix.entity.ProblemWithBLOBs" resultType="Integer">
+    select COUNT(*)
+    from problem
+    where problem_id like '%${problemId}%'
     and delete_flag=0
   </select>
 

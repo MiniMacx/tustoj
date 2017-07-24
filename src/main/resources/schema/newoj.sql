@@ -88,6 +88,7 @@ CREATE TABLE `contest` (
   `private` tinyint(4) NOT NULL DEFAULT '0',
   `langmask` int(11) NOT NULL DEFAULT '0' COMMENT 'bits for LANG to mask',
   `password` char(16) NOT NULL DEFAULT '',
+  `enroll_num` int(11) not null default '0',
   `delete_flag` int(11) not null default '0',
   PRIMARY KEY (`contest_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=utf8;
@@ -99,7 +100,7 @@ CREATE TABLE `contest` (
 
 LOCK TABLES `contest` WRITE;
 /*!40000 ALTER TABLE `contest` DISABLE KEYS */;
-INSERT INTO contest (title, start_time, end_time, defunct, description, private, langmask, password) VALUES ('天津科技大学第一届计算机程序设计大赛','2017-04-30 04:00:00','2017-04-30 08:00:00','N','天津科技大学第一届计算机程序设计大赛',0,262132,'123456');
+INSERT INTO contest (title, start_time, end_time, defunct, description, private, langmask, password,enroll_num) VALUES ('天津科技大学第一届计算机程序设计大赛','2017-04-30 04:00:00','2017-04-30 08:00:00','N','天津科技大学第一届计算机程序设计大赛',0,262132,'123456',0);
 /*!40000 ALTER TABLE `contest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,9 +127,7 @@ DROP TABLE IF EXISTS `contest_problem`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `contest_problem` (
   `problem_id` int(11) NOT NULL DEFAULT '0',
-  `contest_id` int(11) DEFAULT NULL,
-  `title` char(200) NOT NULL DEFAULT '',
-  `num` int(11) NOT NULL DEFAULT '0'
+  `contest_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -138,7 +137,7 @@ CREATE TABLE `contest_problem` (
 
 LOCK TABLES `contest_problem` WRITE;
 /*!40000 ALTER TABLE `contest_problem` DISABLE KEYS */;
-INSERT INTO `contest_problem` VALUES (1061,1000,'',2),(1060,1000,'',1),(1059,1000,'',0);
+INSERT INTO `contest_problem` VALUES (1061,1001),(1060,1001),(1059,1001),(1003,1001);
 /*!40000 ALTER TABLE `contest_problem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,8 +234,8 @@ CREATE TABLE `news` (
   `pic_url` VARCHAR(200) NOT NULL ,
   `user_id` varchar(48) NOT NULL DEFAULT '',
   `content` text not null,
-  `is_top` int(5) not NULL DEFAULT '0' comment '是否置顶',
-  `is_report` int(5) not null default '0' comment '是否允许发表',
+  `is_top` int(5) not NULL DEFAULT '0' comment '是否置顶 1：置顶 0：不置顶',
+  `is_report` int(5) not null default '0' comment '是否允许发表 1：发表 0：待审核 -1：不允许',
   `delete_flag` int(5) not null DEFAULT  '0' comment '是否删除,是为1',
   `weight` int(10) not null default '1' comment '权重数，数越大，展示越靠前',
   `add_time` varchar(50) not null,
@@ -575,7 +574,7 @@ DROP TABLE IF EXISTS `topic`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `topic` (
   `tid` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varbinary(60) NOT NULL,
+  `title` varchar(60) NOT NULL,
   `status` int(2) NOT NULL DEFAULT '0',
   `top_level` int(2) NOT NULL DEFAULT '0',
   `cid` int(11) DEFAULT NULL,
@@ -619,7 +618,7 @@ CREATE TABLE `users` (
   `reg_time` datetime DEFAULT NULL,
   `nick` varchar(100) NOT NULL DEFAULT '',
   `school` varchar(100) NOT NULL DEFAULT '',
-  /*用户等级 1：学生 2：教师 3：学院领导 4:管理员*/
+  /*用户等级 1：管理员 2：领导 3：教师 4:学生*/
   `level` INT(5) not null DEFAULT '1',
   `delete_flag` int(11) not null default '0',
   PRIMARY KEY (`user_id`)
@@ -683,9 +682,10 @@ DROP TABLE IF EXISTS `user_contest`;
 CREATE TABLE `user_contest` (
   `id` int(10) not null AUTO_INCREMENT,
   `user_id` varchar(48) NOT NULL DEFAULT '' ,
-  `contest_id` BIGINT(20) NOT NULL,
+  `contest_id` int(11) NOT NULL,
+  `score` int(11) not null,
   PRIMARY KEY (`id`)
 )ENGINE =InnoDB DEFAULT CHARSET =utf8 AUTO_INCREMENT=2;
 
-INSERT INTO user_contest (user_id, contest_id) VALUES (1001,1001);
+INSERT INTO user_contest (user_id, contest_id,score) VALUES (1001,1001,100);
 

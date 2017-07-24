@@ -1,8 +1,11 @@
 package com.tustcs.matrix.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
+@JsonIgnoreProperties({"ip","valid","num","passRate","lintError","deleteFlag"})
 public class Solution {
     private Integer solutionId;
 

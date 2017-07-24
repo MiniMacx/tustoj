@@ -36,6 +36,18 @@ public class SolutionServiceImpl implements SolutionService {
     }
 
     @Override
+    public List<Solution> showSolutionByProblemId(Integer pageNow, String loginUserId, Integer problemId) {
+        List<Solution> solutionList;
+        if(pageNow!=null) {
+            solutionList=solutionMapper.selectSolutionByProblemId((pageNow - 1) * Page.pageSize,Page.pageSize,
+                    loginUserId,problemId);
+        }else {
+            return null;
+        }
+        return solutionList;
+    }
+
+    @Override
     public boolean addSolution(Solution solution) {
         return solutionMapper.insert(solution)>0;
     }

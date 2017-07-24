@@ -19,11 +19,11 @@
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    user_id, email, submit, solved, defunct, ip, accesstime, volume, language, password, 
+    user_id, email, submit, solved, defunct, ip, accesstime, volume, language, password,
     reg_time, nick, school, level, delete_flag
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from users
     where user_id = #{userId,jdbcType=VARCHAR}
@@ -34,16 +34,16 @@
     where user_id = #{userId,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.tustcs.matrix.entity.User" >
-    insert into users (user_id, email, submit, 
-      solved, defunct, ip, accesstime, 
-      volume, language, password, 
-      reg_time, nick, school, 
-      level, delete_flag)
-    values (#{userId,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{submit,jdbcType=INTEGER}, 
-      #{solved,jdbcType=INTEGER}, #{defunct,jdbcType=CHAR}, #{ip,jdbcType=VARCHAR}, #{accesstime,jdbcType=TIMESTAMP}, 
-      #{volume,jdbcType=INTEGER}, #{language,jdbcType=INTEGER}, #{password,jdbcType=VARCHAR}, 
-      #{regTime,jdbcType=TIMESTAMP}, #{nick,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR}, 
-      #{level,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER})
+    insert into users (user_id, email, submit,
+    solved, defunct, ip, accesstime,
+    volume, language, password,
+    reg_time, nick, school,
+    level, delete_flag)
+    values (#{userId,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{submit,jdbcType=INTEGER},
+    #{solved,jdbcType=INTEGER}, #{defunct,jdbcType=CHAR}, #{ip,jdbcType=VARCHAR}, #{accesstime,jdbcType=TIMESTAMP},
+    #{volume,jdbcType=INTEGER}, #{language,jdbcType=INTEGER}, #{password,jdbcType=VARCHAR},
+    #{regTime,jdbcType=TIMESTAMP}, #{nick,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR},
+    #{level,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.User" >
     insert into users
@@ -193,19 +193,19 @@
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.User" >
     update users
     set email = #{email,jdbcType=VARCHAR},
-      submit = #{submit,jdbcType=INTEGER},
-      solved = #{solved,jdbcType=INTEGER},
-      defunct = #{defunct,jdbcType=CHAR},
-      ip = #{ip,jdbcType=VARCHAR},
-      accesstime = #{accesstime,jdbcType=TIMESTAMP},
-      volume = #{volume,jdbcType=INTEGER},
-      language = #{language,jdbcType=INTEGER},
-      password = #{password,jdbcType=VARCHAR},
-      reg_time = #{regTime,jdbcType=TIMESTAMP},
-      nick = #{nick,jdbcType=VARCHAR},
-      school = #{school,jdbcType=VARCHAR},
-      level = #{level,jdbcType=INTEGER},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER}
+    submit = #{submit,jdbcType=INTEGER},
+    solved = #{solved,jdbcType=INTEGER},
+    defunct = #{defunct,jdbcType=CHAR},
+    ip = #{ip,jdbcType=VARCHAR},
+    accesstime = #{accesstime,jdbcType=TIMESTAMP},
+    volume = #{volume,jdbcType=INTEGER},
+    language = #{language,jdbcType=INTEGER},
+    password = #{password,jdbcType=VARCHAR},
+    reg_time = #{regTime,jdbcType=TIMESTAMP},
+    nick = #{nick,jdbcType=VARCHAR},
+    school = #{school,jdbcType=VARCHAR},
+    level = #{level,jdbcType=INTEGER},
+    delete_flag = #{deleteFlag,jdbcType=INTEGER}
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
 
@@ -226,5 +226,17 @@
     select *from users
     where user_id like '%${userId}%'
     and delete_flag=0
+  </select>
+
+  <select id="selectRankingList" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT u.user_id,u.nick,u.submit,u.solved
+    FROM users AS u
+    ORDER BY (u.solved/u.submit) DESC
+    LIMIT #{offSet,jdbcType=INTEGER},#{userNum,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectAllUser" resultMap="BaseResultMap">
+    SELECT *
+    FROM users
   </select>
 </mapper>

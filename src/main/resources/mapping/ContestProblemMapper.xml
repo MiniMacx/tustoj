@@ -44,4 +44,10 @@
       </if>
     </trim>
   </insert>
+
+  <select id="selectProblemId" resultType="java.lang.Integer">
+    SELECT problem_id
+    from contest_problem
+    where contest_id=#{contestId}
+  </select>
 </mapper>

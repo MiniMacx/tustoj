@@ -21,4 +21,6 @@ public interface CourseService {
     boolean deleteCourse(Integer courseId);
 
     boolean updateCourse(Course course);
+
+
 }

@@ -19,4 +19,6 @@ public interface NewsService {
     boolean deleteNews(Integer newsId);
 
     boolean updateNews(News news);
+
+
 }

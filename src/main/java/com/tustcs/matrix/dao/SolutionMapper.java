@@ -2,6 +2,7 @@ package com.tustcs.matrix.dao;
 
 import com.tustcs.matrix.entity.Solution;
 import org.apache.ibatis.annotations.Param;
+import org.omg.CORBA.INTERNAL;
 
 import java.util.List;
 
@@ -56,5 +57,14 @@ public interface SolutionMapper {
      */
     Integer selectAcceptedSolutionCountUsingUserId(@Param("userId") String userId, @Param("result") Short result);
 
+    List<Solution> selectSolutionByProblemId(@Param("startPos")Integer startPos,@Param("pageSize")Integer pageSize,
+                                              @Param("userId") String userId,@Param("problemId")Integer problemId);
+
+    Integer selectSolutionCountUsingProblemId(@Param("userId") String userId,@Param("problemId")Integer problemId);
+
+    Integer selectSolutionCount();
+
+    Short selectContestProblemResult(@Param("problemId") Integer problemId,@Param("contestId") Integer contestId,
+                                       @Param("userId") String userId);
 
 }

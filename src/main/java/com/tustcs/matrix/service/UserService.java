@@ -1,8 +1,8 @@
 package com.tustcs.matrix.service;
 
-import com.tustcs.matrix.entity.Homework;
 import com.tustcs.matrix.entity.Contest;
 import com.tustcs.matrix.entity.Course;
+import com.tustcs.matrix.entity.Homework;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public interface UserService {
 
 
-    boolean loginService(String userId,String userPwd);
+    boolean loginService(String userId, String userPwd);
 
     int queryOwnSubmit(String userId);
 

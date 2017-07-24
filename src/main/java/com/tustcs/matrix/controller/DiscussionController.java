@@ -4,7 +4,7 @@ import com.tustcs.matrix.service.TopicService;
 import com.tustcs.matrix.entity.Reply;
 import com.tustcs.matrix.entity.Topic;
 import com.tustcs.matrix.service.ReplyService;
-import com.tustcs.matrix.utils.Res;
+import com.tustcs.matrix.dto.Res;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

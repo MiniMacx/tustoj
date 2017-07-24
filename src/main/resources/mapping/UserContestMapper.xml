@@ -69,6 +69,10 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
+  <select id="selectContest" resultType="java.lang.Integer">
+    select *from user_contest
+    where user_id=#{userId} and contest_id=#{contestId}
+  </select>
 
   <select id="selectUserContestList" parameterType="java.lang.String" resultMap="BaseResultMap">
     SELECT

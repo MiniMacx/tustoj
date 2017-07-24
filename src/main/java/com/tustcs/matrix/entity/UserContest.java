@@ -5,7 +5,9 @@ public class UserContest {
 
     private String userId;
 
-    private Long contestId;
+    private Integer contestId;
+
+    private Integer score;
 
     public Integer getId() {
         return id;
@@ -23,11 +25,19 @@ public class UserContest {
         this.userId = userId == null ? null : userId.trim();
     }
 
-    public Long getContestId() {
+    public Integer getContestId() {
         return contestId;
     }
 
-    public void setContestId(Long contestId) {
+    public void setContestId(Integer contestId) {
         this.contestId = contestId;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
     }
 }

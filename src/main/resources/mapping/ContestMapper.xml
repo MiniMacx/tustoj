@@ -10,13 +10,15 @@
     <result column="private" property="privateFlag" jdbcType="TINYINT" />
     <result column="langmask" property="langmask" jdbcType="INTEGER" />
     <result column="password" property="password" jdbcType="CHAR" />
+    <result column="enroll_num" property="enrollNum" jdbcType="INTEGER" />
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.Contest" extends="BaseResultMap" >
     <result column="description" property="description" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    contest_id, title, start_time, end_time, defunct, private, langmask, password, delete_flag
+    contest_id, title, start_time, end_time,private, langmask, password, enroll_num,
+    delete_flag
   </sql>
   <sql id="Blob_Column_List" >
     description
@@ -28,21 +30,20 @@
     <include refid="Blob_Column_List" />
     from contest
     where contest_id = #{contestId,jdbcType=INTEGER}
-    and delete_flag=0
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from contest
     where contest_id = #{contestId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Contest" >
-    insert into contest (title, start_time,
-      end_time, defunct, private, 
-      langmask, password, delete_flag, 
-      description)
-    values  (#{title,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP},
-      #{endTime,jdbcType=TIMESTAMP}, #{defunct,jdbcType=CHAR}, #{privateFlag,jdbcType=TINYINT},
-      #{langmask,jdbcType=INTEGER}, #{password,jdbcType=CHAR}, #{deleteFlag,jdbcType=INTEGER}, 
-      #{description,jdbcType=LONGVARCHAR})
+    insert into contest ( title, start_time,
+      end_time, defunct, private,
+      langmask, password, enroll_num, 
+      delete_flag, description)
+    values ( #{title,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP},
+      #{endTime,jdbcType=TIMESTAMP},'N', #{privateFlag},
+      262132, #{password,jdbcType=CHAR}, 0,
+      0, #{description,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Contest" >
     insert into contest
@@ -63,13 +64,16 @@
         defunct,
       </if>
       <if test="privateFlag != null" >
-        private,
+        privateFlag,
       </if>
       <if test="langmask != null" >
         langmask,
       </if>
       <if test="password != null" >
         password,
+      </if>
+      <if test="enrollNum != null" >
+        enroll_num,
       </if>
       <if test="deleteFlag != null" >
         delete_flag,
@@ -94,7 +98,7 @@
       <if test="defunct != null" >
         #{defunct,jdbcType=CHAR},
       </if>
-      <if test="private != null" >
+      <if test="privateFlag != null" >
         #{privateFlag,jdbcType=TINYINT},
       </if>
       <if test="langmask != null" >
@@ -102,6 +106,9 @@
       </if>
       <if test="password != null" >
         #{password,jdbcType=CHAR},
+      </if>
+      <if test="enrollNum != null" >
+        #{enrollNum,jdbcType=INTEGER},
       </if>
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
@@ -135,6 +142,9 @@
       <if test="password != null" >
         password = #{password,jdbcType=CHAR},
       </if>
+      <if test="enrollNum != null" >
+        enroll_num = #{enrollNum,jdbcType=INTEGER},
+      </if>
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
@@ -153,6 +163,7 @@
       private = #{privateFlag,jdbcType=TINYINT},
       langmask = #{langmask,jdbcType=INTEGER},
       password = #{password,jdbcType=CHAR},
+      enroll_num = #{enrollNum,jdbcType=INTEGER},
       delete_flag = #{deleteFlag,jdbcType=INTEGER},
       description = #{description,jdbcType=LONGVARCHAR}
     where contest_id = #{contestId,jdbcType=INTEGER}
@@ -166,6 +177,7 @@
       private = #{privateFlag,jdbcType=TINYINT},
       langmask = #{langmask,jdbcType=INTEGER},
       password = #{password,jdbcType=CHAR},
+      enroll_num = #{enrollNum,jdbcType=INTEGER},
       delete_flag = #{deleteFlag,jdbcType=INTEGER}
     where contest_id = #{contestId,jdbcType=INTEGER}
   </update>
@@ -179,7 +191,7 @@
   <select id="selectContestCount" resultType="Integer">
     select COUNT(*)
     from contest
-      where delete_flag=0
+    where delete_flag=0
   </select>
 
   <select id="selectByTitle" parameterType="com.tustcs.matrix.entity.Contest" resultType="Contest">
@@ -208,4 +220,11 @@
       #{item.contestId}
     </foreach>
   </select>
+
+  <update id="updateEnrollNum">
+    update FROM
+    contest
+    set enroll_num=enroll_num+1
+  </update>
+
 </mapper>

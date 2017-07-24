@@ -26,7 +26,7 @@ public interface UserMapper {
      * @param limit
      * @return
      */
-    List<User> selectUserList(@Param("offset") int offset, @Param("limit") int limit);
+    List<User> selectUserList(@Param("offset") int offset ,@Param("limit") int limit );
 
     /**
      * [管理员使用]
@@ -44,6 +44,7 @@ public interface UserMapper {
      */
     List<User> selectUsingId(@Param("userId") String userId);
 
+    List<User> selectRankingList(@Param("offSet") Integer offSet,@Param("userNum") Integer userNum);
 
     List<User> selectAllUser();
 

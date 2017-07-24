@@ -1,7 +1,6 @@
 package com.tustcs.matrix.dao;
 
 import com.tustcs.matrix.entity.Reply;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -14,18 +13,11 @@ public interface ReplyMapper {
 
     Reply selectByPrimaryKey(Integer rid);
 
+    List<Reply> selectByTopicId(Integer topicId);
+
     int updateByPrimaryKeySelective(Reply record);
 
     int updateByPrimaryKeyWithBLOBs(Reply record);
 
     int updateByPrimaryKey(Reply record);
-
-    List<Reply> selectReplyList(@Param("startPos") int startPos,@Param("pageSize") int pageSize,
-                                @Param("topicId") int topicId);
-
-    List<Reply> selectReplyByVotes(@Param("startPos") int startPos,@Param("pageSize") int pageSize,
-                                   @Param("topicId") int topicId);
-
-    Integer selectReplyCount(int topicId);
-
 }

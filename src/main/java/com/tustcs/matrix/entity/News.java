@@ -1,5 +1,8 @@
 package com.tustcs.matrix.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"deleteFlag","weight"})
 public class News {
     private Integer newsId;
 

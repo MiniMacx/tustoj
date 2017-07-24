@@ -25,8 +25,7 @@ public class ReplyServiceImpl implements ReplyService {
         List<Reply> replyList;
 
         if(pageNow!=null){
-            replyList=replyMapper.selectReplyList((pageNow - 1) * Page.pageSize,Page.pageSize,
-                                                    topicId);
+            replyList=replyMapper.selectByTopicId(topicId);
         }else {
             return null;
         }

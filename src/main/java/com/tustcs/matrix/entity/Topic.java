@@ -1,5 +1,8 @@
 package com.tustcs.matrix.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"deleteFlag"})
 public class Topic {
     private Integer tid;
 
@@ -17,7 +20,7 @@ public class Topic {
 
     private Integer deleteFlag;
 
-    private byte[] title;
+    private String title;
 
     public Integer getTid() {
         return tid;
@@ -83,16 +86,16 @@ public class Topic {
         this.deleteFlag = deleteFlag;
     }
 
-    public byte[] getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle(byte[] title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
     public Topic(Integer tid, Integer status, Integer topLevel, Integer cid, Integer pid, String authorId,
-                 String time, Integer deleteFlag, byte[] title) {
+                 String time, Integer deleteFlag, String title) {
         this.tid = tid;
         this.status = status;
         this.topLevel = topLevel;
@@ -105,7 +108,7 @@ public class Topic {
     }
 
     public Topic(Integer status, Integer topLevel, Integer cid,
-                 Integer pid, String authorId, String time, Integer deleteFlag, byte[] title) {
+                 Integer pid, String authorId, String time, Integer deleteFlag, String title) {
         this.status = status;
         this.topLevel = topLevel;
         this.cid = cid;

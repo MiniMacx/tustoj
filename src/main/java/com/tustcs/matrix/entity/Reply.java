@@ -1,7 +1,10 @@
 package com.tustcs.matrix.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Date;
 
+@JsonIgnoreProperties({"status","ip","deleteFlag"})
 public class Reply {
     private Integer rid;
 

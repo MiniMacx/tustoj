@@ -84,7 +84,14 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public Course getCourse(Integer courseId) {
-        Course course=courseMapper.selectByPrimaryKey(courseId);
-        return course.getDeleteFlag()==0?course:null;
+        try {
+            Course course=courseMapper.selectByPrimaryKey(courseId);
+            return course.getDeleteFlag()==0?course:null;
+        }catch (Exception e){
+            return null;
+        }
+
     }
+
+
 }

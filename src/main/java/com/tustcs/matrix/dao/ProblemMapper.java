@@ -44,10 +44,16 @@ public interface ProblemMapper {
     List<ProblemWithBLOBs> selectByTitle(@Param("title") String title, @Param("startPos") Integer startPos,
                                          @Param("pageSize") Integer pageSize);
 
+
+    List<ProblemWithBLOBs> selectById(@Param("problemId") Integer problemId,@Param("startPos")Integer startPos,
+                                        @Param("pageSize") Integer pageSize);
+
     /**
      * 获取根据标题搜索问题记录的数量
      * @param title
      * @return
      */
     Integer selectProblemCountUsingTitle(@Param("title") String title);
+
+    Integer selectProblemCountUsingId(@Param("problemId") Integer problemId);
 }

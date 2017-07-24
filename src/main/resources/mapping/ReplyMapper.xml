@@ -22,7 +22,7 @@
     content
   </sql>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
@@ -36,13 +36,13 @@
   </delete>
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Reply" >
     insert into reply ( author_id, time,
-      topic_id, status, ip, 
-      vote_up, vote_down, delete_flag, 
-      content)
+    topic_id, status, ip,
+    vote_up, vote_down, delete_flag,
+    content)
     values ( #{authorId,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP},
-      #{topicId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, 
-      #{voteUp,jdbcType=INTEGER}, #{voteDown,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER}, 
-      #{content,jdbcType=LONGVARCHAR})
+    #{topicId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR},
+    #{voteUp,jdbcType=INTEGER}, #{voteDown,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER},
+    #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Reply" >
     insert into reply
@@ -147,28 +147,38 @@
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.Reply" >
     update reply
     set author_id = #{authorId,jdbcType=VARCHAR},
-      time = #{time,jdbcType=TIMESTAMP},
-      topic_id = #{topicId,jdbcType=INTEGER},
-      status = #{status,jdbcType=INTEGER},
-      ip = #{ip,jdbcType=VARCHAR},
-      vote_up = #{voteUp,jdbcType=INTEGER},
-      vote_down = #{voteDown,jdbcType=INTEGER},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER},
-      content = #{content,jdbcType=LONGVARCHAR}
+    time = #{time,jdbcType=TIMESTAMP},
+    topic_id = #{topicId,jdbcType=INTEGER},
+    status = #{status,jdbcType=INTEGER},
+    ip = #{ip,jdbcType=VARCHAR},
+    vote_up = #{voteUp,jdbcType=INTEGER},
+    vote_down = #{voteDown,jdbcType=INTEGER},
+    delete_flag = #{deleteFlag,jdbcType=INTEGER},
+    content = #{content,jdbcType=LONGVARCHAR}
     where rid = #{rid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.Reply" >
     update reply
     set author_id = #{authorId,jdbcType=VARCHAR},
-      time = #{time,jdbcType=TIMESTAMP},
-      topic_id = #{topicId,jdbcType=INTEGER},
-      status = #{status,jdbcType=INTEGER},
-      ip = #{ip,jdbcType=VARCHAR},
-      vote_up = #{voteUp,jdbcType=INTEGER},
-      vote_down = #{voteDown,jdbcType=INTEGER},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER}
+    time = #{time,jdbcType=TIMESTAMP},
+    topic_id = #{topicId,jdbcType=INTEGER},
+    status = #{status,jdbcType=INTEGER},
+    ip = #{ip,jdbcType=VARCHAR},
+    vote_up = #{voteUp,jdbcType=INTEGER},
+    vote_down = #{voteDown,jdbcType=INTEGER},
+    delete_flag = #{deleteFlag,jdbcType=INTEGER}
     where rid = #{rid,jdbcType=INTEGER}
   </update>
+
+  <!--添加以topicId为查询条件的方法-->
+  <select id="selectByTopicId" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    SELECT
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    FROM reply
+    where topic_id = #{topicId}
+  </select>
 
   <select id="selectReplyList" resultType="Reply">
     select *FROM

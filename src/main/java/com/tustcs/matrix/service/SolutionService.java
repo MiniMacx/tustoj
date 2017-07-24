@@ -8,7 +8,9 @@ import java.util.List;
  * Created by polykickshaw on 17-6-6.
  */
 public interface SolutionService {
-    List<Solution> showSolutionByUserId(Integer pageNow, String StringUserId);
+    List<Solution> showSolutionByUserId(Integer pageNow, String userId);
+
+    List<Solution> showSolutionByProblemId(Integer pageNow,String userId,Integer problemId);
 
     boolean addSolution(Solution solution);
 

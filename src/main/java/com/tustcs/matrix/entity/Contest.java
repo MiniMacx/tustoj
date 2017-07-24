@@ -1,7 +1,10 @@
 package com.tustcs.matrix.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Date;
 
+@JsonIgnoreProperties({"defunct","privateFlag","langmask","password","deleteFlag"})
 public class Contest {
     private Integer contestId;
 
@@ -18,6 +21,8 @@ public class Contest {
     private Integer langmask;
 
     private String password;
+
+    private Integer enrollNum;
 
     private Integer deleteFlag;
 
@@ -87,6 +92,14 @@ public class Contest {
         this.password = password == null ? null : password.trim();
     }
 
+    public Integer getEnrollNum() {
+        return enrollNum;
+    }
+
+    public void setEnrollNum(Integer enrollNum) {
+        this.enrollNum = enrollNum;
+    }
+
     public Integer getDeleteFlag() {
         return deleteFlag;
     }
@@ -101,35 +114,5 @@ public class Contest {
 
     public void setDescription(String description) {
         this.description = description == null ? null : description.trim();
-    }
-
-    public Contest(Integer contestId, String title, Date startTime, Date endTime, String defunct,
-                   Byte privateFlag, Integer langmask, String password, Integer deleteFlag, String description) {
-        this.contestId = contestId;
-        this.title = title;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.defunct = defunct;
-        this.privateFlag = privateFlag;
-        this.langmask = langmask;
-        this.password = password;
-        this.deleteFlag = deleteFlag;
-        this.description = description;
-    }
-
-    public Contest(String title, Date startTime, Date endTime, String defunct, Byte privateFlag,
-                   Integer langmask, String password, Integer deleteFlag, String description) {
-        this.title = title;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.defunct = defunct;
-        this.privateFlag = privateFlag;
-        this.langmask = langmask;
-        this.password = password;
-        this.deleteFlag = deleteFlag;
-        this.description = description;
-    }
-
-    public Contest() {
     }
 }
