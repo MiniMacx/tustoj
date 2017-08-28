@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,7 +42,7 @@ public class ReplyServiceImpl implements ReplyService {
 
     @Override
     public boolean addReply(Reply reply) {
-        return replyMapper.insert(reply)>0;
+        return replyMapper.insertSelective(reply)>0;
     }
 
     @Override
@@ -56,4 +57,26 @@ public class ReplyServiceImpl implements ReplyService {
         reply.setDeleteFlag(1);
         return replyMapper.updateByPrimaryKeySelective(reply)>0;
     }
+
+    @Override
+    public List<Reply> showReplyByTopicId(Integer topicId, Integer pageNow) {
+        List<Reply> replyList=replyMapper.selectReplyByTopicId(topicId,(pageNow - 1) * Page.pageSize,Page.pageSize);
+        for (Reply reply:replyList) {
+            List<Reply> replies=new ArrayList<Reply>();
+            buildReplyComment(reply,replies);
+            reply.setReplyComment(replies);
+        }
+        return replyList;
+    }
+    private void buildReplyComment(Reply reply,List<Reply> replies){
+        if(reply.getParentId()!=0){
+            Reply replyComment=replyMapper.selectReplyByParentId(reply.getParentId());
+            replies.add(replyComment);
+            buildReplyComment(replyComment,replies);
+        }
+
+
+    }
+
+
 }

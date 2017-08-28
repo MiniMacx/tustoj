@@ -13,12 +13,13 @@
     <result column="enroll_num" property="enrollNum" jdbcType="INTEGER" />
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
   </resultMap>
+
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.Contest" extends="BaseResultMap" >
     <result column="description" property="description" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    contest_id, title, start_time, end_time,private, langmask, password, enroll_num,
-    delete_flag
+    contest_id, title, start_time, end_time,  enroll_num,delete_flag,password,langmask,
+    defunct,private
   </sql>
   <sql id="Blob_Column_List" >
     description
@@ -45,7 +46,7 @@
       262132, #{password,jdbcType=CHAR}, 0,
       0, #{description,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Contest" >
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="contestId" parameterType="com.tustcs.matrix.entity.Contest" >
     insert into contest
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="contestId != null" >
@@ -215,16 +216,17 @@
     ,
     <include refid="Blob_Column_List"/>
     FROM contest
-    WHERE contest_id IN
+    WHERE delete_flag=0 and contest_id IN
     <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
       #{item.contestId}
     </foreach>
+
   </select>
 
   <update id="updateEnrollNum">
-    update FROM
-    contest
+    update contest
     set enroll_num=enroll_num+1
+    where contest_id=#{contestId}
   </update>
 
 </mapper>

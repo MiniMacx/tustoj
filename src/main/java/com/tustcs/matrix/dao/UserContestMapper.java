@@ -17,7 +17,7 @@ public interface UserContestMapper {
 
     List<UserContest> selectUserContestList(String userId);
 
-    int selectContest(Integer contestId,String userId);
+    int selectContest(@Param("contestId") Integer contestId,@Param("userId") String userId);
 
     int updateByPrimaryKeySelective(UserContest record);
 

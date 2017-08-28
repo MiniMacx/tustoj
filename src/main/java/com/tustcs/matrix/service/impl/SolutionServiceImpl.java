@@ -1,5 +1,7 @@
 package com.tustcs.matrix.service.impl;
 
+import com.tustcs.matrix.dao.SourceCodeMapper;
+import com.tustcs.matrix.dao.SourceCodeUserMapper;
 import com.tustcs.matrix.entity.Solution;
 import com.tustcs.matrix.dao.SolutionMapper;
 import com.tustcs.matrix.service.SolutionService;
@@ -20,6 +22,12 @@ public class SolutionServiceImpl implements SolutionService {
     @Resource
     SolutionMapper solutionMapper;
 
+
+    @Resource
+    SourceCodeMapper sourceCodeMapper;
+
+    @Resource
+    SourceCodeUserMapper sourceCodeUserMapper;
 
     public List<Solution> showSolutionByUserId(Integer pageNow, String loginUserId) {
 
@@ -42,14 +50,14 @@ public class SolutionServiceImpl implements SolutionService {
             solutionList=solutionMapper.selectSolutionByProblemId((pageNow - 1) * Page.pageSize,Page.pageSize,
                     loginUserId,problemId);
         }else {
-            return null;
+           return null;
         }
         return solutionList;
     }
 
     @Override
     public boolean addSolution(Solution solution) {
-        return solutionMapper.insert(solution)>0;
+        return solutionMapper.insertSelective(solution)>0;
     }
 
     @Override
@@ -68,5 +76,10 @@ public class SolutionServiceImpl implements SolutionService {
     @Override
     public Solution getSolution(Integer solutionId) {
         return solutionMapper.selectByPrimaryKey(solutionId);
+    }
+
+    @Override
+    public boolean submitSourceCode(Integer solutionId,String source) {
+        return sourceCodeMapper.insert(solutionId,source)>0 && sourceCodeUserMapper.insert(solutionId,source)>0;
     }
 }

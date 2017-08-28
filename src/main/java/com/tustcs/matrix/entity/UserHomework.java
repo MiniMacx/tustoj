@@ -5,7 +5,15 @@ public class UserHomework {
 
     private String userId;
 
-    private Long homeworkId;
+    private Integer homeworkId;
+
+    public UserHomework() {
+    }
+
+    public UserHomework(String userId, Integer homeworkId) {
+        this.userId = userId;
+        this.homeworkId = homeworkId;
+    }
 
     public Integer getId() {
         return id;
@@ -23,11 +31,11 @@ public class UserHomework {
         this.userId = userId == null ? null : userId.trim();
     }
 
-    public Long getHomeworkId() {
+    public Integer getHomeworkId() {
         return homeworkId;
     }
 
-    public void setHomeworkId(Long homeworkId) {
+    public void setHomeworkId(Integer homeworkId) {
         this.homeworkId = homeworkId;
     }
 }

@@ -5,9 +5,9 @@ public class UserCourse {
 
     private String userId;
 
-    private String teacherId;
-
     private Integer courseId;
+
+
 
     public Integer getId() {
         return id;
@@ -23,14 +23,6 @@ public class UserCourse {
 
     public void setUserId(String userId) {
         this.userId = userId == null ? null : userId.trim();
-    }
-
-    public String getTeacherId() {
-        return teacherId;
-    }
-
-    public void setTeacherId(String teacherId) {
-        this.teacherId = teacherId == null ? null : teacherId.trim();
     }
 
     public Integer getCourseId() {

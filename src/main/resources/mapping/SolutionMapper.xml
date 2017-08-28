@@ -20,10 +20,11 @@
     <result column="lint_error" property="lintError" jdbcType="INTEGER" />
     <result column="judger" property="judger" jdbcType="CHAR" />
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
+    <result column="homework_id" property="homeworkId" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     solution_id, problem_id, user_id, time, memory, in_date, result, language, ip, contest_id, 
-    valid, num, code_length, judgetime, pass_rate, lint_error, judger, delete_flag
+    valid, num, code_length, judgetime, pass_rate, lint_error, judger, delete_flag,homework_id
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -42,14 +43,14 @@
       result, language, ip, 
       contest_id, valid, num, 
       code_length, pass_rate,
-      lint_error, judger, delete_flag
+      lint_error, judger, delete_flag,homework_id
       )
     values (#{problemId,jdbcType=INTEGER}, #{userId,jdbcType=CHAR},
       #{time,jdbcType=INTEGER}, #{memory,jdbcType=INTEGER}, #{inDate,jdbcType=TIMESTAMP}, 
-      #{result,jdbcType=SMALLINT}, #{language,jdbcType=INTEGER}, #{ip,jdbcType=CHAR}, 
-      #{contestId,jdbcType=INTEGER}, 1, -1,
+      14, #{language,jdbcType=INTEGER},#{ip,jdbcType=CHAR},
+      #{contestId,jdbcType=INTEGER},1,-1,
       #{codeLength,jdbcType=INTEGER}, 0.00,
-      0,'admin', 0
+      0,'admin', 0,#{homeworkId,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Solution" >
@@ -109,6 +110,9 @@
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
+      <if test="homeworkId != null" >
+        homework_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="solutionId != null" >
@@ -164,6 +168,9 @@
       </if>
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
+      </if>
+      <if test="homeworkId != null" >
+        #{contestId,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -221,6 +228,9 @@
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
+      <if test="homeworkId != null" >
+        homework_id=#{homeworkId,jdbcType=INTEGER},
+      </if>
     </set>
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </update>
@@ -243,6 +253,7 @@
       lint_error = #{lintError,jdbcType=INTEGER},
       judger = #{judger,jdbcType=CHAR},
       delete_flag = #{deleteFlag,jdbcType=INTEGER}
+      homework_id=#{homeworkId,jdbcType=INTEGER}
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </update>
 

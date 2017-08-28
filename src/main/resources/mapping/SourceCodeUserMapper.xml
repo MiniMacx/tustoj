@@ -25,7 +25,7 @@
     delete from source_code_user
     where solution_id = #{solutionId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.tustcs.matrix.entity.SourceCodeUser" >
+  <insert id="insert">
     insert into source_code_user (solution_id, source)
     values (#{solutionId,jdbcType=INTEGER}, #{source,jdbcType=LONGVARCHAR})
   </insert>

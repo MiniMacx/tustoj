@@ -39,11 +39,11 @@
     volume, language, password,
     reg_time, nick, school,
     level, delete_flag)
-    values (#{userId,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{submit,jdbcType=INTEGER},
-    #{solved,jdbcType=INTEGER}, #{defunct,jdbcType=CHAR}, #{ip,jdbcType=VARCHAR}, #{accesstime,jdbcType=TIMESTAMP},
+    values (#{userId,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 0,
+    0, ‘N’, #{ip,jdbcType=VARCHAR}, #{accesstime,jdbcType=TIMESTAMP},
     #{volume,jdbcType=INTEGER}, #{language,jdbcType=INTEGER}, #{password,jdbcType=VARCHAR},
     #{regTime,jdbcType=TIMESTAMP}, #{nick,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR},
-    #{level,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER})
+    #{level,jdbcType=INTEGER}, 0)
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.User" >
     insert into users

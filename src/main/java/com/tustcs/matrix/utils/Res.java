@@ -14,6 +14,14 @@ public class Res<T> {
         return jsonObject.toString();
     }
 
+    public Res() {
+    }
+
+    public Res(String msg, int status, T data) {
+        this.msg = msg;
+        this.status = status;
+        this.data = data;
+    }
 
     public String getMsg() {
         return msg;

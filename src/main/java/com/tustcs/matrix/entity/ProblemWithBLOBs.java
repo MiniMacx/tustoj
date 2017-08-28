@@ -63,38 +63,7 @@ public class ProblemWithBLOBs extends Problem {
         this.hint = hint == null ? null : hint.trim();
     }
 
-    public ProblemWithBLOBs(Integer problemId, String title, String spj, String source, Date inDate, Integer timeLimit, Integer memoryLimit, String defunct,
-                            Integer accepted, Integer submit, Integer solved, Integer deleteFlag, String description, String input,
-                            String output, String sampleInput, String sampleOutput, String hint) {
-        super(problemId, title, spj, source, inDate, timeLimit, memoryLimit, defunct, accepted, submit, solved, deleteFlag);
-        this.description = description;
-        this.input = input;
-        this.output = output;
-        this.sampleInput = sampleInput;
-        this.sampleOutput = sampleOutput;
-        this.hint = hint;
-    }
 
-    public ProblemWithBLOBs(String title, String spj, String source, Date inDate, Integer timeLimit,
-                            Integer memoryLimit, String defunct, Integer accepted, Integer submit, Integer solved, Integer deleteFlag, String description, String input, String output, String sampleInput, String sampleOutput, String hint) {
-        super(title, spj, source, inDate, timeLimit, memoryLimit, defunct, accepted, submit, solved, deleteFlag);
-        this.description = description;
-        this.input = input;
-        this.output = output;
-        this.sampleInput = sampleInput;
-        this.sampleOutput = sampleOutput;
-        this.hint = hint;
-    }
-
-    public ProblemWithBLOBs(String description, String input, String output, String sampleInput,
-                            String sampleOutput, String hint) {
-        this.description = description;
-        this.input = input;
-        this.output = output;
-        this.sampleInput = sampleInput;
-        this.sampleOutput = sampleOutput;
-        this.hint = hint;
-    }
 
     public ProblemWithBLOBs() {
     }

@@ -70,7 +70,7 @@
   </update>
 
   <select id="selectContest" resultType="java.lang.Integer">
-    select *from user_contest
+    select count(*)from user_contest
     where user_id=#{userId} and contest_id=#{contestId}
   </select>
 

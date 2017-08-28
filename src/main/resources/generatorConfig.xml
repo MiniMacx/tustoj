@@ -26,22 +26,22 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
         <!-- 生成模型的包名和位置-->
-        <javaModelGenerator targetPackage="com.tustcs.entity" targetProject="src">
+        <javaModelGenerator targetPackage="com.tustcs.matrix.entity" targetProject="src">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <!-- 生成映射文件的包名和位置-->
-        <sqlMapGenerator targetPackage="com.tustcs.mapping" targetProject="src">
+        <sqlMapGenerator targetPackage="com.tustcs.matrix.mapping" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!-- 生成DAO的包名和位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.tustcs.dao" targetProject="src">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.tustcs.matrix.dao" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
-        <table tableName="users" domainObjectName="User" enableCountByExample="false"
+        <table tableName="reply" domainObjectName="Reply" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="compileinfo" domainObjectName="CompileInfo" enableCountByExample="false"
+  <!--      <table tableName="compileinfo" domainObjectName="CompileInfo" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
         <table tableName="contest" domainObjectName="Contest" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
@@ -89,6 +89,6 @@
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
         <table tableName="user_homework" domainObjectName="UserHomework" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-
+-->
     </context>
 </generatorConfiguration>

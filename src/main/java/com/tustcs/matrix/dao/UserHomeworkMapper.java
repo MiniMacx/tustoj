@@ -1,6 +1,7 @@
 package com.tustcs.matrix.dao;
 
 import com.tustcs.matrix.entity.UserHomework;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -14,6 +15,8 @@ public interface UserHomeworkMapper {
     UserHomework selectByPrimaryKey(Integer id);
 
     List<UserHomework> listUserHomework(String userId);
+
+    int insertUserHomework(List<UserHomework> homeworkList);
 
     int updateByPrimaryKeySelective(UserHomework record);
 

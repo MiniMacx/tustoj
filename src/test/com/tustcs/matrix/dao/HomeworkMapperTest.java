@@ -22,10 +22,7 @@ public class HomeworkMapperTest {
 
     @Test
     public void insert() throws Exception {
-        Homework homework=new Homework("linlinlin","19970815","19980815",99.9,
-                                    0,"1001 1002 1003");
 
-        homeworkMapper.insert(homework);
     }
 
     @Test

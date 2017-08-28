@@ -21,7 +21,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springfr
         <!--当获取链接失败重试次数 -->
         <property name="autoCommitOnClose" value="false"/>
         <!--获取链接超时时间 -->
-        <property name="checkoutTimeout" value="10000"/>
+        <property name="checkoutTimeout" value="1000"/>
         <!--当获取链接失败重试次数 -->
         <property name="acquireIncrement" value="2"/>
     </bean>
@@ -45,7 +45,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springfr
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!--给出扫描DAO接口包 -->
         <property name="basePackage" value="com.tustcs.matrix.dao"/>
-
-
     </bean>
+
+    <bean id="SpringContextUtil" class="com.tustcs.matrix.utils.SpringContextUtil" scope="singleton"/>
 </beans>

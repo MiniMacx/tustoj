@@ -1,5 +1,7 @@
 package com.tustcs.matrix.service;
 
+import com.tustcs.matrix.dto.ContestDTO;
+import com.tustcs.matrix.dto.ContestProblemDTO;
 import com.tustcs.matrix.dto.ContestSum;
 import com.tustcs.matrix.dto.Exposer;
 import com.tustcs.matrix.entity.Contest;
@@ -17,7 +19,7 @@ public interface ContestService {
 
     Contest getContest(Integer contestId);
 
-    boolean addContest(Contest contest);
+    boolean addContest(ContestDTO contestDTO);
 
     boolean deleteContest(Integer contestId);
 
@@ -27,7 +29,7 @@ public interface ContestService {
 
     Exposer exportContestUrl(Integer contestId);
 
-    List<Problem> getContestProblem(Integer contestId);
+    List<ContestProblemDTO> getContestProblem(Integer contestId);
 
     ContestSum execution(Integer contestId,String userId,String md5);
 

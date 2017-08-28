@@ -2,7 +2,7 @@ package com.tustcs.matrix.controller;
 
 import com.tustcs.matrix.config.Config;
 import com.tustcs.matrix.dao.NoticeMapper;
-import com.tustcs.matrix.dto.Res;
+import com.tustcs.matrix.utils.Res;
 import com.tustcs.matrix.entity.*;
 import com.tustcs.matrix.service.IndexService;
 import org.json.JSONObject;

@@ -4,6 +4,7 @@ import com.tustcs.matrix.entity.Solution;
 import org.apache.ibatis.annotations.Param;
 import org.omg.CORBA.INTERNAL;
 
+import java.util.Date;
 import java.util.List;
 
 public interface SolutionMapper {
@@ -18,6 +19,7 @@ public interface SolutionMapper {
     int updateByPrimaryKeySelective(Solution record);
 
     int updateByPrimaryKey(Solution record);
+
 
     /**
      * 分页

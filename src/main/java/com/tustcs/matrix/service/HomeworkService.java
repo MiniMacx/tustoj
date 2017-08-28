@@ -1,5 +1,7 @@
 package com.tustcs.matrix.service;
 
+import com.tustcs.matrix.dto.HomeworkDTO;
+import com.tustcs.matrix.dto.HomeworkProblemDTO;
 import com.tustcs.matrix.entity.Homework;
 
 import java.util.List;
@@ -12,11 +14,13 @@ public interface HomeworkService {
 
     List<Homework> showHomeworkByCreatorId(Integer pageNow,String creatorId);
 
-    boolean addHomework(Homework homework);
+    boolean addHomework(HomeworkDTO homeworkDTO);
 
-    boolean updateHomework(Homework homework);
+    boolean updateHomework(HomeworkDTO homeworkDTO);
 
     boolean deleteHomework(Integer homeworkId);
 
     Homework getHomework(Integer homeworkId);
+
+    List<HomeworkProblemDTO> getHomeworkProblem(Integer homeworkId);
 }

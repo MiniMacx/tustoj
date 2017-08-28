@@ -11,38 +11,42 @@
     <result column="vote_up" property="voteUp" jdbcType="INTEGER" />
     <result column="vote_down" property="voteDown" jdbcType="INTEGER" />
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
+    <result column="parent_id" property="parentId" jdbcType="INTEGER" />
+    <result column="content_id" property="contentId" jdbcType="INTEGER" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.tustcs.matrix.entity.Reply" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    rid, author_id, time, topic_id, status, ip, vote_up, vote_down, delete_flag
+    rid, author_id, time, topic_id, status, ip, vote_up, vote_down, delete_flag, parent_id, 
+    content_id
   </sql>
   <sql id="Blob_Column_List" >
     content
   </sql>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
-    select
+    select 
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
     from reply
     where rid = #{rid,jdbcType=INTEGER}
-    and delete_flag=0
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from reply
     where rid = #{rid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Reply" >
-    insert into reply ( author_id, time,
-    topic_id, status, ip,
-    vote_up, vote_down, delete_flag,
-    content)
-    values ( #{authorId,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP},
-    #{topicId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR},
-    #{voteUp,jdbcType=INTEGER}, #{voteDown,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER},
-    #{content,jdbcType=LONGVARCHAR})
+    insert into reply (rid, author_id, time, 
+      topic_id, status, ip, 
+      vote_up, vote_down, delete_flag, 
+      parent_id, content_id, content
+      )
+    values (#{rid,jdbcType=INTEGER}, #{authorId,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, 
+      #{topicId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, 
+      #{voteUp,jdbcType=INTEGER}, #{voteDown,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER}, 
+      #{parentId,jdbcType=INTEGER}, #{contentId,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Reply" >
     insert into reply
@@ -73,6 +77,12 @@
       </if>
       <if test="deleteFlag != null" >
         delete_flag,
+      </if>
+      <if test="parentId != null" >
+        parent_id,
+      </if>
+      <if test="contentId != null" >
+        content_id,
       </if>
       <if test="content != null" >
         content,
@@ -106,6 +116,12 @@
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
       </if>
+      <if test="parentId != null" >
+        #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="contentId != null" >
+        #{contentId,jdbcType=INTEGER},
+      </if>
       <if test="content != null" >
         #{content,jdbcType=LONGVARCHAR},
       </if>
@@ -138,6 +154,12 @@
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
+      <if test="parentId != null" >
+        parent_id = #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="contentId != null" >
+        content_id = #{contentId,jdbcType=INTEGER},
+      </if>
       <if test="content != null" >
         content = #{content,jdbcType=LONGVARCHAR},
       </if>
@@ -147,26 +169,30 @@
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tustcs.matrix.entity.Reply" >
     update reply
     set author_id = #{authorId,jdbcType=VARCHAR},
-    time = #{time,jdbcType=TIMESTAMP},
-    topic_id = #{topicId,jdbcType=INTEGER},
-    status = #{status,jdbcType=INTEGER},
-    ip = #{ip,jdbcType=VARCHAR},
-    vote_up = #{voteUp,jdbcType=INTEGER},
-    vote_down = #{voteDown,jdbcType=INTEGER},
-    delete_flag = #{deleteFlag,jdbcType=INTEGER},
-    content = #{content,jdbcType=LONGVARCHAR}
+      time = #{time,jdbcType=TIMESTAMP},
+      topic_id = #{topicId,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      ip = #{ip,jdbcType=VARCHAR},
+      vote_up = #{voteUp,jdbcType=INTEGER},
+      vote_down = #{voteDown,jdbcType=INTEGER},
+      delete_flag = #{deleteFlag,jdbcType=INTEGER},
+      parent_id = #{parentId,jdbcType=INTEGER},
+      content_id = #{contentId,jdbcType=INTEGER},
+      content = #{content,jdbcType=LONGVARCHAR}
     where rid = #{rid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tustcs.matrix.entity.Reply" >
     update reply
     set author_id = #{authorId,jdbcType=VARCHAR},
-    time = #{time,jdbcType=TIMESTAMP},
-    topic_id = #{topicId,jdbcType=INTEGER},
-    status = #{status,jdbcType=INTEGER},
-    ip = #{ip,jdbcType=VARCHAR},
-    vote_up = #{voteUp,jdbcType=INTEGER},
-    vote_down = #{voteDown,jdbcType=INTEGER},
-    delete_flag = #{deleteFlag,jdbcType=INTEGER}
+      time = #{time,jdbcType=TIMESTAMP},
+      topic_id = #{topicId,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      ip = #{ip,jdbcType=VARCHAR},
+      vote_up = #{voteUp,jdbcType=INTEGER},
+      vote_down = #{voteDown,jdbcType=INTEGER},
+      delete_flag = #{deleteFlag,jdbcType=INTEGER},
+      parent_id = #{parentId,jdbcType=INTEGER},
+      content_id = #{contentId,jdbcType=INTEGER}
     where rid = #{rid,jdbcType=INTEGER}
   </update>
 
@@ -180,11 +206,13 @@
     where topic_id = #{topicId}
   </select>
 
-  <select id="selectReplyList" resultType="Reply">
+  <select id="selectReplyByTopicId" resultType="Reply">
     select *FROM
     reply
     where topic_id=#{topicId}
     and delete_flag=0
+    order by vote_up-vote_down DESC,
+    time desc
     limit #{startPos},#{pageSize}
   </select>
 
@@ -195,12 +223,10 @@
     and delete_flag=0
   </select>
 
-  <select id="selectReplyByVotes" resultType="Reply">
-    select *from
-    reply
-    where topic_id=#{topicId}
+  <select id="selectReplyByParentId" resultType="Reply">
+    select *from reply
+    where rid=#{parentId}
     and delete_flag=0
-    order by vote_up-vote_down
-    desc limit #{startPos},#{pageSize}
   </select>
+
 </mapper>

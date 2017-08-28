@@ -18,7 +18,6 @@ public interface CourseMapper {
 
     int updateByPrimaryKey(Course record);
 
-
     List<Course> selectCourseList(@Param("startPos") int startPos, @Param("pageSize") int pageSize);
 
     Integer selectCourseCount();
@@ -31,7 +30,11 @@ public interface CourseMapper {
     List<Course> selectCourseByCourseName(@Param("courseName") String courseName,
                                           @Param("startPos") int startPos, @Param("pageSize") int pageSize);
 
-    Integer selectCourseCountUsingCourseName(@Param("courseName")String courseName);
+    Integer selectCourseCountUsingCourseName(@Param("courseName") String courseName);
 
     List<Course> listCourse(int[] arrayCourseId);
+
+    int addJoinNum(Integer courseId);
+
+    List<Course> selectTeacherCourse(String userId);
 }

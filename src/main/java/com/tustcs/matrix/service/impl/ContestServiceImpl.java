@@ -1,6 +1,8 @@
 package com.tustcs.matrix.service.impl;
 
 import com.tustcs.matrix.dao.*;
+import com.tustcs.matrix.dto.ContestDTO;
+import com.tustcs.matrix.dto.ContestProblemDTO;
 import com.tustcs.matrix.dto.ContestSum;
 import com.tustcs.matrix.dto.Exposer;
 import com.tustcs.matrix.entity.*;
@@ -72,8 +74,21 @@ public class ContestServiceImpl implements ContestService {
 
 
     @Override
-    public boolean addContest(Contest contest) {
-        return contestMapper.insert(contest)>0;
+    public boolean addContest(ContestDTO contestDTO) {
+
+        if(contestMapper.insertSelective(contestDTO)>0){
+            Integer contestId=contestDTO.getContestId();
+            List<Integer> contestProblemList=contestDTO.getContestProblem();
+            if(contestId!=null){
+                for (Integer problems:
+                        contestProblemList) {
+                    contestProblemMapper.insert(contestId,problems,0);
+                }
+                return true;
+            }
+
+        }
+        return false;
     }
 
     @Override
@@ -86,7 +101,9 @@ public class ContestServiceImpl implements ContestService {
 
     @Override
     public boolean updateContest(Contest contest) {
-        return contestMapper.updateByPrimaryKeySelective(contest)>0;
+        if(contest.getContestId()>0)
+            return contestMapper.updateByPrimaryKeySelective(contest)>0;
+        return false;
     }
 
     @Override
@@ -96,14 +113,15 @@ public class ContestServiceImpl implements ContestService {
 
     @Override
     public boolean enrollContest(String userId,Integer contestId) {
-        UserContest userContest= new UserContest();
-        boolean flag=true;
+        UserContest userContest = new UserContest();
+        boolean flag = true;
         userContest.setContestId(contestId);
         userContest.setUserId(userId);
         userContest.setScore(0);
-        if(contestMapper.updateEnrollNum()>0 &&
-        userContestMapper.insert(userContest)>0)
+        if (contestMapper.updateEnrollNum(contestId) > 0 &&
+                userContestMapper.insert(userContest) > 0){
             return flag;
+        }
         flag=false;
         return flag;
 
@@ -118,7 +136,7 @@ public class ContestServiceImpl implements ContestService {
 //        }
 
         if(contest==null){
-            return new Exposer(false,contestId);
+            return new Exposer(false,null);
         }
         Date startTime=contest.getStartTime();
         Date endTime=contest.getEndTime();
@@ -140,14 +158,8 @@ public class ContestServiceImpl implements ContestService {
     }
 
     @Override
-    public List<Problem> getContestProblem(Integer contestId) {
-        List<Integer> problemIdList=contestProblemMapper.selectProblemId(contestId);
-        List<Problem> problemList=new ArrayList<Problem>();
-        for (int problemId:
-             problemIdList) {
-            problemList.add(problemMapper.selectByPrimaryKey(problemId));
-        }
-        return problemList;
+    public List<ContestProblemDTO> getContestProblem(Integer contestId) {
+        return contestProblemMapper.selectProblemsForContest(contestId);
     }
 
     @Override
@@ -165,22 +177,17 @@ public class ContestServiceImpl implements ContestService {
             if(contestMapper.selectByPrimaryKey(contestId).getEndTime().before(date)){
                 return new ContestSum(contestId,userId,ContestEnums.END,false);
             }
-            Map<Integer, Short> scoreMap = new HashMap<Integer, Short>();
-            List<Integer> problemList = contestProblemMapper.selectProblemId(contestId);
-            for (Integer problemId :
-                    problemList) {
-                scoreMap.put(problemId, solutionMapper.selectContestProblemResult(problemId, contestId,
-                        userId));
-            }
-            for (Integer problemId :
-                    problemList) {
-                if (scoreMap.get(problemId) == (short) 4) {
-                    sumScore += 100 / scoreMap.size();
+            List<ContestProblemDTO> problemList=getContestProblem(contestId);
+            for (ContestProblemDTO problem:
+                 problemList) {
+                if(problem.getResult()==4){//4:AC
+                    sumScore+=100/problemList.size();
                 }
             }
-            return new ContestSum(contestId, userId, ContestEnums.SUCCESS, scoreMap, sumScore, true);
+            return new ContestSum(contestId, userId, ContestEnums.SUCCESS,problemList , sumScore, true);
 
         }catch (Exception e){
+            e.printStackTrace();
             return new ContestSum(contestId,userId,ContestEnums.SYSTEM_ERROR,false);
         }
     }

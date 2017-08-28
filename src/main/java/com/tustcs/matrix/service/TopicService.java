@@ -15,6 +15,10 @@ public interface TopicService {
 
     List<Topic> showTopicByUserId(String userId,Integer pageNow);
 
+    List<Topic> showTopicByProblemId(Integer problemId,Integer pageNow);
+
+    List<Topic> showTopicByContestId(Integer contestId,Integer pageNow);
+
     boolean addTopic(Topic topic);
 
     boolean updateTopic(Topic topic);

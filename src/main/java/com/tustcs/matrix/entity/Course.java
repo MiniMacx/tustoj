@@ -18,6 +18,10 @@ public class Course {
 
     private Integer deleteFlag;
 
+    private Integer joinNum;
+
+    private Integer joinLimit;
+
     public Integer getCourseId() {
         return courseId;
     }
@@ -74,27 +78,19 @@ public class Course {
         this.deleteFlag = deleteFlag;
     }
 
-    public Course(Integer courseId, String courseName, String courseTeacher, String courseTime,
-                  String courseWeek, String courseSection, Integer deleteFlag) {
-        this.courseId = courseId;
-        this.courseName = courseName;
-        this.courseTeacher = courseTeacher;
-        this.courseTime = courseTime;
-        this.courseWeek = courseWeek;
-        this.courseSection = courseSection;
-        this.deleteFlag = deleteFlag;
+    public Integer getJoinNum() {
+        return joinNum;
     }
 
-    public Course(String courseName, String courseTeacher, String courseTime, String courseWeek,
-                  String courseSection, Integer deleteFlag) {
-        this.courseName = courseName;
-        this.courseTeacher = courseTeacher;
-        this.courseTime = courseTime;
-        this.courseWeek = courseWeek;
-        this.courseSection = courseSection;
-        this.deleteFlag = deleteFlag;
+    public void setJoinNum(Integer joinNum) {
+        this.joinNum = joinNum;
     }
 
-    public Course() {
+    public Integer getJoinLimit() {
+        return joinLimit;
+    }
+
+    public void setJoinLimit(Integer joinLimit) {
+        this.joinLimit = joinLimit;
     }
 }

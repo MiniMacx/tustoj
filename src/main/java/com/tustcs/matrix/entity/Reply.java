@@ -3,8 +3,9 @@ package com.tustcs.matrix.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Date;
+import java.util.List;
 
-@JsonIgnoreProperties({"status","ip","deleteFlag"})
+@JsonIgnoreProperties({"deleteFlag","ip","parentId","contentId"})
 public class Reply {
     private Integer rid;
 
@@ -24,7 +25,21 @@ public class Reply {
 
     private Integer deleteFlag;
 
+    private Integer parentId;
+
+    private Integer contentId;
+
     private String content;
+
+    private List<Reply> replyComment;
+
+    public List<Reply> getReplyComment() {
+        return replyComment;
+    }
+
+    public void setReplyComment(List<Reply> replyComment) {
+        this.replyComment = replyComment;
+    }
 
     public Integer getRid() {
         return rid;
@@ -98,41 +113,27 @@ public class Reply {
         this.deleteFlag = deleteFlag;
     }
 
+    public Integer getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
+    }
+
+    public Integer getContentId() {
+        return contentId;
+    }
+
+    public void setContentId(Integer contentId) {
+        this.contentId = contentId;
+    }
+
     public String getContent() {
         return content;
     }
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
-    }
-
-    public Reply(Integer rid, String authorId, Date time, Integer topicId, Integer status, String ip,
-                 Integer voteUp, Integer voteDown, Integer deleteFlag, String content) {
-        this.rid = rid;
-        this.authorId = authorId;
-        this.time = time;
-        this.topicId = topicId;
-        this.status = status;
-        this.ip = ip;
-        this.voteUp = voteUp;
-        this.voteDown = voteDown;
-        this.deleteFlag = deleteFlag;
-        this.content = content;
-    }
-
-    public Reply(String authorId, Date time, Integer topicId, Integer status, String ip,
-                 Integer voteUp, Integer voteDown, Integer deleteFlag, String content) {
-        this.authorId = authorId;
-        this.time = time;
-        this.topicId = topicId;
-        this.status = status;
-        this.ip = ip;
-        this.voteUp = voteUp;
-        this.voteDown = voteDown;
-        this.deleteFlag = deleteFlag;
-        this.content = content;
-    }
-
-    public Reply() {
     }
 }

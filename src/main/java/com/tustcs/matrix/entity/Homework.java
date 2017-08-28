@@ -1,21 +1,23 @@
 package com.tustcs.matrix.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.math.BigDecimal;
 
+@JsonIgnoreProperties({"deleteFlag","homeworkScore"})
 public class Homework {
-    private Integer homeworkId;
+    protected Integer homeworkId;
 
-    private String homeworkCreatorId;
+    protected String homeworkCreatorId;
 
-    private String homeworkCreateTime;
+    protected String homeworkCreateTime;
 
-    private String homeworkEndTime;
+    protected String homeworkEndTime;
 
-    private Double homeworkScore;
+    protected Double homeworkScore;
 
-    private Integer deleteFlag;
+    protected Integer deleteFlag;
 
-    private String homeworkProblem;
 
     public Integer getHomeworkId() {
         return homeworkId;
@@ -65,35 +67,9 @@ public class Homework {
         this.deleteFlag = deleteFlag;
     }
 
-    public String getHomeworkProblem() {
-        return homeworkProblem;
-    }
-
-    public void setHomeworkProblem(String homeworkProblem) {
-        this.homeworkProblem = homeworkProblem == null ? null : homeworkProblem.trim();
-    }
-
-    public Homework(Integer homeworkId, String homeworkCreatorId, String homeworkCreateTime, String homeworkEndTime,
-                    Double homeworkScore, Integer deleteFlag, String homeworkProblem) {
-        this.homeworkId = homeworkId;
-        this.homeworkCreatorId = homeworkCreatorId;
-        this.homeworkCreateTime = homeworkCreateTime;
-        this.homeworkEndTime = homeworkEndTime;
-        this.homeworkScore = homeworkScore;
-        this.deleteFlag = deleteFlag;
-        this.homeworkProblem = homeworkProblem;
-    }
-
-    public Homework(String homeworkCreatorId, String homeworkCreateTime, String homeworkEndTime,
-                    Double homeworkScore, Integer deleteFlag, String homeworkProblem) {
-        this.homeworkCreatorId = homeworkCreatorId;
-        this.homeworkCreateTime = homeworkCreateTime;
-        this.homeworkEndTime = homeworkEndTime;
-        this.homeworkScore = homeworkScore;
-        this.deleteFlag = deleteFlag;
-        this.homeworkProblem = homeworkProblem;
-    }
 
     public Homework() {
     }
+
+
 }

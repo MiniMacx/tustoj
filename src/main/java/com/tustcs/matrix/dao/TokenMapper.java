@@ -13,4 +13,6 @@ public interface TokenMapper {
     Token selectByRecId(Integer recId);
 
     Token selectByToken(String token);
+
+    int updateByRecId(Token record);
 }

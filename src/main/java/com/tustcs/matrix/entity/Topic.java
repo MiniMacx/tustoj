@@ -1,10 +1,13 @@
 package com.tustcs.matrix.entity;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties({"deleteFlag"})
 public class Topic {
     private Integer tid;
+
+    private String title;
 
     private Integer status;
 
@@ -20,7 +23,7 @@ public class Topic {
 
     private Integer deleteFlag;
 
-    private String title;
+    private Integer count;
 
     public Integer getTid() {
         return tid;
@@ -28,6 +31,14 @@ public class Topic {
 
     public void setTid(Integer tid) {
         this.tid = tid;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 
     public Integer getStatus() {
@@ -86,39 +97,11 @@ public class Topic {
         this.deleteFlag = deleteFlag;
     }
 
-    public String getTitle() {
-        return title;
+    public Integer getCount() {
+        return count;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Topic(Integer tid, Integer status, Integer topLevel, Integer cid, Integer pid, String authorId,
-                 String time, Integer deleteFlag, String title) {
-        this.tid = tid;
-        this.status = status;
-        this.topLevel = topLevel;
-        this.cid = cid;
-        this.pid = pid;
-        this.authorId = authorId;
-        this.time = time;
-        this.deleteFlag = deleteFlag;
-        this.title = title;
-    }
-
-    public Topic(Integer status, Integer topLevel, Integer cid,
-                 Integer pid, String authorId, String time, Integer deleteFlag, String title) {
-        this.status = status;
-        this.topLevel = topLevel;
-        this.cid = cid;
-        this.pid = pid;
-        this.authorId = authorId;
-        this.time = time;
-        this.deleteFlag = deleteFlag;
-        this.title = title;
-    }
-
-    public Topic() {
+    public void setCount(Integer count) {
+        this.count = count;
     }
 }

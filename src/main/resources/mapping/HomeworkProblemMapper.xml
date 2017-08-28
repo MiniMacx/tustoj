@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tustcs.matrix.dao.HomeworkProblemMapper" >
+  <resultMap id="BaseResultMap" type="com.tustcs.matrix.entity.HomeworkProblem" >
+    <result column="homework_id" property="homeworkId" jdbcType="INTEGER" />
+    <result column="problem_id" property="problemId" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="insert">
+    insert into homework_problem (homework_id, problem_id)
+    values (#{homeworkId,jdbcType=INTEGER}, #{problemId,jdbcType=INTEGER})
+    <!--on DUPLICATE KEY update homework_id=#{homeworkId},problem_id=#{problemId} -->
+  </insert>
+  <delete id="delete">
+    delete from homework_problem where homework_id=#{homeworkId}
+  </delete>
+
+  <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.HomeworkProblem" >
+    insert into homework_problem
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="homeworkId != null" >
+        homework_id,
+      </if>
+      <if test="problemId != null" >
+        problem_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="homeworkId != null" >
+        #{homeworkId,jdbcType=INTEGER},
+      </if>
+      <if test="problemId != null" >
+        #{problemId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="selectHomeworkProblem" resultType="com.tustcs.matrix.dto.HomeworkProblemDTO">
+    select hp.problem_id,p.title,s.result from homework_problem as hp left join problem as p
+    on hp.problem_id=p.problem_id left join solution as s
+    on s.problem_id=hp.problem_id and s.homework_id=hp.homework_id
+    where hp.homework_id=#{homework_id}
+  </select>
+</mapper>

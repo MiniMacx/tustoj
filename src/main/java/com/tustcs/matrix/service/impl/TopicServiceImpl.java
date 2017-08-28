@@ -48,6 +48,8 @@ public class TopicServiceImpl implements TopicService {
         return topicList;
     }
 
+
+
     @Override
     public List<Topic> showTopicByUserId(String userId, Integer pageNow) {
         List<Topic> topicList;
@@ -62,8 +64,34 @@ public class TopicServiceImpl implements TopicService {
     }
 
     @Override
+    public List<Topic> showTopicByProblemId(Integer problemId,Integer pageNow) {
+        List<Topic> topicList;
+
+        if(pageNow!=null){
+            topicList=topicMapper.selectByProblemId(problemId,(pageNow - 1) * Page.pageSize,Page.pageSize);
+        }else {
+            return null;
+        }
+
+        return topicList;
+    }
+
+    @Override
+    public List<Topic> showTopicByContestId(Integer contestId,Integer pageNow) {
+        List<Topic> topicList;
+
+        if(pageNow!=null){
+            topicList=topicMapper.selectByContestId(contestId,(pageNow - 1) * Page.pageSize,Page.pageSize);
+        }else {
+            return null;
+        }
+
+        return topicList;
+    }
+
+    @Override
     public boolean addTopic(Topic topic) {
-        return topicMapper.insert(topic)>0;
+        return topicMapper.insertSelective(topic)>0;
     }
 
     @Override
@@ -81,6 +109,10 @@ public class TopicServiceImpl implements TopicService {
 
     @Override
     public Topic getTopic(Integer topicId) {
-        return topicMapper.selectByPrimaryKey(topicId);
+        if(topicMapper.addCount(topicId)>0)
+            return topicMapper.selectByPrimaryKey(topicId);
+        return null;
     }
+
+
 }

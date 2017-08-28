@@ -22,96 +22,74 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ContestController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ContestController.java">
+      <file leaf-file-name="DiscussionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/DiscussionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1845">
-              <caret line="85" column="57" lean-forward="false" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+            <state relative-caret-position="4002">
+              <caret line="189" column="60" lean-forward="false" selection-start-line="188" selection-start-column="47" selection-end-line="189" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeworkController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/HomeworkController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1955">
+              <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding>
-                <element signature="e#1187#1202#0" expanded="true" />
+                <element signature="e#1205#1221#0" expanded="true" />
+                <element signature="e#1981#1997#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/NewsController.java">
+      <file leaf-file-name="ContestServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ContestServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="83" column="29" lean-forward="true" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+            <state relative-caret-position="207">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProblemService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ProblemService.java">
+      <file leaf-file-name="ReplyServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ReplyServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProblemMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ProblemMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+            <state relative-caret-position="943">
+              <caret line="57" column="45" lean-forward="false" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
               <folding>
-                <marker date="1500878123890" expanded="true" signature="2098:2285" ph="select , fro... " />
-                <marker date="1500878123890" expanded="true" signature="2372:2444" ph="delete from " />
-                <marker date="1500878123890" expanded="true" signature="2543:3171" ph="insert into problem... " />
-                <marker date="1500878123890" expanded="true" signature="6284:8018" ph="update probl... " />
-                <marker date="1500878123890" expanded="true" signature="8138:9011" ph="update probl... " />
-                <marker date="1500878123890" expanded="true" signature="9113:9676" ph="update probl... " />
-                <marker date="1500878123890" expanded="true" signature="9816:9894" ph="SELECT *from... problem" />
-                <marker date="1500878123890" expanded="true" signature="10026:10082" ph="select count... problem" />
-                <marker date="1500878123890" expanded="true" signature="10215:10334" ph="SELECT *from... problem" />
-                <marker date="1500878123890" expanded="true" signature="10470:10580" ph="select *from... problem" />
-                <marker date="1500878123890" expanded="true" signature="10722:10810" ph="select COUNT... problem" />
-                <marker date="1500878123890" expanded="true" signature="10949:11046" ph="select COUNT... problem" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#996#997#0" expanded="false" />
+                <element signature="e#1023#1024#0" expanded="false" />
+                <element signature="e#1081#1082#0" expanded="false" />
+                <element signature="e#1140#1141#0" expanded="false" />
+                <element signature="e#1201#1202#0" expanded="false" />
+                <element signature="e#1272#1273#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newoj.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/schema/newoj.sql">
+      <file leaf-file-name="NoticeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/NoticeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="614" column="40" lean-forward="true" selection-start-line="614" selection-start-column="40" selection-end-line="614" selection-end-column="40" />
-              <folding />
+            <state relative-caret-position="1909">
+              <caret line="94" column="56" lean-forward="false" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/NewsService.java">
+      <file leaf-file-name="ProblemController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ProblemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Problem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Problem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="2967">
+              <caret line="141" column="56" lean-forward="false" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -120,8 +98,28 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="105" column="17" lean-forward="true" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
+            <state relative-caret-position="575">
+              <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SolutionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3611">
+              <caret line="174" column="56" lean-forward="false" selection-start-line="174" selection-start-column="56" selection-end-line="174" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ContestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1631">
+              <caret line="275" column="27" lean-forward="false" selection-start-line="275" selection-start-column="27" selection-end-line="275" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -130,8 +128,8 @@
       <file leaf-file-name="CourseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/CourseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state relative-caret-position="4899">
+              <caret line="231" column="49" lean-forward="true" selection-start-line="231" selection-start-column="49" selection-end-line="231" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -150,21 +148,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>es</find>
-      <find>reply</find>
-      <find>problem</find>
-      <find>users</find>
-      <find>com</find>
-      <find>com.tustcs.</find>
-      <find>gen</find>
-      <find>BIGINT</find>
-      <find>DECIMAL</find>
-      <find>LONG</find>
-      <find>homewo</find>
-      <find>token</find>
       <find>cid</find>
       <find>contest</find>
-      <find>contest_problem</find>
       <find>com.tustcs</find>
       <find>topic</find>
       <find>title</find>
@@ -174,12 +159,25 @@
       <find>insert</find>
       <find>private</find>
       <find>listCon</find>
-      <find>solution</find>
       <find>solution_id</find>
       <find>contest_prob</find>
       <find>news</find>
       <find>notice</find>
       <find>user</find>
+      <find>jackson</find>
+      <find>rec</find>
+      <find>users</find>
+      <find>solution</find>
+      <find>homework</find>
+      <find>contest_problem</find>
+      <find>dis</find>
+      <find>user_Cou</find>
+      <find>bigint</find>
+      <find>BIGINT</find>
+      <find>homework_pro</find>
+      <find>Blob_Column_List</find>
+      <find>ResultMap</find>
+      <find>selectCourseU</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -190,57 +188,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/SolutionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/CourseService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ProblemService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ProblemMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ProblemServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ProblemController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/NewsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/CourseMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/CourseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/CourseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/IndistinctLoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/URLUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ReplyMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ReplyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/TopicMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/config/Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/IndistinctLoginImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/NoticeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/NoticeMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserContestMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserContestMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dto/ContestResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dto/Res.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ContestService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/SolutionMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/SolutionMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dto/ContestSum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/enums/ContestEnums.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ContestServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/ContestMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ContestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Contest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/tustcs/matrix/mapping/CourseMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/tustcs/matrix/dao/CourseMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Course.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/News.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Notice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Problem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Reply.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Solution.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Topic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/NewsService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/ProblemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/CourseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dto/HomeworkDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/UserCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/UserHomework.java" />
         <option value="$PROJECT_DIR$/src/main/resources/schema/newoj.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserHomeworkMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserHomeworkMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dto/HomeworkProblemDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Homework.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/ContestProblemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/ContestMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserCourseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/CourseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/CourseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/CourseMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserCourseMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ContestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dto/Exposer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/HomeworkMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/HomeworkService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/HomeworkProblemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/HomeworkProblemMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/HomeworkServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ContestMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/TopicService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Topic.java" />
+        <option value="$PROJECT_DIR$/src/com/tustcs/matrix/mapping/TopicMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/com/tustcs/matrix/entity/Reply.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/TopicMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/TopicServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/tustcs/matrix/mapping/ReplyMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Reply.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ReplyMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/ReplyMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ReplyService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/TopicMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ReplyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/DiscussionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/NewsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/NoticeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ProblemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ContestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/CourseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/HomeworkController.java" />
       </list>
     </option>
   </component>
@@ -267,6 +265,38 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="tust-oj Maven Webapp" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="tust-oj Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="war" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="tust-oj Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -605,10 +635,6 @@
               <option name="myItemId" value="matrix" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="enums" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -633,6 +659,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="matrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -692,6 +722,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tust-oj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tustoj-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -707,6 +767,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="last_opened_file_path" value="$USER_HOME$/p" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -716,11 +779,11 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/mapping" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service" />
       <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapping" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.tustcs.matrix.dao" />
@@ -745,32 +808,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.tustoj">
-    <configuration default="false" name="SolutionMapperTest.selectAcceptedSolutionByPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.tustcs.matrix.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="tust-oj" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.tustcs.matrix.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.dao.SolutionMapperTest" />
-      <option name="METHOD_NAME" value="selectAcceptedSolutionByPage" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="ContestMapperTest.updateByPrimaryKeySelective" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -863,6 +900,32 @@
       <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.dao.HomeworkMapperTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SolutionMapperTest.insertSelective" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tustcs.matrix.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tust-oj" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tustcs.matrix.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.tustcs.matrix.dao.SolutionMapperTest" />
+      <option name="METHOD_NAME" value="insertSelective" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1446,19 +1509,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Maven.generator" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.tustoj" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SolutionMapperTest.selectAcceptedSolutionByPage" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ContestMapperTest.updateByPrimaryKeySelective" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest.insert" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest.selectByPrimaryKey" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ContestMapperTest.updateByPrimaryKeySelective" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest.insert" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest.selectByPrimaryKey" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.SolutionMapperTest.insertSelective" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest.selectByPrimaryKey" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest.insert" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ContestMapperTest.updateByPrimaryKeySelective" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SolutionMapperTest.selectAcceptedSolutionByPage" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SolutionMapperTest.insertSelective" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest.selectByPrimaryKey" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.HomeworkMapperTest.insert" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ContestMapperTest.updateByPrimaryKeySelective" />
       </list>
     </recent_temporary>
   </component>
@@ -1516,14 +1579,45 @@
       <workItem from="1500717341633" duration="166000" />
       <workItem from="1500692693045" duration="6606000" />
       <workItem from="1500708222608" duration="3410000" />
-      <workItem from="1500827259633" duration="11187000" />
+      <workItem from="1500827259633" duration="14536000" />
+      <workItem from="1500987509649" duration="14254000" />
+      <workItem from="1501037037103" duration="1654000" />
+      <workItem from="1501145753776" duration="5691000" />
+      <workItem from="1501332818139" duration="10646000" />
+      <workItem from="1501347704145" duration="15095000" />
+      <workItem from="1501473125974" duration="2423000" />
+      <workItem from="1501500937509" duration="8572000" />
+      <workItem from="1501903836746" duration="6461000" />
+      <workItem from="1502000654414" duration="12100000" />
+      <workItem from="1502064041581" duration="12149000" />
+      <workItem from="1502157445465" duration="2118000" />
+      <workItem from="1502175612144" duration="3106000" />
+      <workItem from="1502352772690" duration="25000" />
+      <workItem from="1502380123699" duration="8171000" />
+      <workItem from="1502520969342" duration="3820000" />
+      <workItem from="1502597203938" duration="6142000" />
+      <workItem from="1502603708096" duration="1570000" />
+      <workItem from="1502618575007" duration="2529000" />
+      <workItem from="1502678878496" duration="798000" />
+      <workItem from="1502811416416" duration="3260000" />
+      <workItem from="1502880673130" duration="1703000" />
+      <workItem from="1502882858096" duration="9339000" />
+      <workItem from="1502955008146" duration="32000" />
+      <workItem from="1502955204398" duration="7069000" />
+      <workItem from="1502987166856" duration="1827000" />
+      <workItem from="1503058761841" duration="3577000" />
+      <workItem from="1503239922464" duration="224000" />
+      <workItem from="1503326215160" duration="4335000" />
+      <workItem from="1503462832461" duration="8082000" />
+      <workItem from="1503544847850" duration="714000" />
+      <workItem from="1503567508791" duration="2938000" />
+      <workItem from="1503586186851" duration="15448000" />
+      <workItem from="1503836823082" duration="1619000" />
+      <workItem from="1503883301034" duration="1246000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HomeworkMapperTest - 2017.06.24 at 22h 00m 54s.xml">
-      <configuration name="HomeworkMapperTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HomeworkMapperTest - 2017.06.24 at 22h 01m 15s.xml">
       <configuration name="HomeworkMapperTest" configurationId="JUnit" />
     </history-entry>
@@ -1551,19 +1645,22 @@
     <history-entry file="HomeworkMapperTest_selectByPrimaryKey - 2017.06.24 at 22h 00m 43s.xml">
       <configuration name="HomeworkMapperTest.selectByPrimaryKey" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SolutionMapperTest_insertSelective - 2017.07.29 at 21h 11m 59s.xml">
+      <configuration name="SolutionMapperTest.insertSelective" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200985000" />
+    <option name="totallyTimeSpent" value="383071000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33734939" sideWeight="0.5042598" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858709" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10223642" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10032017" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1573,23 +1670,23 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32601535" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33734939" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26677316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23639274" sideWeight="0.4961665" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26198083" sideWeight="0.50383353" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="100" y="127" width="1720" height="853" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1612,482 +1709,496 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/NoticeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/NoticeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="116" column="15" lean-forward="false" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
-          <folding>
-            <marker date="1500438736395" expanded="true" signature="1029:1191" ph="select , fro... " />
-            <marker date="1500438736395" expanded="true" signature="1278:1347" ph="delete from " />
-            <marker date="1500438736395" expanded="true" signature="1436:1695" ph="insert into notice... " />
-            <marker date="1500438736395" expanded="true" signature="2840:3330" ph="update notic... " />
-            <marker date="1500438736395" expanded="true" signature="3440:3706" ph="update notic... " />
-            <marker date="1500438736395" expanded="true" signature="3807:4011" ph="update notic... " />
-            <marker date="1500438736395" expanded="true" signature="4116:4266" ph="select * fro... notice" />
-            <marker date="1500438736395" expanded="true" signature="4349:4380" ph="select count... notice" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/IndistinctLoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/IndexService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/SolutionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/IndexImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ContestProblemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/UserContestMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dto/Res.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ContestMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/TopicService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2002">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserContestMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-          <folding>
-            <marker date="1500445267002" expanded="true" signature="671:779" ph="select from user_contest" />
-            <marker date="1500445267002" expanded="true" signature="866:928" ph="delete from " />
-            <marker date="1500445267002" expanded="true" signature="1022:1180" ph="insert into user_contest... " />
-            <marker date="1500445267002" expanded="true" signature="1990:2261" ph="update user_... " />
-            <marker date="1500445267002" expanded="true" signature="2367:2518" ph="update user_... " />
-            <marker date="1500445267002" expanded="true" signature="2597:2678" ph="select *from... user_contest" />
-            <marker date="1500445267002" expanded="true" signature="2793:2891" ph="SELECT FROM user_contest" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dto/Exposer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/CourseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="86" column="13" lean-forward="false" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/SolutionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="66" column="9" lean-forward="false" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/SolutionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6468">
-          <caret line="294" column="69" lean-forward="false" selection-start-line="294" selection-start-column="69" selection-end-line="294" selection-end-column="69" />
-          <folding>
-            <marker date="1500709031107" expanded="true" signature="1878:2021" ph="select from solution" />
-            <marker date="1500709031107" expanded="true" signature="2108:2183" ph="delete from " />
-            <marker date="1500709031107" expanded="true" signature="2274:2844" ph="insert into solution... " />
-            <marker date="1500709031107" expanded="true" signature="5884:7569" ph="update solut... " />
-            <marker date="1500709031107" expanded="true" signature="7672:8506" ph="update solut... " />
-            <marker date="1500709031107" expanded="true" signature="8634:8744" ph="select * fro... solution" />
-            <marker date="1500709031107" expanded="true" signature="8880:8959" ph="select COUNT... solution" />
-            <marker date="1500709031107" expanded="true" signature="9094:9224" ph="select *FROM... solution" />
-            <marker date="1500709031107" expanded="true" signature="9368:9464" ph="select count... solution" />
-            <marker date="1500709031107" expanded="true" signature="9546:9667" ph="select * fro... solution" />
-            <marker date="1500709031107" expanded="true" signature="9766:9864" ph="select count... solution" />
-            <marker date="1500709031107" expanded="true" signature="9949:10006" ph="select count... solution" />
-            <marker date="1500709031107" expanded="true" signature="10096:10159" ph="select resul... solution" />
-            <marker date="1500709031107" expanded="true" signature="10096:10215" ph="select resul... solution" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dto/ContestSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="37" column="100" lean-forward="false" selection-start-line="37" selection-start-column="100" selection-end-line="37" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ContestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="31" column="69" lean-forward="false" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ContestServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3608">
-          <caret line="183" column="76" lean-forward="false" selection-start-line="183" selection-start-column="76" selection-end-line="183" selection-end-column="76" />
-          <folding />
+        <state relative-caret-position="814">
+          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/enums/ContestEnums.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#577#578#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ContestMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4026">
-          <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-          <folding>
-            <marker date="1500827777202" expanded="true" signature="1519:1684" ph="select , fro... " />
-            <marker date="1500827777202" expanded="true" signature="1771:1843" ph="delete from " />
-            <marker date="1500827777202" expanded="true" signature="1933:2298" ph="insert into contest... " />
-            <marker date="1500827777202" expanded="true" signature="4369:5445" ph="update conte... " />
-            <marker date="1500827777202" expanded="true" signature="5556:6106" ph="update conte... " />
-            <marker date="1500827777202" expanded="true" signature="6208:6701" ph="update conte... " />
-            <marker date="1500827777202" expanded="true" signature="6823:6901" ph="select *from... contest" />
-            <marker date="1500827777202" expanded="true" signature="6975:7031" ph="select COUNT... contest" />
-            <marker date="1500827777202" expanded="true" signature="7149:7259" ph="select *from... contest" />
-            <marker date="1500827777202" expanded="true" signature="7343:7431" ph="select COUNT... contest" />
-            <marker date="1500827777202" expanded="true" signature="7876:7931" ph="update FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/DiscussionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="33" column="56" lean-forward="false" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-          <folding>
-            <element signature="e#1042#1055#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="162" column="41" lean-forward="true" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Homework.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/MD5Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-          <folding />
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/News.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/HomeworkMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="1914">
+          <caret line="87" column="11" lean-forward="false" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
+          <folding>
+            <marker date="1502987423294" expanded="true" signature="1058:1201" ph="select , fro... " />
+            <marker date="1502987423294" expanded="true" signature="1288:1363" ph="delete from " />
+            <marker date="1502987423294" expanded="true" signature="1454:1759" ph="insert into homework... " />
+            <marker date="1502987423294" expanded="true" signature="3242:3926" ph="update homew... " />
+            <marker date="1502987423294" expanded="true" signature="4038:4419" ph="update homew... " />
+            <marker date="1502987423294" expanded="true" signature="4522:4901" ph="update homew... " />
+            <marker date="1502987423294" expanded="true" signature="5326:5409" ph="select *FROM... homework" />
+            <marker date="1502987423294" expanded="true" signature="5484:5545" ph="select COUNT... homework" />
+            <marker date="1502987423294" expanded="true" signature="5627:5751" ph="select *from... homework" />
+            <marker date="1502987423294" expanded="true" signature="5841:5947" ph="select count... homework" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/IndexImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/HomeworkProblemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/HomeworkProblemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="64" lean-forward="false" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
+          <folding>
+            <marker date="1502988815018" expanded="true" signature="497:620" ph="insert into homework_problem... " />
+            <marker date="1502988815018" expanded="true" signature="497:645" ph="insert into homework_problem... " />
+            <marker date="1502988815018" expanded="true" signature="646:702" ph="update homew... " />
+            <marker date="1502988815018" expanded="true" signature="746:806" ph="delete from " />
+            <marker date="1502988815018" expanded="true" signature="1509:1762" ph="select hp.pr... homework_problem" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/HomeworkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/HomeworkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1628">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Notice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
+          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/ProblemWithBLOBs.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/DateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="242">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Reply.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/EncodeFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Solution.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/LoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/MD5Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/URLUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/TokenUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="31" column="70" lean-forward="true" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/SpringContextUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/Res.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/utils/TokenFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/CourseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/CompileInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ContestMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tustcs/matrix/entity/Topic.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tustcs/matrix/mapping/TopicMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/com/tustcs/matrix/dao/TopicMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Topic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        <state relative-caret-position="-22">
+          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="46" column="87" lean-forward="false" selection-start-line="46" selection-start-column="87" selection-end-line="46" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/UserContest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/TopicMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="1541">
+          <caret line="70" column="14" lean-forward="false" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Token.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/TopicService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="414">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/TopicServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="2254">
+          <caret line="110" column="44" lean-forward="false" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tustcs/matrix/mapping/ReplyMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/com/tustcs/matrix/entity/Reply.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/dao/ReplyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ReplyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Reply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/NewsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="27" column="90" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/TopicMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5083">
+          <caret line="221" column="16" lean-forward="false" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1503643171671" expanded="true" signature="1182:1285" ph="select from topic" />
+            <marker date="1503643171671" expanded="true" signature="1372:1429" ph="delete from " />
+            <marker date="1503643171671" expanded="true" signature="1517:1942" ph="insert into topic... " />
+            <marker date="1503643171671" expanded="true" signature="3727:4617" ph="update topic... " />
+            <marker date="1503643171671" expanded="true" signature="4717:5156" ph="update topic... " />
+            <marker date="1503643171671" expanded="true" signature="5272:5348" ph="SELECT *from... topic" />
+            <marker date="1503643171671" expanded="true" signature="5415:5469" ph="select count... topic" />
+            <marker date="1503643171671" expanded="true" signature="5583:5691" ph="select *from... topic" />
+            <marker date="1503643171671" expanded="true" signature="5773:5859" ph="SELECT count... topic" />
+            <marker date="1503643171671" expanded="true" signature="5927:6040" ph="select *from... topic" />
+            <marker date="1503643171671" expanded="true" signature="6123:6215" ph="SELECT count... topic" />
+            <marker date="1503643171671" expanded="true" signature="6286:6396" ph="select *from... topic" />
+            <marker date="1503643171671" expanded="true" signature="6482:6570" ph="select count... topic" />
+            <marker date="1503643171671" expanded="true" signature="6641:6751" ph="select *from... topic" />
+            <marker date="1503643171671" expanded="true" signature="6837:6925" ph="select count... topic" />
+            <marker date="1503643171671" expanded="true" signature="6968:7045" ph="update topic... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Contest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ReplyMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="5290">
+          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1503642469777" expanded="true" signature="1550:1700" ph="select , fro... " />
+            <marker date="1503642469777" expanded="true" signature="1787:1844" ph="delete from " />
+            <marker date="1503642469777" expanded="true" signature="1932:2475" ph="insert into reply... " />
+            <marker date="1503642469777" expanded="true" signature="4602:5717" ph="update reply... " />
+            <marker date="1503642469777" expanded="true" signature="5826:6383" ph="update reply... " />
+            <marker date="1503642469777" expanded="true" signature="6483:6991" ph="update reply... " />
+            <marker date="1503642469777" expanded="true" signature="7134:7273" ph="SELECT , FRO... " />
+            <marker date="1503642469777" expanded="true" signature="7347:7506" ph="select *FROM... reply" />
+            <marker date="1503642469777" expanded="true" signature="7578:7660" ph="SELECT count... reply" />
+            <marker date="1503642469777" expanded="true" signature="7735:7801" ph="select *from... reply" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/entity/Problem.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="-184">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/NewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="111" column="56" lean-forward="false" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ProblemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="2967">
+          <caret line="141" column="56" lean-forward="false" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/SolutionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3611">
+          <caret line="174" column="56" lean-forward="false" selection-start-line="174" selection-start-column="56" selection-end-line="174" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="105" column="17" lean-forward="true" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
+        <state relative-caret-position="575">
+          <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/DiscussionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4002">
+          <caret line="189" column="60" lean-forward="false" selection-start-line="188" selection-start-column="47" selection-end-line="189" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/NoticeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1909">
+          <caret line="94" column="56" lean-forward="false" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ReplyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="57" column="45" lean-forward="false" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#996#997#0" expanded="false" />
+            <element signature="e#1023#1024#0" expanded="false" />
+            <element signature="e#1081#1082#0" expanded="false" />
+            <element signature="e#1140#1141#0" expanded="false" />
+            <element signature="e#1201#1202#0" expanded="false" />
+            <element signature="e#1272#1273#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/HomeworkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1955">
+          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding>
+            <element signature="e#1205#1221#0" expanded="true" />
+            <element signature="e#1981#1997#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/CourseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        <state relative-caret-position="4899">
+          <caret line="231" column="49" lean-forward="true" selection-start-line="231" selection-start-column="49" selection-end-line="231" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/ContestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1845">
-          <caret line="85" column="57" lean-forward="false" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
-          <folding>
-            <element signature="e#1187#1202#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/NewsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="1631">
+          <caret line="275" column="27" lean-forward="false" selection-start-line="275" selection-start-column="27" selection-end-line="275" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/controller/NewsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/impl/ContestServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="83" column="29" lean-forward="true" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+        <state relative-caret-position="207">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tustcs/matrix/service/ProblemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ProblemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
-          <folding>
-            <marker date="1500878123890" expanded="true" signature="2098:2285" ph="select , fro... " />
-            <marker date="1500878123890" expanded="true" signature="2372:2444" ph="delete from " />
-            <marker date="1500878123890" expanded="true" signature="2543:3171" ph="insert into problem... " />
-            <marker date="1500878123890" expanded="true" signature="6284:8018" ph="update probl... " />
-            <marker date="1500878123890" expanded="true" signature="8138:9011" ph="update probl... " />
-            <marker date="1500878123890" expanded="true" signature="9113:9676" ph="update probl... " />
-            <marker date="1500878123890" expanded="true" signature="9816:9894" ph="SELECT *from... problem" />
-            <marker date="1500878123890" expanded="true" signature="10026:10082" ph="select count... problem" />
-            <marker date="1500878123890" expanded="true" signature="10215:10334" ph="SELECT *from... problem" />
-            <marker date="1500878123890" expanded="true" signature="10470:10580" ph="select *from... problem" />
-            <marker date="1500878123890" expanded="true" signature="10722:10810" ph="select COUNT... problem" />
-            <marker date="1500878123890" expanded="true" signature="10949:11046" ph="select COUNT... problem" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema/newoj.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="614" column="40" lean-forward="true" selection-start-line="614" selection-start-column="40" selection-end-line="614" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>tust-oj:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring (tust-oj)|Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>tust-oj</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

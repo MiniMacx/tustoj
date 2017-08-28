@@ -3,11 +3,11 @@ package com.tustcs.matrix.controller;
 import com.tustcs.matrix.dao.NewsMapper;
 import com.tustcs.matrix.entity.News;
 import com.tustcs.matrix.service.NewsService;
-import com.tustcs.matrix.utils.Page;
-import com.tustcs.matrix.dto.Res;
+import com.tustcs.matrix.utils.Res;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -26,7 +26,8 @@ public class NewsController {
     @Resource
     NewsMapper newsMapper;
 
-    @RequestMapping("/query")
+    @RequestMapping(value = "/query",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res<List<News>> showNews(Integer pageNow){
         Res<List<News>> res=new Res<List<News>>();
@@ -43,7 +44,8 @@ public class NewsController {
         }
     }
 
-    @RequestMapping("/queryByTitle")
+    @RequestMapping(value = "/queryByTitle",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res<List<News>> showNewsByTitle(Integer pageNow,String title){
         Res<List<News>> res=new Res<List<News>>();
@@ -61,9 +63,10 @@ public class NewsController {
         }
     }
 
-    @RequestMapping("/insert")
+    @RequestMapping(value = "/insert",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
-    public Res insertContest(@RequestBody News news){
+    public Res insertNews(@RequestBody News news){
         Res res=new Res();
         if(newsService.addNews(news)){
             res.setMsg("success!");
@@ -75,9 +78,10 @@ public class NewsController {
         return res;
     }
 
-    @RequestMapping("/update")
+    @RequestMapping(value = "/update",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
-    public Res updateContest(@RequestBody News news){
+    public Res updateNews(@RequestBody News news){
         Res res=new Res();
         if(newsService.updateNews(news)){
             res.setMsg("success!");
@@ -89,9 +93,10 @@ public class NewsController {
         return res;
     }
 
-    @RequestMapping("/delete")
+    @RequestMapping(value = "/delete",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
-    public Res deleteContest(Integer newsId){
+    public Res deleteNews(Integer newsId){
         Res res=new Res();
         if(newsService.deleteNews(newsId)){
             res.setMsg("success!");
@@ -103,7 +108,8 @@ public class NewsController {
         return res;
     }
 
-    @RequestMapping("/queryDetail")
+    @RequestMapping(value = "/queryDetail",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res getDetail(Integer newsId){
         Res res=new Res();

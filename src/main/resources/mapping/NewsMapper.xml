@@ -29,6 +29,7 @@
     from news
     where news_id = #{newsId,jdbcType=INTEGER}
     and delete_flag=0
+
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from news
@@ -40,8 +41,8 @@
       delete_flag, weight, add_time, 
       content)
     values ( #{title,jdbcType=VARCHAR}, #{picUrl,jdbcType=VARCHAR},
-      #{userId,jdbcType=VARCHAR}, #{isTop,jdbcType=INTEGER}, #{isReport,jdbcType=INTEGER}, 
-      #{deleteFlag,jdbcType=INTEGER}, #{weight,jdbcType=INTEGER}, #{addTime,jdbcType=VARCHAR}, 
+      #{userId,jdbcType=VARCHAR}, #{isTop,jdbcType=INTEGER},0,
+     0, #{weight,jdbcType=INTEGER}, #{addTime,jdbcType=VARCHAR},
       #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.News" >
@@ -173,6 +174,7 @@
   <select id="selectNewsList" parameterType="com.tustcs.matrix.entity.News" resultType="News">
     select *from news
     where delete_flag=0
+    order by is_top desc, add_time  desc
     limit #{startPos},#{pageSize}
   </select>
 
@@ -186,6 +188,7 @@
     select *from news
     where title like '%${title}%'
     and delete_flag=0
+    order by is_top desc, add_time  desc
   </select>
 
   <select id="selectNewsCountUsingTitle" resultType="Integer">

@@ -127,7 +127,9 @@ DROP TABLE IF EXISTS `contest_problem`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `contest_problem` (
   `problem_id` int(11) NOT NULL DEFAULT '0',
-  `contest_id` int(11) DEFAULT NULL
+  `contest_id` int(11) DEFAULT NULL,
+  `title` char(200)  DEFAULT '',
+  `num` int(11)  DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -140,6 +142,8 @@ LOCK TABLES `contest_problem` WRITE;
 INSERT INTO `contest_problem` VALUES (1061,1001),(1060,1001),(1059,1001),(1003,1001);
 /*!40000 ALTER TABLE `contest_problem` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
 
 --
 -- Table structure for table `custominput`
@@ -490,6 +494,7 @@ CREATE TABLE `solution` (
   `language` int(10) unsigned NOT NULL DEFAULT '0',
   `ip` char(46) NOT NULL,
   `contest_id` int(11) DEFAULT NULL,
+  `homework_id` int(11) DEFAULT NULL ,
   `valid` tinyint(4) NOT NULL DEFAULT '1',
   `num` tinyint(4) NOT NULL DEFAULT '-1',
   `code_length` int(11) NOT NULL DEFAULT '0',
@@ -618,7 +623,7 @@ CREATE TABLE `users` (
   `reg_time` datetime DEFAULT NULL,
   `nick` varchar(100) NOT NULL DEFAULT '',
   `school` varchar(100) NOT NULL DEFAULT '',
-  /*用户等级 1：管理员 2：领导 3：教师 4:学生*/
+  /*用户等级 10：管理员 20：领导 30：教师 40:学生*/
   `level` INT(5) not null DEFAULT '1',
   `delete_flag` int(11) not null default '0',
   PRIMARY KEY (`user_id`)
@@ -643,13 +648,32 @@ CREATE TABLE `homework` (
   `homework_create_time` varchar(50) not null,
   `homework_end_time` varchar(50) not null,
   `homework_score` Double(6,2) UNSIGNED NOT NULL DEFAULT '0.00',
-  `homework_problem` TEXT NOT NULL ,
   `delete_flag` int(11) not null default '0',
   PRIMARY KEY (`homework_id`)
-)ENGINE =InnoDB DEFAULT CHARSET =utf8;
+)ENGINE =InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET =utf8;
 
-INSERT INTO homework (homework_id, homework_creator_id, homework_create_time, homework_end_time, homework_score, homework_problem)
-VALUES (1001,1002,'1777333447','1777333447',0,'1001 1002');
+INSERT INTO homework (homework_id, homework_creator_id, homework_create_time, homework_end_time, homework_score)
+VALUES (1001,1002,'1777333447','1777333447',0);
+
+
+DROP TABLE IF EXISTS `homework_problem`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `homework_problem` (
+  `homework_id` int(11) NOT NULL DEFAULT '0',
+  `problem_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contest_problem`
+--
+
+LOCK TABLES `homework_problem` WRITE;
+/*!40000 ALTER TABLE `homework_problem` DISABLE KEYS */;
+INSERT INTO `homework_problem` VALUES (1001,1061),(1001,1001),(1001,1091),(1001,1034);
+/*!40000 ALTER TABLE `homework_problem` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 
@@ -657,7 +681,6 @@ drop table if EXISTS `user_course`;
 create table `user_course`(
   `id` int(10) not null AUTO_INCREMENT,
   `user_id` varchar(48) not null default '',
-  `teacher_id` varchar(48) not null default '',
   `course_id` int(10) not null,
   PRIMARY KEY (`id`)
 )ENGINE =InnoDB DEFAULT CHARSET =utf8 AUTO_INCREMENT=2;
@@ -668,7 +691,7 @@ DROP TABLE IF EXISTS `user_homework`;
 CREATE TABLE `user_homework` (
   `id` int(10) not null AUTO_INCREMENT,
   `user_id` varchar(48) NOT NULL DEFAULT '' ,
-  `homework_id` BIGINT(20) NOT NULL,
+  `homework_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 )ENGINE =InnoDB DEFAULT CHARSET =utf8 AUTO_INCREMENT=2;
 

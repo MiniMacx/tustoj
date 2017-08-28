@@ -1,9 +1,12 @@
 package com.tustcs.matrix.controller;
 
-import com.tustcs.matrix.dto.Res;
+import com.sun.org.apache.regexp.internal.RE;
+import com.tustcs.matrix.entity.Token;
 import com.tustcs.matrix.service.IndistinctLoginService;
+import com.tustcs.matrix.service.TokenService;
 import com.tustcs.matrix.service.UserService;
-
+import com.tustcs.matrix.utils.Res;
+import org.apache.ibatis.jdbc.SQL;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
@@ -27,6 +32,9 @@ public class UserController {
     @Resource
     private IndistinctLoginService indistinctLoginService;
 
+    @Resource
+    private TokenService tokenService;
+
     /**
      * 登陆
      * @param userId
@@ -37,17 +45,22 @@ public class UserController {
     @ResponseBody
     public String login(String userId,String userPwd) {
         JSONObject jsonObject = new JSONObject();
-        System.out.println(userId+" "+userPwd);
         if (null == userId || "".equals(userId) || null == userPwd || "".equals(userPwd)) {
             jsonObject.put("msg", "用户名或密码错误")
                     .put("status", 0);
             return Res.jsonToString(jsonObject);
         }
+        //生成token
+        JSONObject jsonToken = new JSONObject();
+        Token token = tokenService.createToken(userId);
+        jsonToken.put("recId",token.getRecId())
+                .put("userId",token.getUserId())
+                .put("token",token.getToken());
+
         if (userService.loginService(userId, userPwd)) {
             jsonObject.put("msg", "登陆成功")
                     .put("status", 1)
-                    .put("userId", userId)
-                    .put("token",123);
+                    .put("token",jsonToken);
             return Res.jsonToString(jsonObject);
         }
         //进行模拟登陆
@@ -55,8 +68,7 @@ public class UserController {
             if (indistinctLoginService.indistinctLogin(userId, userPwd)) {
                 jsonObject.put("msg", "登陆成功")
                         .put("status", 1)
-                        .put("userId", userId)
-                        .put("token",123);
+                        .put("token",jsonToken);
                 return Res.jsonToString(jsonObject);
             }
         }catch (IOException e){
@@ -123,16 +135,16 @@ public class UserController {
      */
     @RequestMapping(value = "homework_list",method = RequestMethod.POST)
     @ResponseBody
-    public String getHomeworkList(String userId) {
-        JSONObject jsonObject = new JSONObject();
+    public Res getHomeworkList(String userId) {
+        Res res=new Res();
         if (null == userId || "".equals(userId)) {
-            jsonObject.put("msg", "用户名为空")
-                    .put("status", 0);
-            return Res.jsonToString(jsonObject);
+            res.setMsg("用户名为空")
+                    .setStatus(0);
+            return res;
         }
-        jsonObject.put("status", 1)
-                .put("homeWorkList", userService.queryHomeWorkList(userId));
-        return Res.jsonToString(jsonObject);
+        res.setStatus(1)
+                .setData(userService.queryHomeWorkList(userId));
+        return res;
     }
 
     /**
@@ -142,15 +154,15 @@ public class UserController {
      */
     @RequestMapping(value = "user_contest",method = RequestMethod.POST)
     @ResponseBody
-    public String getUserContest(String userId) {
-        JSONObject jsonObject = new JSONObject();
+    public Res getUserContest(String userId) {
+        Res res=new Res();
         if (null == userId || "".equals(userId)) {
-            jsonObject.put("msg", "用户名为空")
-                    .put("status", 0);
-            return Res.jsonToString(jsonObject);
+            res.setMsg("用户名为空").setStatus(0);
+
+            return res;
         }
-        jsonObject.put("userContest",userService.queryContestList(userId))
-                .put("status", 1);
-        return Res.jsonToString(jsonObject);
+        res.setData(userService.queryContestList(userId))
+                .setStatus(1);
+        return res;
     }
 }

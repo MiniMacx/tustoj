@@ -9,27 +9,32 @@
     <result column="course_week" property="courseWeek" jdbcType="VARCHAR" />
     <result column="course_section" property="courseSection" jdbcType="VARCHAR" />
     <result column="delete_flag" property="deleteFlag" jdbcType="INTEGER" />
+    <result column="join_num" property="joinNum" jdbcType="INTEGER" />
+    <result column="join_limit" property="joinLimit" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     course_id, course_name, course_teacher, course_time, course_week, course_section, 
-    delete_flag
+    delete_flag, join_num, join_limit
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     from course
     where course_id = #{courseId,jdbcType=INTEGER}
-    and delete_flag=0
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from course
     where course_id = #{courseId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Course" >
-    insert into course ( course_name, course_teacher,
-      course_time, course_week, course_section,delete_flag)
-    values ( #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR},
-      #{courseTime,jdbcType=VARCHAR}, #{courseWeek,jdbcType=VARCHAR}, #{courseSection,jdbcType=VARCHAR},0)
+    insert into course (course_id, course_name, course_teacher, 
+      course_time, course_week, course_section, 
+      delete_flag, join_num, join_limit
+      )
+    values (#{courseId,jdbcType=INTEGER}, #{courseName,jdbcType=VARCHAR}, #{courseTeacher,jdbcType=VARCHAR}, 
+      #{courseTime,jdbcType=VARCHAR}, #{courseWeek,jdbcType=VARCHAR}, #{courseSection,jdbcType=VARCHAR}, 
+      #{deleteFlag,jdbcType=INTEGER}, #{joinNum,jdbcType=INTEGER}, #{joinLimit,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Course" >
     insert into course
@@ -55,6 +60,12 @@
       <if test="deleteFlag != null" >
         delete_flag,
       </if>
+      <if test="joinNum != null" >
+        join_num,
+      </if>
+      <if test="joinLimit != null" >
+        join_limit,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="courseId != null" >
@@ -77,6 +88,12 @@
       </if>
       <if test="deleteFlag != null" >
         #{deleteFlag,jdbcType=INTEGER},
+      </if>
+      <if test="joinNum != null" >
+        #{joinNum,jdbcType=INTEGER},
+      </if>
+      <if test="joinLimit != null" >
+        #{joinLimit,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -101,6 +118,12 @@
       <if test="deleteFlag != null" >
         delete_flag = #{deleteFlag,jdbcType=INTEGER},
       </if>
+      <if test="joinNum != null" >
+        join_num = #{joinNum,jdbcType=INTEGER},
+      </if>
+      <if test="joinLimit != null" >
+        join_limit = #{joinLimit,jdbcType=INTEGER},
+      </if>
     </set>
     where course_id = #{courseId,jdbcType=INTEGER}
   </update>
@@ -111,7 +134,9 @@
       course_time = #{courseTime,jdbcType=VARCHAR},
       course_week = #{courseWeek,jdbcType=VARCHAR},
       course_section = #{courseSection,jdbcType=VARCHAR},
-      delete_flag = #{deleteFlag,jdbcType=INTEGER}
+      delete_flag = #{deleteFlag,jdbcType=INTEGER},
+      join_num = #{joinNum,jdbcType=INTEGER},
+      join_limit = #{joinLimit,jdbcType=INTEGER}
     where course_id = #{courseId,jdbcType=INTEGER}
   </update>
 
@@ -165,5 +190,13 @@
     <foreach collection="array" item="item" index="index" open="(" separator="," close=")">
       #{item}
     </foreach>
+  </select>
+
+  <update id="addJoinNum">
+    update course set join_num=join_num+1 where course_id=#{courseId}
+  </update>
+
+  <select id="selectTeacherCourse" resultType="com.tustcs.matrix.entity.Course">
+    select *from course where course_teacher=#{userId}
   </select>
 </mapper>

@@ -5,7 +5,7 @@ import com.tustcs.matrix.entity.SourceCodeUser;
 public interface SourceCodeUserMapper {
     int deleteByPrimaryKey(Integer solutionId);
 
-    int insert(SourceCodeUser record);
+    int insert(Integer solutionId,String source);
 
     int insertSelective(SourceCodeUser record);
 

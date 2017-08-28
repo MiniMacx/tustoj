@@ -19,4 +19,6 @@ public interface SolutionService {
     boolean deleteSolution(Integer solutionId);
 
     Solution getSolution(Integer solutionId);
+
+    boolean submitSourceCode(Integer solutionId,String source);
 }

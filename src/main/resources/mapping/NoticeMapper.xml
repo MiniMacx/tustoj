@@ -31,7 +31,7 @@
   <insert id="insert" parameterType="com.tustcs.matrix.entity.Notice" >
     insert into notice (notice_id, delete_flag, is_show, 
       weight, notice_content)
-    values (#{noticeId,jdbcType=INTEGER}, #{deleteFlag,jdbcType=INTEGER}, #{isShow,jdbcType=INTEGER}, 
+    values (#{noticeId,jdbcType=INTEGER}, 0, #{isShow,jdbcType=INTEGER},
       #{weight,jdbcType=INTEGER}, #{noticeContent,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.Notice" >
@@ -107,7 +107,7 @@
 
   <select id="selectNoticeList" parameterType="java.lang.Integer" resultType="Notice">
     select * from notice
-    WHERE is_show = 1 AND delete_flag = 0
+    WHERE  delete_flag = 0
     ORDER BY weight DESC
     limit #{offset,jdbcType=INTEGER},#{limit,jdbcType=INTEGER}
   </select>
@@ -115,5 +115,6 @@
   <select id="selectNoticeCount" resultType="java.lang.Integer">
     select count(*)
     from notice
+    where delete_flag=0
   </select>
 </mapper>

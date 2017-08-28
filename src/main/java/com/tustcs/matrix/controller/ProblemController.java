@@ -1,12 +1,14 @@
 package com.tustcs.matrix.controller;
 
 import com.tustcs.matrix.dao.ProblemMapper;
+import com.tustcs.matrix.entity.Problem;
 import com.tustcs.matrix.service.ProblemService;
 import com.tustcs.matrix.entity.ProblemWithBLOBs;
-import com.tustcs.matrix.dto.Res;
+import com.tustcs.matrix.utils.Res;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -24,24 +26,27 @@ public class ProblemController {
     @Resource
     ProblemMapper problemMapper;
 
-    @RequestMapping("/queryDetail")
+    @RequestMapping(value = "/queryDetail",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res<ProblemWithBLOBs> showDetail(Integer problemId ){
         Res<ProblemWithBLOBs> res=new Res<ProblemWithBLOBs>();
-        if(problemService.getProblem(problemId)!=null){
+        ProblemWithBLOBs problem=problemService.getProblem(problemId);
+        if(problem!=null){
             res.setMsg("problem detail");
             res.setStatus(1);
-            res.setData(problemService.getProblem(problemId));
-            return res;
+            res.setData(problem);
+
         }else {
             res.setMsg("failed");
             res.setStatus(0);
-            return res;
-        }
 
+        }
+        return res;
     }
 
-    @RequestMapping("/query")
+    @RequestMapping(value = "/query",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res<List<ProblemWithBLOBs>> showProblem(Integer pageNow){
         Res<List<ProblemWithBLOBs>> res = new Res<List<ProblemWithBLOBs>>();
@@ -57,7 +62,8 @@ public class ProblemController {
         return res;
     }
 
-    @RequestMapping("/queryById")
+    @RequestMapping(value = "/queryById",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res showProblemById(Integer pageNow,Integer problemId){
         try {
@@ -78,7 +84,8 @@ public class ProblemController {
     }
 
 
-    @RequestMapping("/queryByTitle")
+    @RequestMapping(value = "/queryByTitle",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res<List<ProblemWithBLOBs>> showProblemByTitle(String title,Integer pageNow){
         try {
@@ -101,7 +108,8 @@ public class ProblemController {
     }
 
 
-    @RequestMapping("/insert")
+    @RequestMapping(value = "/insert",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res insertContest(@RequestBody ProblemWithBLOBs problem){
         Res res=new Res();
@@ -115,7 +123,8 @@ public class ProblemController {
         return res;
     }
 
-    @RequestMapping("/update")
+    @RequestMapping(value = "/update",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res updateContest(@RequestBody ProblemWithBLOBs problem){
         Res res=new Res();
@@ -129,7 +138,8 @@ public class ProblemController {
         return res;
     }
 
-    @RequestMapping("/delete")
+    @RequestMapping(value = "/delete",method = RequestMethod.POST,
+            produces =("application/json;charset=UTF-8"))
     @ResponseBody
     public Res deleteContest(Integer problemId){
         Res res=new Res();

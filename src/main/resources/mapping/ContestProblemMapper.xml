@@ -7,10 +7,26 @@
     <result column="title" property="title" jdbcType="CHAR" />
     <result column="num" property="num" jdbcType="INTEGER" />
   </resultMap>
+  
+  <!--<insert id="add" parameterType="java.util.List">
+    insert into contest_problem(contest_id,problem_id,title,num)
+    VALUES 
+    <foreach collection="list" item="item" index="index" separator=";">
+      (#{item.contest_id},#{item.problem_id},#{item.title},#{item.num})
+    </foreach>
+  </insert> -->
+  <select id="selectProblemsForContest" resultType="com.tustcs.matrix.dto.ContestProblemDTO">
+    select cp.contest_id,cp.problem_id,cp.title,s.result,p.submit from contest_problem as cp
+     inner join problem as p on cp.problem_id=p.problem_id
+    left join  solution as s on s.problem_id=p.problem_id and cp.contest_id=s.contest_id
+    and result=4
+    where cp.contest_id=#{contestId}
+  </select>
+
   <insert id="insert" parameterType="com.tustcs.matrix.entity.ContestProblem" >
     insert into contest_problem (problem_id, contest_id, title, 
       num)
-    values (#{problemId,jdbcType=INTEGER}, #{contestId,jdbcType=INTEGER}, #{title,jdbcType=CHAR}, 
+    values (#{problemId,jdbcType=INTEGER}, #{contestId,jdbcType=INTEGER},(SELECT title from problem where problem_id=#{problemId}),
       #{num,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.tustcs.matrix.entity.ContestProblem" >
@@ -48,6 +64,11 @@
   <select id="selectProblemId" resultType="java.lang.Integer">
     SELECT problem_id
     from contest_problem
+    where contest_id=#{contestId}
+  </select>
+
+  <select id="selectProblem" resultType="com.tustcs.matrix.entity.ContestProblem">
+    select *from contest_problem
     where contest_id=#{contestId}
   </select>
 </mapper>

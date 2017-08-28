@@ -1,5 +1,8 @@
 package com.tustcs.matrix.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"contestId","num"})
 public class ContestProblem {
     private Integer problemId;
 

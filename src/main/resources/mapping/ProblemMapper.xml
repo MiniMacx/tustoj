@@ -52,7 +52,7 @@
       sample_input, sample_output, hint
       )
     values ( #{title,jdbcType=VARCHAR}, 0,
-      '', #{inDate,jdbcType=TIMESTAMP}, #{timeLimit,jdbcType=INTEGER},
+      #{source,jdbcType=VARCHAR}, #{inDate,jdbcType=TIMESTAMP}, #{timeLimit,jdbcType=INTEGER},
       #{memoryLimit,jdbcType=INTEGER}, 'N', 0,
       0,0, 0,
       #{description,jdbcType=LONGVARCHAR}, #{input,jdbcType=LONGVARCHAR}, #{output,jdbcType=LONGVARCHAR}, 

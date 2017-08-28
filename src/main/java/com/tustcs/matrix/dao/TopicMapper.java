@@ -71,4 +71,16 @@ public interface TopicMapper {
      * @return
      */
     Integer selectTopicCountUsingUserId(@Param("userId")String userId);
+
+    List<Topic> selectByProblemId(@Param("problemId")Integer problemId,@Param("startPos")int startPos,
+                                  @Param("pageSize")int pageSize);
+
+    Integer selectTopicCountUsingProblemId(@Param("problemId") Integer problemId);
+
+    List<Topic> selectByContestId(@Param("contestId")Integer contestId,@Param("startPos")int startPos,
+                                  @Param("pageSize")int pageSize);
+
+    Integer selectTopicCountUsingContestId(@Param("contestId")Integer contestId);
+
+    Integer addCount(@Param("topicId")Integer topicId);
 }

@@ -14,6 +14,10 @@ public interface CourseService {
 
     List<Course> showCourseByCourseName(String courseName,Integer pageNow);
 
+    List<Course> getUserCourse(String userId);
+
+    List<Course> getTeacherCourse(String userId);
+
     Course getCourse(Integer courseId);
 
     boolean addCourse(Course course);
@@ -22,5 +26,9 @@ public interface CourseService {
 
     boolean updateCourse(Course course);
 
+    int enroll(String userId,Integer courseId);
 
+    boolean removeUser(String userId,Integer courseId);
+
+    List<String> getCourseStudent(Integer courseId);
 }

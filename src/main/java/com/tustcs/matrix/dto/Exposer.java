@@ -1,15 +1,11 @@
 package com.tustcs.matrix.dto;
 
-import com.tustcs.matrix.entity.ContestProblem;
-
-import javax.xml.crypto.Data;
-
 /**
  * Created by polykickshaw on 17-6-29.
  */
 public class Exposer<T> {
     private boolean isExposed;
-    private String md5;
+    private String url;
     private Integer exportId;
     private T data;
     private long now;
@@ -25,9 +21,9 @@ public class Exposer<T> {
         this.end = end;
     }
 
-    public Exposer(boolean isExposed, String md5, Integer exportId,T data) {
+    public Exposer(boolean isExposed, String url, Integer exportId, T data) {
         this.isExposed = isExposed;
-        this.md5 = md5;
+        this.url = url;
         this.data=data;
         this.exportId = exportId;
     }
@@ -37,20 +33,20 @@ public class Exposer<T> {
         this.exportId = exportId;
     }
 
-    public boolean isExposed() {
+    public boolean getIsExposed() {
         return isExposed;
     }
 
-    public void setExposed(boolean exposed) {
+    public void setIsExposed(boolean exposed) {
         isExposed = exposed;
     }
 
-    public String getMd5() {
-        return md5;
+    public String getUrl() {
+        return url;
     }
 
-    public void setMd5(String md5) {
-        this.md5 = md5;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public Integer getExportId() {

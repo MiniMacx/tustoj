@@ -18,9 +18,9 @@ public class ContestSum {
 
     private String stateInfo;
 
-    private Map<Integer,Short> problemScore;
+    private List<ContestProblemDTO> problemList;
 
-    private Integer SumScore;
+    private Integer sumScore;
 
     private boolean isValid;
 
@@ -35,14 +35,22 @@ public class ContestSum {
         this.isValid = isValid;
     }
 
-    public ContestSum(Integer contestId, String userId, ContestEnums contestEnums, Map<Integer,Short> problemScore, Integer sumScore, boolean isValid) {
+    public ContestSum(Integer contestId, String userId, ContestEnums contestEnums, List<ContestProblemDTO> problemScore, Integer sumScore, boolean isValid) {
         this.contestId = contestId;
         this.userId = userId;
         this.state = contestEnums.getState();
         this.stateInfo = contestEnums.getStateInfo();
-        this.problemScore = problemScore;
-        SumScore = sumScore;
+        this.problemList = problemScore;
+        this.sumScore = sumScore;
         this.isValid = isValid;
+    }
+
+    public Integer getSumScore() {
+        return sumScore;
+    }
+
+    public void setSumScore(Integer sumScore) {
+        this.sumScore = sumScore;
     }
 
     public int getState() {
@@ -77,13 +85,22 @@ public class ContestSum {
         this.userId = userId;
     }
 
-    public Integer getSumScore() {
-        return SumScore;
+    public List<ContestProblemDTO> getProblemList() {
+        return problemList;
     }
 
-    public void setSumScore(Integer sumScore) {
-        SumScore = sumScore;
+    public void setProblemList(List<ContestProblemDTO> problemList) {
+        this.problemList = problemList;
     }
+
+    public boolean isValid() {
+        return isValid;
+    }
+
+    public void setValid(boolean valid) {
+        isValid = valid;
+    }
+
 
     public boolean getIsValid() {
         return isValid;

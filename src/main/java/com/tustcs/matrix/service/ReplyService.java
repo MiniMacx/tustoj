@@ -16,7 +16,8 @@ public interface ReplyService {
 
     boolean updateReply(Reply reply);
 
+
     boolean deleteReply(Integer replyId);
 
-
+    List<Reply> showReplyByTopicId(Integer topicId,Integer pageNow);
 }

@@ -1,32 +1,34 @@
 package com.tustcs.matrix.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
 @JsonIgnoreProperties({"defunct","privateFlag","langmask","password","deleteFlag"})
 public class Contest {
-    private Integer contestId;
+    protected Integer contestId;
 
-    private String title;
+    protected String title;
 
-    private Date startTime;
+    protected Date startTime;
 
-    private Date endTime;
+    protected Date endTime;
 
-    private String defunct;
+    protected String defunct;
 
-    private Byte privateFlag;
+    protected Byte privateFlag;
 
-    private Integer langmask;
+    protected Integer langmask;
 
-    private String password;
+    protected String password;
 
-    private Integer enrollNum;
+    protected Integer enrollNum;
 
-    private Integer deleteFlag;
+    protected Integer deleteFlag;
 
-    private String description;
+    protected String description;
 
     public Integer getContestId() {
         return contestId;
@@ -51,7 +53,6 @@ public class Contest {
     public void setStartTime(Date startTime) {
         this.startTime = startTime;
     }
-
     public Date getEndTime() {
         return endTime;
     }

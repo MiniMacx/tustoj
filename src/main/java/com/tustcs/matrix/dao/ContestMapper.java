@@ -54,5 +54,5 @@ public interface ContestMapper {
 
     List<Contest> listContest(List<UserContest> listUserContest);
 
-    Integer updateEnrollNum();
+    Integer updateEnrollNum(Integer contestId);
 }

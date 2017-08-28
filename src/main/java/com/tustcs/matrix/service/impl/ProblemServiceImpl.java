@@ -82,7 +82,9 @@ public class ProblemServiceImpl implements ProblemService {
 
     @Override
     public boolean updateProblem(ProblemWithBLOBs problem) {
-        return problemMapper.updateByPrimaryKeySelective(problem)>0;
+        if(problem.getProblemId()>0)
+            return problemMapper.updateByPrimaryKeySelective(problem)>0;
+        return false;
     }
 
     @Override
