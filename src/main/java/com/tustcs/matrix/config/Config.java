@@ -30,5 +30,11 @@ public class Config {
     //limit分页
     public static final int PAGE_NUM= 20;
 
+    public static final int ADMINISTRATOR=10;
+    public static final int SCHOOLLEADER=20;
+    public static final int TEACHER=30;
+    public static final int STUDENT=40;
+    
+
 
 }

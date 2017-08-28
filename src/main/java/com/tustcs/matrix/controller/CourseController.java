@@ -1,11 +1,15 @@
 package com.tustcs.matrix.controller;
 
 import com.sun.org.apache.regexp.internal.RE;
+import com.tustcs.matrix.annotation.UserAccess;
+import com.tustcs.matrix.config.Config;
 import com.tustcs.matrix.dao.CourseMapper;
 import com.tustcs.matrix.dao.UserCourseMapper;
 import com.tustcs.matrix.dao.UserMapper;
 import com.tustcs.matrix.entity.Course;
 import com.tustcs.matrix.entity.UserCourse;
+import com.tustcs.matrix.enums.ContestEnums;
+import com.tustcs.matrix.enums.UserEnums;
 import com.tustcs.matrix.service.CourseService;
 import com.tustcs.matrix.utils.Res;
 import org.json.JSONObject;
@@ -104,7 +108,7 @@ public class CourseController {
 
     }
 
-
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/insert",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -120,6 +124,7 @@ public class CourseController {
         return res;
     }
 
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/update",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -135,6 +140,7 @@ public class CourseController {
         return res;
     }
 
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/delete",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -226,6 +232,7 @@ public class CourseController {
     }
 
     //老师添加的课程列表
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/queryTeacherCourse",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -239,6 +246,7 @@ public class CourseController {
     }
 
     //踢出课程中的学生
+@UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/kickStudent",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody

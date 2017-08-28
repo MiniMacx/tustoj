@@ -64,6 +64,20 @@
     </dependency>
 
 
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.8.10</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>1.8.10</version>
+    </dependency>
+
     <!--spring依赖-->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -86,6 +100,13 @@
       <artifactId>spring-tx</artifactId>
       <version>4.1.7.RELEASE</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>4.1.7.RELEASE</version>
+    </dependency>
+
     <!--spring web相关依赖-->
     <dependency>
       <groupId>org.springframework</groupId>

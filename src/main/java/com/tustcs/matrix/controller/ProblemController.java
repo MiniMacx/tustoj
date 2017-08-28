@@ -1,5 +1,7 @@
 package com.tustcs.matrix.controller;
 
+import com.tustcs.matrix.annotation.UserAccess;
+import com.tustcs.matrix.config.Config;
 import com.tustcs.matrix.dao.ProblemMapper;
 import com.tustcs.matrix.entity.Problem;
 import com.tustcs.matrix.service.ProblemService;
@@ -108,6 +110,7 @@ public class ProblemController {
     }
 
 
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/insert",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -123,6 +126,7 @@ public class ProblemController {
         return res;
     }
 
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/update",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -138,6 +142,7 @@ public class ProblemController {
         return res;
     }
 
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/delete",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody

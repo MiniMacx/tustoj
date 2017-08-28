@@ -1,5 +1,7 @@
 package com.tustcs.matrix.controller;
 
+import com.tustcs.matrix.annotation.UserAccess;
+import com.tustcs.matrix.config.Config;
 import com.tustcs.matrix.dao.HomeworkMapper;
 import com.tustcs.matrix.dto.HomeworkDTO;
 import com.tustcs.matrix.dto.HomeworkProblemDTO;
@@ -72,7 +74,7 @@ public class HomeworkController {
     }
 
 
-
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/insert",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -91,7 +93,7 @@ public class HomeworkController {
 
 
 
-
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/update",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -107,6 +109,7 @@ public class HomeworkController {
         return res;
     }
 
+    @UserAccess(level = Config.TEACHER)
     @RequestMapping(value = "/delete",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody

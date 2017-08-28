@@ -1,5 +1,7 @@
 package com.tustcs.matrix.controller;
 
+import com.tustcs.matrix.annotation.UserAccess;
+import com.tustcs.matrix.config.Config;
 import com.tustcs.matrix.dao.ContestMapper;
 import com.tustcs.matrix.dao.UserMapper;
 import com.tustcs.matrix.dto.ContestDTO;
@@ -94,6 +96,7 @@ public class ContestController {
 
     }
 
+    @UserAccess(level = Config.ADMINISTRATOR)
     @RequestMapping(value = "/insert",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -137,6 +140,7 @@ public class ContestController {
 
     }
 
+    @UserAccess(level = Config.ADMINISTRATOR)
     @RequestMapping(value = "/delete",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody

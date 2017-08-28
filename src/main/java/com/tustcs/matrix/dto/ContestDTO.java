@@ -9,14 +9,14 @@ import java.util.List;
  * Created by polykickshaw on 17-7-30.
  */
 public class ContestDTO extends Contest{
-   private List<Integer> problems;
+   private List<Integer> contestProblem;
 
     public List<Integer> getContestProblem() {
-        return problems;
+        return contestProblem;
     }
 
     public void setContestProblem(List<Integer> contestProblem) {
-        this.problems = contestProblem;
+        this.contestProblem = contestProblem;
     }
 
     public ContestDTO() {
@@ -34,6 +34,6 @@ public class ContestDTO extends Contest{
         this.password=contest.getPassword();
         this.privateFlag=contest.getPrivateFlag();
         this.title=contest.getTitle();
-        this.problems = contestProblem;
+        this.contestProblem = contestProblem;
     }
 }

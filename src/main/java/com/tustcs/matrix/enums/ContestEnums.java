@@ -1,17 +1,20 @@
 package com.tustcs.matrix.enums;
 
-import com.tustcs.matrix.entity.Contest;
-
 /**
- * Created by polykickshaw on 17-7-21.
+ * Created by polykickshaw on 17-8-28.
  */
 public enum  ContestEnums {
+    SUCCESS(1,"成功"),
 
-    SUCCESS(1,"更新成功"),
-    END(0,"比赛结束"),
-    NOT_ENROLLED(-1,"未报名"),
-    MD5_FAILED(-2,"验证失败"),
-    SYSTEM_ERROR(-3,"系统异常");
+    END(0,"比赛已结束"),
+
+    MD5_FAILED(-2,"MD5验证失败"),
+
+    NOT_ENROLLED(-3,"未报名"),
+
+    SYSTEM_ERROR(-1,"系统异常");
+
+
 
     private int state;
 
@@ -27,11 +30,9 @@ public enum  ContestEnums {
     }
 
 
-
     public String getStateInfo() {
         return stateInfo;
     }
-
 
 
     public static ContestEnums stateOf(int index){

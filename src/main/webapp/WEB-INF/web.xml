@@ -18,6 +18,14 @@
     <dispatcher>INCLUDE</dispatcher>
   </filter-mapping>
 
+  <listener>
+    <listener-class>
+      org.springframework.web.context.request.RequestContextListener
+    </listener-class>
+  </listener>
+
+
+
   <filter>
     <filter-name>loginFilter</filter-name>
     <filter-class>com.tustcs.matrix.utils.LoginFilter</filter-class>

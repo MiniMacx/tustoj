@@ -1,5 +1,7 @@
 package com.tustcs.matrix.controller;
 
+import com.tustcs.matrix.annotation.UserAccess;
+import com.tustcs.matrix.config.Config;
 import com.tustcs.matrix.dao.ReplyMapper;
 import com.tustcs.matrix.dao.TopicMapper;
 import com.tustcs.matrix.service.TopicService;
@@ -202,6 +204,7 @@ public class DiscussionController {
             }
         }
 
+        @UserAccess(level = Config.ADMINISTRATOR)
         @RequestMapping(value = "/reply/delete",method = RequestMethod.POST,
                 produces =("application/json;charset=UTF-8"))
         @ResponseBody

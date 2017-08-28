@@ -1,5 +1,7 @@
 package com.tustcs.matrix.controller;
 
+import com.tustcs.matrix.annotation.UserAccess;
+import com.tustcs.matrix.config.Config;
 import com.tustcs.matrix.dao.NoticeMapper;
 import com.tustcs.matrix.entity.Notice;
 import com.tustcs.matrix.service.NoticeService;
@@ -61,6 +63,7 @@ public class NoticeController {
         return res;
     }
 
+    @UserAccess(level = Config.SCHOOLLEADER)
     @RequestMapping(value = "/update",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -76,6 +79,7 @@ public class NoticeController {
         return res;
     }
 
+    @UserAccess(level = Config.SCHOOLLEADER)
     @RequestMapping(value = "/delete",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
@@ -91,6 +95,7 @@ public class NoticeController {
         return res;
     }
 
+    @UserAccess(level = Config.SCHOOLLEADER)
     @RequestMapping(value = "/insert",method = RequestMethod.POST,
             produces =("application/json;charset=UTF-8"))
     @ResponseBody
